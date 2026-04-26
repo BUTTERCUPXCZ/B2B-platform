@@ -226,14 +226,25 @@ function RoleContent({ role }: { role: SellRole }) {
                   No long contracts, no setup fees, no IT lift. The whole flow
                   takes most sellers under a week.
                 </p>
-                <Link
-                  to="/auth/signup"
-                  search={{ role }}
-                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
-                >
-                  {ctaLabel}
-                  <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
-                </Link>
+                <div className="mt-7 flex flex-wrap items-center gap-3">
+                  <Link
+                    to="/auth/signup"
+                    search={{ role }}
+                    className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft"
+                  >
+                    {ctaLabel}
+                    <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
+                  </Link>
+                  {role === "contractor" && (
+                    <Link
+                      to="/services/post"
+                      className="inline-flex items-center gap-2 rounded-full border border-brand-black/15 bg-white px-6 py-3 text-sm font-semibold text-brand-black transition-colors hover:border-brand-orange/40 hover:text-brand-orange"
+                    >
+                      List a service first
+                      <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
+                    </Link>
+                  )}
+                </div>
               </Reveal>
 
               <ol className="space-y-4">

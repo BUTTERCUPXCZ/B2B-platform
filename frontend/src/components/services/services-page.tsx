@@ -143,15 +143,22 @@ function Hero({
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Link
             to="/jobs/post"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft"
           >
             Post a job
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
           </Link>
-          <span className="text-xs text-white/80">
-            Free to post · pay only when you hire
-          </span>
+          <Link
+            to="/services/post"
+            className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            List your service
+            <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
+          </Link>
         </div>
+        <p className="mt-3 text-xs text-white/80">
+          Buyers post jobs free · contractors list services free
+        </p>
 
         <form
           className="mt-6 flex max-w-3xl items-center gap-2 rounded-full bg-white p-1.5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] focus-within:ring-2 focus-within:ring-brand-orange/40"

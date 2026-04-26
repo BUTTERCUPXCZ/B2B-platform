@@ -21,7 +21,7 @@ const servicesSearchSchema = z.object({
   category: serviceCategoryEnum.optional(),
 })
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   validateSearch: (search) => servicesSearchSchema.parse(search),
   component: ServicesRoute,
 })
