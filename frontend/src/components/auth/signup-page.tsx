@@ -182,7 +182,7 @@ export function SignupPage({ initialRole = "buyer" }: { initialRole?: SignupRole
             required
           />
           <span>
-            I agree to Buildora&rsquo;s{" "}
+            I agree to Levite&rsquo;s{" "}
             <Link to="/" className="font-semibold text-brand-orange hover:underline">
               Terms of Service
             </Link>{" "}

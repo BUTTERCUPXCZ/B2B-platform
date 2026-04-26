@@ -76,7 +76,7 @@ export function ShopPage({ initialQuery = "" }: { initialQuery?: string }) {
     <main className="bg-white">
       <Hero query={query} setQuery={setQuery} onOpenFilters={() => setFiltersOpen(true)} />
 
-      <section className="bg-white pb-16 sm:pb-20 lg:pb-24">
+      <section className="bg-white pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[260px_1fr]">
           <Filters
             activeCategory={activeCategory}

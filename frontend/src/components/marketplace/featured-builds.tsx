@@ -91,7 +91,7 @@ export function FeaturedBuilds() {
               Featured Builds
             </span>
             <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-brand-black sm:text-4xl">
-              Real homes, built through Buildora.
+              Real homes, built through Levite.
             </h2>
           </div>
           <div className="flex flex-wrap gap-1.5 text-xs font-semibold">

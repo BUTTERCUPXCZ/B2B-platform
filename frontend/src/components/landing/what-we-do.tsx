@@ -95,7 +95,7 @@ export function WhatWeDo() {
               What you can do here <span className="text-brand-orange">!</span>
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-brand-black/65">
-              Buildora is a marketplace, not just a catalog. Every listing
+              Levite is a marketplace, not just a catalog. Every listing
               connects to a verified seller, every job connects to a vetted
               pro, and every transaction is escrow-backed end to end.
             </p>

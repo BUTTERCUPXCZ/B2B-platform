@@ -48,7 +48,7 @@ export function PricingHero({
           variants={fadeUp}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75"
         >
-          Browsing, ordering, and hiring on Buildora is always free for buyers.
+          Browsing, ordering, and hiring on Levite is always free for buyers.
           Materials sellers and service contractors pay a transparent
           subscription + commission to list their products and win jobs.
           Annual billing saves 20%.

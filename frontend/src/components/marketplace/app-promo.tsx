@@ -22,7 +22,7 @@ export function AppPromo() {
             Mobile App
           </span>
           <h2 className="mt-3 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
-            Buildora in your pocket.
+            Levite in your pocket.
             <br />
             Built for the jobsite.
           </h2>
@@ -91,7 +91,7 @@ export function AppPromo() {
             />
             <div className="relative flex h-full flex-col p-6 text-white">
               <span className="text-[10px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
-                Buildora · Today
+                Levite · Today
               </span>
               <h3 className="mt-2 text-xl leading-tight font-bold">
                 Cement order arriving 2:30pm

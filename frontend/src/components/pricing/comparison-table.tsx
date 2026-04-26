@@ -14,7 +14,7 @@ const groups: Array<{
   {
     label: "Storefront & Listings",
     rows: [
-      { feature: "Storefront page on Buildora", starter: true, growth: true, pro: true },
+      { feature: "Storefront page on Levite", starter: true, growth: true, pro: true },
       { feature: "Active listings", starter: "100", growth: "1,000", pro: "Unlimited" },
       { feature: "Custom storefront URL", starter: false, growth: true, pro: true },
       { feature: "Featured placement on category pages", starter: false, growth: true, pro: true },

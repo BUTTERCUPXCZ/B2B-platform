@@ -62,7 +62,7 @@ export function About() {
             Three Sides Of The Trade.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-brand-black/65">
-            Buildora is the construction marketplace where homeowners and
+            Levite is the construction marketplace where homeowners and
             contractors shop materials and hire builders, while suppliers and
             service pros pay a transparent subscription to reach them. Every
             order moves through escrow — so trust isn&rsquo;t a leap of faith.

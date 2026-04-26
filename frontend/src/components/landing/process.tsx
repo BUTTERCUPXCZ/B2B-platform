@@ -3,7 +3,7 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
 const steps: { step: string; title: string; to?: "/shop" | "/services" | "/jobs/post" }[] = [
   { step: "Step 1", title: "Browse 24,000+ Listings & Verified Pros", to: "/shop" },
-  { step: "Step 2", title: "Compare Prices, Reviews, And Bids", to: "/services" },
+  { step: "Step 2", title: "Post A Job · Compare Bids In 24h", to: "/jobs/post" },
   { step: "Step 3", title: "Pay Safely Through Escrow" },
   { step: "Step 4", title: "Receive Or Sign Off — Build" },
 ]

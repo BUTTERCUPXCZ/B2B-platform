@@ -89,7 +89,7 @@ export function FeaturedProjects() {
               Real builds
             </span>
             <h2 className="mt-2 text-4xl font-extrabold tracking-tight text-brand-black sm:text-[44px]">
-              Built through Buildora.
+              Built through Levite.
             </h2>
           </div>
           <div className="flex flex-wrap gap-1.5 text-xs font-semibold">

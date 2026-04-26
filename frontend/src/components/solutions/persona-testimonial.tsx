@@ -27,7 +27,7 @@ export function PersonaTestimonial() {
             className="mt-6 size-10 text-brand-orange/70"
           />
           <p className="mt-4 text-2xl leading-snug font-medium text-white/90 sm:text-[28px]">
-            &ldquo;Before Buildora, half my week went into chasing leads and
+            &ldquo;Before Levite, half my week went into chasing leads and
             sending quotes. Now jobs find me. The verified-pro badge means
             buyers trust the bid before we even meet, and escrow takes the
             payment risk off the table completely.&rdquo;

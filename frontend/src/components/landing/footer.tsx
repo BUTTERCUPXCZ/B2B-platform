@@ -50,7 +50,7 @@ export function Footer() {
             <span className="flex size-9 items-center justify-center rounded-full bg-brand-orange text-white">
               <HugeiconsIcon icon={ConstructionIcon} className="size-5" />
             </span>
-            <span className="text-lg font-bold">Buildora</span>
+            <span className="text-lg font-bold">Levite</span>
           </a>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
             The all-in-one platform for construction supply and service
@@ -122,7 +122,7 @@ export function Footer() {
       </div>
 
       <div className="mx-auto mt-12 flex max-w-7xl flex-col items-center justify-between gap-3 border-t border-white/10 px-6 pt-6 text-xs text-white/45 sm:flex-row">
-        <p>© {new Date().getFullYear()} Buildora Inc. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Levite Inc. All rights reserved.</p>
         <div className="flex gap-5">
           <a href="#" className="hover:text-white">
             Terms

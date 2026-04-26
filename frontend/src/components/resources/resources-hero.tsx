@@ -39,7 +39,7 @@ export function ResourcesHero() {
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75"
         >
           Buying guides for homeowners and contractors, growth playbooks for
-          sellers, and project deep-dives from real Buildora builds. Written by
+          sellers, and project deep-dives from real Levite builds. Written by
           the people who ship the marketplace and the operators who use it.
         </motion.p>
 

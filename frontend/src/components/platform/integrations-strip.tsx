@@ -34,7 +34,7 @@ export function IntegrationsStrip() {
               Ship Anywhere.
             </h2>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/85">
-              Buildora supports every major local payment method, bank, and
+              Levite supports every major local payment method, bank, and
               delivery network. Sellers sync their accounting tools and run
               everything from one dashboard.
             </p>

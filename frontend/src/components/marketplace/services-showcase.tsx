@@ -101,7 +101,7 @@ export function ServicesShowcase() {
               Need it built? Hire a vetted pro.
             </h2>
             <p className="mt-2 max-w-xl text-sm text-brand-black/60">
-              Every contractor on Buildora is identity-verified, licensed, and
+              Every contractor on Levite is identity-verified, licensed, and
               backed by buyer escrow. Pay only when each milestone is signed off.
             </p>
           </div>

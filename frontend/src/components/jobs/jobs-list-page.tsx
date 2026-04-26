@@ -5,54 +5,65 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import {
   Search01Icon,
   ArrowRight01Icon,
-  StarIcon,
   ArrowDown01Icon,
-  CheckmarkBadge02Icon,
   Location01Icon,
+  TimerIcon,
+  CheckmarkBadge02Icon,
+  Wrench01Icon,
 } from "@hugeicons/core-free-icons"
 import { cn } from "@/lib/utils"
-import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/primitives"
+import { Reveal } from "@/components/motion/primitives"
 import {
   serviceCategories,
-  servicePros,
-  proSortOptions,
   type ServiceCategory,
-  type ServicePro,
-  type ProSortOption,
-} from "./services-data"
+} from "@/components/services/services-data"
+import {
+  jobs,
+  jobSortOptions,
+  type Job,
+  type JobSortOption,
+} from "./jobs-data"
 
-export function ServicesPage({
-  initialQuery = "",
+const budgetOrder: Record<string, number> = {
+  "Under ₱25k": 1,
+  "₱25k – ₱100k": 2,
+  "₱100k – ₱500k": 3,
+  "₱500k – ₱2M": 4,
+  "₱2M+": 5,
+}
+
+export function JobsListPage({
   initialCategory = null,
 }: {
-  initialQuery?: string
   initialCategory?: ServiceCategory | null
 }) {
-  const [query, setQuery] = useState(initialQuery)
+  const [query, setQuery] = useState("")
   const [activeCategory, setActiveCategory] = useState<ServiceCategory | null>(
     initialCategory
   )
-  const [sort, setSort] = useState<ProSortOption>("popular")
+  const [sort, setSort] = useState<JobSortOption>("recent")
 
   const visible = useMemo(() => {
-    let list: ServicePro[] = servicePros
+    let list: Job[] = jobs
     if (query.trim()) {
       const q = query.trim().toLowerCase()
       list = list.filter(
-        (p) =>
-          p.name.toLowerCase().includes(q) ||
-          p.location.toLowerCase().includes(q) ||
-          p.category.toLowerCase().includes(q) ||
-          p.blurb.toLowerCase().includes(q)
+        (j) =>
+          j.title.toLowerCase().includes(q) ||
+          j.description.toLowerCase().includes(q) ||
+          j.location.toLowerCase().includes(q) ||
+          j.category.toLowerCase().includes(q)
       )
     }
-    if (activeCategory) list = list.filter((p) => p.category === activeCategory)
+    if (activeCategory) list = list.filter((j) => j.category === activeCategory)
     switch (sort) {
-      case "rating":
-        list = [...list].sort((a, b) => b.rating - a.rating)
+      case "budget-desc":
+        list = [...list].sort(
+          (a, b) => (budgetOrder[b.budget] ?? 0) - (budgetOrder[a.budget] ?? 0)
+        )
         break
-      case "jobs":
-        list = [...list].sort((a, b) => b.jobsCompleted - a.jobsCompleted)
+      case "bids-asc":
+        list = [...list].sort((a, b) => a.bidCount - b.bidCount)
         break
     }
     return list
@@ -74,8 +85,8 @@ export function ServicesPage({
           <div className="mt-8 mb-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
             <p className="text-sm text-brand-black/65">
               <span className="font-bold text-brand-black">{visible.length}</span>{" "}
-              of {servicePros.length} verified pros
-              {activeCategory ? ` for ${activeCategory}` : ""}
+              of {jobs.length} open jobs
+              {activeCategory ? ` in ${activeCategory}` : ""}
             </p>
             <SortMenu sort={sort} setSort={setSort} />
           </div>
@@ -88,16 +99,11 @@ export function ServicesPage({
               }}
             />
           ) : (
-            <StaggerGroup
-              key={`${activeCategory ?? "all"}-${sort}-${query}`}
-              className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
-            >
-              {visible.map((p) => (
-                <StaggerItem key={p.id}>
-                  <ProCard pro={p} />
-                </StaggerItem>
+            <div className="grid gap-4">
+              {visible.map((j) => (
+                <JobCard key={j.id} job={j} />
               ))}
-            </StaggerGroup>
+            </div>
           )}
         </div>
       </section>
@@ -116,7 +122,7 @@ function Hero({
     <section className="relative isolate overflow-hidden bg-brand-ink pt-32 pb-12 text-white sm:pt-40 lg:pt-44">
       <div
         aria-hidden
-        className="absolute inset-0 bg-cover bg-center opacity-30"
+        className="absolute inset-0 bg-cover bg-center opacity-25"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80&auto=format&fit=crop')",
@@ -129,15 +135,15 @@ function Hero({
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
           <span className="size-1.5 rounded-full bg-brand-orange" />
-          Marketplace · Services
+          Job Board
         </span>
 
         <h1 className="mt-5 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-          Hire 1,800+ verified pros.
+          Open jobs from buyers across the country.
         </h1>
         <p className="mt-3 max-w-xl text-sm text-white/70">
-          Filter by trade and location, compare ratings and jobs completed,
-          or post a job to get up to 5 priced bids in 24 hours.
+          Browse jobs that match your trade and area. Submit a bid in minutes —
+          win the job, get paid through escrow as you deliver.
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -145,7 +151,7 @@ function Hero({
             to="/jobs/post"
             className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
           >
-            Post a job
+            Post a job instead
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
           </Link>
           <span className="text-xs text-white/55">
@@ -164,7 +170,7 @@ function Hero({
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search trades or pros — roofing, plumber, painter…"
+            placeholder="Search by trade, location, or keyword…"
             className="flex-1 bg-transparent py-1.5 text-sm text-brand-black placeholder:text-brand-black/45 outline-none"
           />
         </form>
@@ -189,13 +195,13 @@ function CategoryRail({
           className={cn(
             "relative inline-flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold transition-colors",
             active === null
-              ? "border-brand-orange bg-brand-orange text-white"
+              ? "border-brand-orange text-white"
               : "border-brand-black/10 bg-white text-brand-black/70 hover:border-brand-orange/40 hover:text-brand-orange"
           )}
         >
           {active === null && (
             <motion.span
-              layoutId="cat-pill"
+              layoutId="jobs-cat-pill"
               className="absolute inset-0 rounded-full bg-brand-orange"
               transition={{ type: "spring", stiffness: 320, damping: 30 }}
             />
@@ -218,7 +224,7 @@ function CategoryRail({
             >
               {isActive && (
                 <motion.span
-                  layoutId="cat-pill"
+                  layoutId="jobs-cat-pill"
                   className="absolute inset-0 -z-10 rounded-full bg-brand-orange"
                   transition={{ type: "spring", stiffness: 320, damping: 30 }}
                 />
@@ -239,11 +245,11 @@ function SortMenu({
   sort,
   setSort,
 }: {
-  sort: ProSortOption
-  setSort: (s: ProSortOption) => void
+  sort: JobSortOption
+  setSort: (s: JobSortOption) => void
 }) {
   const [open, setOpen] = useState(false)
-  const active = proSortOptions.find((s) => s.id === sort)!
+  const active = jobSortOptions.find((s) => s.id === sort)!
   return (
     <div className="relative">
       <button
@@ -255,8 +261,8 @@ function SortMenu({
         <HugeiconsIcon icon={ArrowDown01Icon} className="size-3.5" />
       </button>
       {open && (
-        <div className="absolute top-full right-0 z-10 mt-2 w-56 rounded-md border border-brand-black/10 bg-white p-1 shadow-lg">
-          {proSortOptions.map((o) => (
+        <div className="absolute top-full right-0 z-10 mt-2 w-64 rounded-md border border-brand-black/10 bg-white p-1 shadow-lg">
+          {jobSortOptions.map((o) => (
             <button
               key={o.id}
               type="button"
@@ -280,75 +286,69 @@ function SortMenu({
   )
 }
 
-function ProCard({ pro }: { pro: ServicePro }) {
+function JobCard({ job }: { job: Job }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-md border border-brand-black/10 bg-white shadow-[0_8px_20px_-12px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-25px_rgba(255,116,32,0.25)]">
-      <div className="relative aspect-[16/10] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-          style={{ backgroundImage: `url('${pro.image}')` }}
-        />
-        {pro.badge && (
-          <span className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-semibold text-brand-black shadow-md">
-            <HugeiconsIcon
-              icon={CheckmarkBadge02Icon}
-              className="size-3 text-brand-orange"
-            />
-            {pro.badge}
+    <article className="group flex flex-col overflow-hidden rounded-md border border-brand-black/10 bg-white p-6 shadow-[0_8px_20px_-12px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-0.5 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-25px_rgba(255,116,32,0.25)] sm:p-7">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-orange/10 px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
+            {job.category}
           </span>
-        )}
-      </div>
-
-      <div className="flex flex-1 flex-col p-5">
-        <p className="text-[10px] font-semibold tracking-[0.25em] text-brand-orange uppercase">
-          {pro.category}
-        </p>
-        <h3 className="mt-1 text-base leading-snug font-bold text-brand-black">
-          {pro.name}
-        </h3>
-
-        <div className="mt-1 flex items-center gap-3 text-xs text-brand-black/60">
-          <span className="inline-flex items-center gap-1">
+          <span className="inline-flex items-center gap-1 text-[11px] text-brand-black/55">
             <HugeiconsIcon
               icon={Location01Icon}
-              className="size-3.5 text-brand-orange"
+              className="size-3 text-brand-orange"
             />
-            {pro.location}
-          </span>
-          <span className="inline-flex items-center gap-1">
-            <HugeiconsIcon icon={StarIcon} className="size-3.5 text-brand-orange" />
-            <span className="font-semibold text-brand-black">{pro.rating}</span>
-            <span>· {pro.reviews}</span>
+            {job.location}
           </span>
         </div>
+        <span className="text-[11px] tracking-wider text-brand-black/45 uppercase">
+          {job.postedAgo}
+        </span>
+      </div>
 
-        <p className="mt-3 line-clamp-2 text-xs leading-relaxed text-brand-black/65">
-          {pro.blurb}
-        </p>
+      <h3 className="mt-3 text-lg leading-snug font-bold text-brand-black sm:text-xl">
+        {job.title}
+      </h3>
+      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-brand-black/65">
+        {job.description}
+      </p>
 
-        <p className="mt-3 text-[11px] text-brand-black/55">
-          <span className="font-bold text-brand-black">{pro.jobsCompleted}</span>{" "}
-          jobs completed on Levite
-        </p>
+      <div className="mt-4 flex flex-wrap items-center gap-3 text-[11px] text-brand-black/65">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-black/[0.04] px-3 py-1 font-semibold">
+          Budget · {job.budget}
+        </span>
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-black/[0.04] px-3 py-1">
+          <HugeiconsIcon icon={TimerIcon} className="size-3" />
+          {job.startWindow}
+        </span>
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-black/[0.04] px-3 py-1">
+          <HugeiconsIcon icon={Wrench01Icon} className="size-3" />
+          {job.bidCount} bid{job.bidCount === 1 ? "" : "s"} so far
+        </span>
+      </div>
 
-        <div className="mt-auto flex items-end justify-between pt-4">
-          <div>
-            <p className="text-[11px] tracking-wider text-brand-black/45 uppercase">
-              Starting from
-            </p>
-            <p className="text-lg font-extrabold text-brand-black">
-              {pro.startingFrom}
-            </p>
-          </div>
-          <Link
-            to="/jobs/post"
-            search={{ category: pro.category }}
-            className="inline-flex items-center gap-1.5 rounded-full bg-brand-orange px-4 py-2 text-[11px] font-semibold tracking-[0.18em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
-          >
-            Get quotes
-            <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
-          </Link>
-        </div>
+      <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-brand-black/10 pt-5">
+        <span className="inline-flex items-center gap-2 text-xs text-brand-black/65">
+          Posted by{" "}
+          <span className="font-semibold text-brand-black">
+            {job.buyer.name}
+          </span>
+          {job.buyer.verified && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-brand-orange/10 px-2 py-0.5 text-[10px] font-semibold text-brand-orange">
+              <HugeiconsIcon icon={CheckmarkBadge02Icon} className="size-3" />
+              Verified buyer
+            </span>
+          )}
+        </span>
+        <Link
+          to="/auth/signup"
+          search={{ role: "contractor" }}
+          className="inline-flex items-center gap-1.5 rounded-full bg-brand-orange px-4 py-2 text-[11px] font-semibold tracking-[0.18em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+        >
+          Submit a bid
+          <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
+        </Link>
       </div>
     </article>
   )
@@ -357,9 +357,9 @@ function ProCard({ pro }: { pro: ServicePro }) {
 function EmptyState({ onClear }: { onClear: () => void }) {
   return (
     <div className="rounded-md border border-dashed border-brand-black/15 bg-brand-black/[0.02] p-12 text-center">
-      <p className="text-sm font-semibold text-brand-black">No pros match</p>
+      <p className="text-sm font-semibold text-brand-black">No open jobs match</p>
       <p className="mt-1 text-xs text-brand-black/55">
-        Try clearing the filters or search a different trade.
+        New jobs post every day. Try a different trade or clear the filters.
       </p>
       <button
         type="button"

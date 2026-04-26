@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils"
 import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
-const categories = ["All", "Buying Guides", "Selling on Buildora", "Project Stories", "Industry"] as const
+const categories = ["All", "Buying Guides", "Selling on Levite", "Project Stories", "Industry"] as const
 type Category = (typeof categories)[number]
 
 type Post = {
@@ -38,14 +38,14 @@ const posts: Post[] = [
     category: "Project Stories",
     title: "From bare lot to handover: a ₱4.8M Cebu coastal home",
     excerpt:
-      "Inside the 9-month build of the Cebu Coastal Residence — every supplier hired through Buildora, every milestone signed off in escrow.",
+      "Inside the 9-month build of the Cebu Coastal Residence — every supplier hired through Levite, every milestone signed off in escrow.",
     author: "Heritage Build Co.",
     readTime: "14 min",
     image:
       "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=80&auto=format&fit=crop",
   },
   {
-    category: "Selling on Buildora",
+    category: "Selling on Levite",
     title: "10 listing photos that actually sell tiles",
     excerpt:
       "We analyzed 1,200 tile listings to figure out what photo composition triples click-through. Spoiler: lifestyle shots beat catalog shots, but not how you think.",
@@ -58,7 +58,7 @@ const posts: Post[] = [
     category: "Industry",
     title: "What homeowners actually fear about hiring a builder",
     excerpt:
-      "We surveyed 1,400 homeowners who hired through Buildora about their pre-booking anxieties. Top three: cost overruns, no-shows, and quality. Here's how the platform fixes each.",
+      "We surveyed 1,400 homeowners who hired through Levite about their pre-booking anxieties. Top three: cost overruns, no-shows, and quality. Here's how the platform fixes each.",
     author: "Priya Hassan",
     readTime: "11 min",
     image:
@@ -75,7 +75,7 @@ const posts: Post[] = [
       "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=900&q=80&auto=format&fit=crop",
   },
   {
-    category: "Selling on Buildora",
+    category: "Selling on Levite",
     title: "Going from local yard to top-3 supplier in your category",
     excerpt:
       "What sellers who hit Top Seller badge do differently — pricing strategy, listing cadence, response time, and how they handle returns.",
@@ -88,7 +88,7 @@ const posts: Post[] = [
     category: "Project Stories",
     title: "A BGC penthouse refit, end to end",
     excerpt:
-      "How Northline Interiors used Buildora to source 47 SKUs from 9 sellers, schedule 5 service crews, and deliver a ₱950k refit two weeks early.",
+      "How Northline Interiors used Levite to source 47 SKUs from 9 sellers, schedule 5 service crews, and deliver a ₱950k refit two weeks early.",
     author: "Elena Marsh",
     readTime: "8 min",
     image:
@@ -108,7 +108,7 @@ const posts: Post[] = [
     category: "Industry",
     title: "How escrow changed buyer-seller trust in construction",
     excerpt:
-      "Two years of dispute data from Buildora — what works, what we changed, and why the average dispute now resolves in 36 hours instead of 14 days.",
+      "Two years of dispute data from Levite — what works, what we changed, and why the average dispute now resolves in 36 hours instead of 14 days.",
     author: "Priya Hassan",
     readTime: "12 min",
     image:

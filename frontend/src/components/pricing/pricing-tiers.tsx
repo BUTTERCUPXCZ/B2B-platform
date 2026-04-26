@@ -43,7 +43,7 @@ const tiers: Tier[] = [
       { label: "Payouts", value: "Weekly" },
     ],
     features: [
-      { label: "Storefront page on Buildora", included: true },
+      { label: "Storefront page on Levite", included: true },
       { label: "Up to 100 active listings", included: true },
       { label: "Standard search placement", included: true },
       { label: "Basic seller dashboard", included: true },

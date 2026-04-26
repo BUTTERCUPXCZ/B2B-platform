@@ -126,7 +126,7 @@ export function QuoteForm() {
             <ContactRow
               icon={Mail01Icon}
               label="Email"
-              lines={["sales@buildora.co", "support@buildora.co"]}
+              lines={["sales@leviteconstruction.com", "support@leviteconstruction.com"]}
             />
             <ContactRow
               icon={Call02Icon}
@@ -140,7 +140,7 @@ export function QuoteForm() {
             />
 
             <a
-              href="mailto:sales@buildora.co"
+              href="mailto:sales@leviteconstruction.com"
               className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-black py-4 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink"
             >
               Talk to Sales

@@ -39,7 +39,7 @@ export function PlatformHero() {
           variants={fadeUp}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75"
         >
-          Buildora is the marketplace where buyers shop construction materials,
+          Levite is the marketplace where buyers shop construction materials,
           hire vetted builders, and pay safely — and where suppliers and
           contractors list their products and services to reach buyers ready
           to build.
@@ -59,7 +59,7 @@ export function PlatformHero() {
             <span className="flex size-7 items-center justify-center rounded-full bg-white/15">
               <HugeiconsIcon icon={PlayIcon} className="size-3" />
             </span>
-            Sell on Buildora
+            Sell on Levite
           </Link>
         </motion.div>
       </motion.div>

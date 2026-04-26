@@ -146,7 +146,7 @@ export function Hero() {
               <span className="flex size-7 items-center justify-center rounded-full bg-white/15">
                 <HugeiconsIcon icon={ShoppingBag03Icon} className="size-3" />
               </span>
-              Sell on Buildora
+              Sell on Levite
             </Link>
           </motion.div>
         </div>

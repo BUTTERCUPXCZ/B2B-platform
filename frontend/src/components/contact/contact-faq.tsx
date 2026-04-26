@@ -11,11 +11,11 @@ const faqs = [
   },
   {
     q: "I have an order issue — what do I do?",
-    a: "Open a dispute directly from the order page in your account, or email help@buildora.co with your order ID. Funds stay in escrow while we investigate. Most disputes resolve within 36 hours.",
+    a: "Open a dispute directly from the order page in your account, or email help@leviteconstruction.com with your order ID. Funds stay in escrow while we investigate. Most disputes resolve within 36 hours.",
   },
   {
     q: "How do I become a seller?",
-    a: "Submit the ‘Become a Seller’ form (or email sales@buildora.co). We verify your business permit and ID, then walk you through listing your first 10 items. Most sellers go live within 5 business days of applying.",
+    a: "Submit the ‘Become a Seller’ form (or email sales@leviteconstruction.com). We verify your business permit and ID, then walk you through listing your first 10 items. Most sellers go live within 5 business days of applying.",
   },
   {
     q: "What about service contractors?",

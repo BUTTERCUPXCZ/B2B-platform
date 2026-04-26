@@ -25,7 +25,7 @@ export function LoginPage() {
       subtitle="Sign in to your buyer or seller account."
       bottomPrompt={
         <>
-          New to Buildora?{" "}
+          New to Levite?{" "}
           <Link
             to="/auth/signup"
             className="font-semibold text-brand-orange hover:underline"

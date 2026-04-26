@@ -39,7 +39,7 @@ export function SolutionsHero() {
         >
           Homeowners renovating a kitchen, contractors stocking a jobsite,
           materials yards going online, builders winning new projects —
-          Buildora is the construction marketplace that fits every side of the
+          Levite is the construction marketplace that fits every side of the
           trade.
         </motion.p>
       </motion.div>

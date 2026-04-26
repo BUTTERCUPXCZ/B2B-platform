@@ -44,14 +44,14 @@ export function SellOnBuildora() {
             Run a construction business?
           </span>
           <h2 className="mt-3 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
-            Sell on Buildora.
+            Sell on Levite.
             <br />
             <span className="text-brand-orange">Reach buyers ready to build.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
             We don&rsquo;t carry inventory or staff jobsites. We&rsquo;re the platform —
             you&rsquo;re the brand. Materials sellers and service contractors both
-            grow on Buildora.
+            grow on Levite.
           </p>
         </Reveal>
 
@@ -61,7 +61,7 @@ export function SellOnBuildora() {
               <HugeiconsIcon icon={Store02Icon} className="size-5" />
             </span>
             <h3 className="mt-5 text-2xl font-extrabold tracking-tight">
-              Sell on Buildora
+              Sell on Levite
             </h3>
             <p className="mt-2 text-sm text-white/85">
               For construction-materials sellers — cement yards, hardware retail,

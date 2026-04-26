@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils"
 const reviews = [
   {
     quote:
-      "I order all my project cement and rebar through Buildora. Prices beat my old yard, delivery hits the site on the day I scheduled, and the receipts auto-export to QuickBooks. Saved me at least 6 hours a week.",
+      "I order all my project cement and rebar through Levite. Prices beat my old yard, delivery hits the site on the day I scheduled, and the receipts auto-export to QuickBooks. Saved me at least 6 hours a week.",
     name: "Marlon Reyes",
     title: "Contractor · Reyes Build",
     tag: "Buyer",
@@ -29,7 +29,7 @@ const reviews = [
   },
   {
     quote:
-      "Before Buildora, half my week went into chasing leads and sending quotes. Now jobs find me. The verified-pro badge means buyers trust the bid before we even meet — and escrow takes payment risk off the table.",
+      "Before Levite, half my week went into chasing leads and sending quotes. Now jobs find me. The verified-pro badge means buyers trust the bid before we even meet — and escrow takes payment risk off the table.",
     name: "Daniel Okafor",
     title: "Owner · Stormshield Roofing",
     tag: "Seller",

@@ -327,7 +327,7 @@ function PreviewCard({ form }: { form: FormState }) {
               icon={Shield01Icon}
               className="mt-0.5 size-3.5 shrink-0 text-brand-orange"
             />
-            Every bid comes from an identity-verified Buildora pro
+            Every bid comes from an identity-verified Levite pro
           </li>
           <li className="flex items-start gap-2">
             <HugeiconsIcon

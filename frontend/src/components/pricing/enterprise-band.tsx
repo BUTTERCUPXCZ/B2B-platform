@@ -15,7 +15,7 @@ const points = [
   {
     icon: UserMultipleIcon,
     title: "Custom contract pricing",
-    body: "Negotiate per-buyer prices for your top contractors directly inside Buildora. Automatic order discounts, no spreadsheets.",
+    body: "Negotiate per-buyer prices for your top contractors directly inside Levite. Automatic order discounts, no spreadsheets.",
   },
   {
     icon: ChartIncreaseIcon,

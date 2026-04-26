@@ -6,7 +6,7 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
 const faqs = [
   {
-    q: "Is Buildora really free for buyers?",
+    q: "Is Levite really free for buyers?",
     a: "Yes — buyers never pay a membership fee, transaction fee, or commission. The seller pays a transparent commission per order, which is already built into the listed price. What you see at checkout is what you pay.",
   },
   {
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "What if a buyer disputes an order?",
-    a: "Buildora holds the buyer's payment in escrow until they sign off. If a dispute is opened, our team reviews transaction logs and mediates within 3 business days — refunding the buyer or releasing funds to the seller based on the evidence.",
+    a: "Levite holds the buyer's payment in escrow until they sign off. If a dispute is opened, our team reviews transaction logs and mediates within 3 business days — refunding the buyer or releasing funds to the seller based on the evidence.",
   },
 ]
 

@@ -13,6 +13,8 @@ import { cn } from "@/lib/utils"
 
 const navItems: Array<{ label: string; to: string }> = [
   { label: "Home", to: "/" },
+  { label: "Shop", to: "/shop" },
+  { label: "Jobs", to: "/jobs" },
   { label: "Platform", to: "/platform" },
   { label: "Solutions", to: "/solutions" },
   { label: "Pricing", to: "/pricing" },
@@ -43,11 +45,11 @@ export function Header() {
               <HugeiconsIcon icon={ConstructionIcon} className="size-5" />
             </span>
             <span className="text-lg font-bold tracking-tight text-brand-black">
-              Buildora
+              Levite
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-7 text-sm font-medium text-brand-black/80 md:flex">
+          <nav className="hidden items-center gap-5 text-sm font-medium text-brand-black/80 lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -87,7 +89,7 @@ export function Header() {
               aria-label="Open menu"
               aria-expanded={open}
               onClick={() => setOpen(true)}
-              className="inline-flex size-10 items-center justify-center rounded-full bg-brand-orange text-white transition-colors hover:bg-brand-orange-soft md:hidden"
+              className="inline-flex size-10 items-center justify-center rounded-full bg-brand-orange text-white transition-colors hover:bg-brand-orange-soft lg:hidden"
             >
               <HugeiconsIcon icon={Menu01Icon} className="size-5" />
             </button>
@@ -109,7 +111,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.2 } }}
       exit={{ opacity: 0, transition: { duration: 0.15 } }}
-      className="fixed inset-0 z-40 md:hidden"
+      className="fixed inset-0 z-40 lg:hidden"
     >
       <button
         type="button"
@@ -129,7 +131,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             <span className="flex size-9 items-center justify-center rounded-full bg-brand-orange text-white">
               <HugeiconsIcon icon={ConstructionIcon} className="size-5" />
             </span>
-            <span className="text-lg font-bold tracking-tight">Buildora</span>
+            <span className="text-lg font-bold tracking-tight">Levite</span>
           </Link>
           <button
             type="button"

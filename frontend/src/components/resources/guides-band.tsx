@@ -11,7 +11,7 @@ const guides = [
   {
     icon: BookOpen01Icon,
     title: "Homeowner's Construction Buying Guide",
-    body: "How to plan a renovation or new build on Buildora — from materials takeoff to hiring contractors to managing payments through escrow.",
+    body: "How to plan a renovation or new build on Levite — from materials takeoff to hiring contractors to managing payments through escrow.",
     pages: "48 pages",
   },
   {

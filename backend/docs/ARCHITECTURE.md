@@ -1,4 +1,4 @@
-# Buildora Backend — System Architecture
+# Levite Backend — System Architecture
 
 > NestJS · Prisma · Supabase (Postgres + Auth + Storage) · BullMQ · Redis
 > Status: Design v1 · Last updated: 2026-04-26

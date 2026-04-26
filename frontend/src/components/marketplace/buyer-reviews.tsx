@@ -21,7 +21,7 @@ type Review = {
 const reviews: Review[] = [
   {
     quote:
-      "I order all my project cement and rebar through Buildora now. Prices beat my old yard, delivery hits the site on the day I scheduled, and the receipts auto-export to QuickBooks. Saved me at least 6 hours a week of running around.",
+      "I order all my project cement and rebar through Levite now. Prices beat my old yard, delivery hits the site on the day I scheduled, and the receipts auto-export to QuickBooks. Saved me at least 6 hours a week of running around.",
     name: "Marlon Reyes",
     title: "General Contractor · Reyes Build",
     tag: "Material buyer",
@@ -41,7 +41,7 @@ const reviews: Review[] = [
   },
   {
     quote:
-      "The verified-pro badge actually means something. We hired a contractor through Buildora to extend our kitchen and the quality matched the photos in their portfolio. Milestone payments meant we never felt out of control.",
+      "The verified-pro badge actually means something. We hired a contractor through Levite to extend our kitchen and the quality matched the photos in their portfolio. Milestone payments meant we never felt out of control.",
     name: "Daniel Okafor",
     title: "Homeowner · Makati",
     tag: "Service client",

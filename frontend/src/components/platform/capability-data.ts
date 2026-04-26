@@ -73,7 +73,7 @@ export const capabilities: Capability[] = [
     icon: TruckDeliveryIcon,
     eyebrow: "For Buyers · 04",
     title: "Doorstep — or jobsite — delivery",
-    body: "Schedule deliveries to a home, a yard, or an active jobsite. Track every order in real time. The Buildora driver knows the gate code and where to drop your cement.",
+    body: "Schedule deliveries to a home, a yard, or an active jobsite. Track every order in real time. The Levite driver knows the gate code and where to drop your cement.",
     bullets: [
       "Schedule by hour, not by day",
       "Live tracking from supplier to gate",

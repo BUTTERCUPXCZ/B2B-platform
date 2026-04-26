@@ -28,7 +28,7 @@ const trustItems = [
   {
     icon: CheckmarkSquare02Icon,
     title: "Dispute Resolution",
-    body: "Buildora mediates disputes between buyers and sellers within 3 business days, with full transaction logs.",
+    body: "Levite mediates disputes between buyers and sellers within 3 business days, with full transaction logs.",
   },
 ]
 
