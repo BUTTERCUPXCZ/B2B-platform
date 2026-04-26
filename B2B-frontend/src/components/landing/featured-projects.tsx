@@ -5,7 +5,7 @@ import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
 import { cn } from "@/lib/utils"
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
-const filters = ["All", "Suppliers", "Contractors", "Combined", "Hardware"] as const
+const filters = ["All", "New Build", "Renovation", "Repair", "Interior"] as const
 type Filter = (typeof filters)[number]
 
 const projects: Array<{
@@ -15,32 +15,60 @@ const projects: Array<{
   image: string
 }> = [
   {
-    name: "Skyline Materials",
-    category: "Materials supplier · 3 branches",
-    filter: "Suppliers",
+    name: "Cebu Coastal Residence",
+    category: "Heritage Build Co. · ₱4.8M",
+    filter: "New Build",
     image:
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=80&auto=format&fit=crop",
   },
   {
-    name: "Heritage Renovation Co.",
-    category: "Service contractor · 24 crews",
-    filter: "Contractors",
+    name: "Salcedo Loft Refit",
+    category: "Studio Manille · ₱1.2M",
+    filter: "Renovation",
+    image:
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    name: "Tagaytay Hillside Home",
+    category: "Apex General Builders · ₱6.5M",
+    filter: "New Build",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    name: "BGC Penthouse Refit",
+    category: "Northline Interiors · ₱950k",
+    filter: "Interior",
+    image:
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    name: "QC Roof & Gutter Repair",
+    category: "Stormshield Roofing · ₱165k",
+    filter: "Repair",
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80&auto=format&fit=crop",
   },
   {
-    name: "Orange County Build",
-    category: "Materials + services",
-    filter: "Combined",
+    name: "Alabang Two-Storey Build",
+    category: "Pillar Group · ₱8.2M",
+    filter: "New Build",
     image:
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80&auto=format&fit=crop",
   },
   {
-    name: "Foundry Hardware",
-    category: "Hardware retail going digital",
-    filter: "Hardware",
+    name: "Makati Studio Renovation",
+    category: "Northline Interiors · ₱520k",
+    filter: "Renovation",
     image:
-      "https://images.unsplash.com/photo-1495433324511-bf8e92934d90?w=900&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    name: "Pasig Plumbing Overhaul",
+    category: "AquaFlow Plumbing · ₱85k",
+    filter: "Repair",
+    image:
+      "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=900&q=80&auto=format&fit=crop",
   },
 ]
 
@@ -58,10 +86,10 @@ export function FeaturedProjects() {
         <Reveal className="flex flex-col gap-6 pt-8 pb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-white/80 uppercase">
-              Customer stories
+              Real builds
             </span>
             <h2 className="mt-2 text-4xl font-extrabold tracking-tight text-brand-black sm:text-[44px]">
-              Featured Customers
+              Built through Buildora.
             </h2>
           </div>
           <div className="flex flex-wrap gap-1.5 text-xs font-semibold">
@@ -107,7 +135,7 @@ export function FeaturedProjects() {
               />
               <div className="absolute inset-x-0 bottom-0 p-5">
                 <span className="text-[10px] font-semibold tracking-[0.25em] text-brand-orange uppercase">
-                  Case study
+                  {p.filter}
                 </span>
                 <h3 className="mt-1 text-lg leading-tight font-bold">
                   {p.name}
@@ -126,7 +154,7 @@ export function FeaturedProjects() {
             href="#"
             className="inline-flex items-center gap-2 rounded-full bg-brand-black px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink"
           >
-            Explore All Customers
+            Explore all builds
             <span className="flex size-6 items-center justify-center rounded-full bg-brand-orange">
               <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
             </span>

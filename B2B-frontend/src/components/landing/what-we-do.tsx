@@ -4,39 +4,39 @@ import {
   ArrowUpRight01Icon,
   ShoppingBag02Icon,
   CustomerService01Icon,
-  TaskDaily02Icon,
-  Building03Icon,
+  Shield01Icon,
+  TruckDeliveryIcon,
 } from "@hugeicons/core-free-icons"
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
 const capabilities = [
   {
     icon: ShoppingBag02Icon,
-    title: "Materials e-commerce",
-    desc: "B2B storefront with contract pricing, bulk pricing tiers, and quote-to-cart for registered accounts.",
+    title: "24,000+ verified listings",
+    desc: "Cement, rebar, tiles, paint, tools, fixtures — sourced from 200+ identity-verified sellers in one searchable catalog.",
   },
   {
     icon: CustomerService01Icon,
-    title: "Service quoting & RFQs",
-    desc: "Take inbound RFQs from contractors, build line-item quotes from your service catalog, and send for digital sign-off.",
+    title: "Bid-ready service marketplace",
+    desc: "Post a job once, get up to 5 priced bids from vetted contractors within 24 hours. Hire on price, rating, or earliest start.",
   },
   {
-    icon: TaskDaily02Icon,
-    title: "Project workspace",
-    desc: "Run renovations and builds with milestones, daily reports, materials lists, and field photos in one feed.",
+    icon: Shield01Icon,
+    title: "Escrow on every order",
+    desc: "Your money is held in escrow until you sign off. If a job goes sideways, our team mediates and refunds within 36 hours.",
   },
   {
-    icon: Building03Icon,
-    title: "B2B accounts & net terms",
-    desc: "Multi-user buyer accounts with approval limits, contract pricing, and 30/60/90-day net-terms billing.",
+    icon: TruckDeliveryIcon,
+    title: "Doorstep & jobsite delivery",
+    desc: "Schedule delivery to a home, a yard, or an active site — by the hour, not by the day. Live tracking from supplier to gate.",
   },
 ] as const
 
 const targetUsers = [
-  "Materials yards going digital",
-  "Multi-branch parts & spares retailers",
-  "Renovation & service contractors",
-  "Combined materials + services businesses",
+  "Homeowners building or renovating",
+  "Independent contractors stocking jobs",
+  "Materials yards expanding online",
+  "Verified pros winning more jobs",
 ]
 
 export function WhatWeDo() {
@@ -92,12 +92,12 @@ export function WhatWeDo() {
         <div className="lg:col-span-7">
           <Reveal className="mb-10">
             <h2 className="text-4xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-[44px]">
-              What Buildora Does <span className="text-brand-orange">!</span>
+              What you can do here <span className="text-brand-orange">!</span>
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-brand-black/65">
-              Four operational surfaces, one shared customer record, one
-              shared inventory ledger. Stop reconciling between five tools
-              every Friday.
+              Buildora is a marketplace, not just a catalog. Every listing
+              connects to a verified seller, every job connects to a vetted
+              pro, and every transaction is escrow-backed end to end.
             </p>
           </Reveal>
 
@@ -127,7 +127,7 @@ export function WhatWeDo() {
           </StaggerGroup>
 
           <h3 className="mt-12 text-2xl font-bold text-brand-black">
-            What You Can Run On It
+            Built for everyone who builds
           </h3>
           <ul className="mt-4 grid gap-2 text-sm text-brand-black/70 sm:grid-cols-2">
             {targetUsers.map((item) => (
@@ -142,7 +142,7 @@ export function WhatWeDo() {
           </ul>
 
           <a href="#projects" className="pill-cta mt-9">
-            Explore Capabilities
+            Browse the marketplace
             <span className="pill-cta-icon">
               <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
             </span>

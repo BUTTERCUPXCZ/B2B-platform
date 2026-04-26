@@ -1,6 +1,11 @@
 import { motion, useReducedMotion } from "motion/react"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { CheckmarkCircle02Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
+import {
+  CheckmarkCircle02Icon,
+  ArrowRight01Icon,
+  ShoppingBag03Icon,
+  Store02Icon,
+} from "@hugeicons/core-free-icons"
 import { cn } from "@/lib/utils"
 import { capabilities } from "./capability-data"
 
@@ -26,7 +31,10 @@ export function CapabilityDetails() {
             >
               <div className={cn(reverse && "lg:order-2")}>
                 <span className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
-                  <span className="h-px w-6 bg-brand-orange" />
+                  <HugeiconsIcon
+                    icon={c.audience === "Buyers" ? ShoppingBag03Icon : Store02Icon}
+                    className="size-3.5"
+                  />
                   {c.eyebrow}
                 </span>
 

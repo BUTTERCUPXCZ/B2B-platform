@@ -12,23 +12,23 @@ const webinars = [
   {
     date: "May 12",
     time: "11:00 GMT+8 · 60 min",
-    title: "Building a B2B Storefront on Top of an Existing ERP",
-    speaker: "Adi Santoso · Head of Product, Buildora",
-    tag: "Product",
+    title: "Listing 101: Photo, Pricing, and Description Best Practices",
+    speaker: "Adi Santoso · Head of Marketplace, Buildora",
+    tag: "Sellers",
   },
   {
     date: "May 27",
     time: "10:00 GMT+8 · 45 min",
-    title: "Net-Terms Underwriting Without a Finance Team",
-    speaker: "Jonas Park · Operator-in-Residence",
-    tag: "Playbook",
+    title: "How To Plan A Home Renovation You Can Actually Afford",
+    speaker: "Jonas Park · Buyer Advocate, Buildora",
+    tag: "Buyers",
   },
   {
     date: "Jun 03",
     time: "13:00 GMT+8 · 75 min",
-    title: "From Spreadsheets to Project Workspace in 6 Weeks",
+    title: "Q&A With A Verified-Pro: Winning Service Jobs on Buildora",
     speaker: "Elena Marsh · Founder, Heritage Renovation Co.",
-    tag: "Customer",
+    tag: "Contractors",
   },
 ]
 

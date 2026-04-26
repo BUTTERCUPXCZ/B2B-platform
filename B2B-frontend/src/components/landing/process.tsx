@@ -1,10 +1,10 @@
 import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
 const steps = [
-  { step: "Step 1", title: "Discovery & Audit Of Your Operations" },
-  { step: "Step 2", title: "Catalog & Pricing Migration Plan" },
-  { step: "Step 3", title: "Storefront, Quoting & Workspace Launch" },
-  { step: "Step 4", title: "Onboard Your Buyers & Field Teams" },
+  { step: "Step 1", title: "Browse 24,000+ Listings & Verified Pros" },
+  { step: "Step 2", title: "Compare Prices, Reviews, And Bids" },
+  { step: "Step 3", title: "Pay Safely Through Escrow" },
+  { step: "Step 4", title: "Receive Or Sign Off — Build" },
 ]
 
 export function Process() {

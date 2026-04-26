@@ -20,17 +20,17 @@ export function PersonaTestimonial() {
       <div className="relative mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.4fr_1fr] lg:items-center">
         <div>
           <span className="rounded-full bg-brand-orange/15 px-3 py-1 text-[10px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
-            Persona · Combined Materials + Services
+            Seller · Service Contractor
           </span>
           <HugeiconsIcon
             icon={QuoteUpIcon}
             className="mt-6 size-10 text-brand-orange/70"
           />
           <p className="mt-4 text-2xl leading-snug font-medium text-white/90 sm:text-[28px]">
-            &ldquo;We sold materials at the front and ran renovation crews at
-            the back, on completely different software. Buildora put both on
-            one customer record. We now upsell projects from the storefront
-            and invoice both lines on one statement.&rdquo;
+            &ldquo;Before Buildora, half my week went into chasing leads and
+            sending quotes. Now jobs find me. The verified-pro badge means
+            buyers trust the bid before we even meet, and escrow takes the
+            payment risk off the table completely.&rdquo;
           </p>
 
           <div className="mt-7 flex items-center gap-4">
@@ -44,7 +44,7 @@ export function PersonaTestimonial() {
             <div>
               <p className="text-sm font-semibold">Marisol Tan</p>
               <p className="text-xs text-white/55">
-                Managing Director, Orange County Build &amp; Supply
+                Owner, Tan Heritage Construction
               </p>
             </div>
           </div>
@@ -53,17 +53,17 @@ export function PersonaTestimonial() {
             href="#"
             className="mt-9 inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
           >
-            Read the case study
+            Read the seller story
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
           </a>
         </div>
 
         <dl className="grid grid-cols-2 gap-4">
           {[
-            { label: "Orders / mo", value: "4,200" },
-            { label: "Quote turnaround", value: "−47%" },
-            { label: "AR collection days", value: "−18" },
-            { label: "Tools replaced", value: "5" },
+            { label: "Jobs won / mo", value: "+38" },
+            { label: "Avg bid turnaround", value: "<2h" },
+            { label: "Repeat buyers", value: "62%" },
+            { label: "Pro rating", value: "4.9★" },
           ].map((m) => (
             <div
               key={m.label}

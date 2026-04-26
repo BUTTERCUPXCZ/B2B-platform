@@ -12,23 +12,23 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 const trustItems = [
   {
     icon: Shield01Icon,
-    title: "SOC 2 Type II",
-    body: "Independently audited annually. Reports available under NDA on request.",
+    title: "Buyer Escrow",
+    body: "Every order and service payment is held in escrow until you sign off. Funds never reach the seller before delivery.",
   },
   {
     icon: CertificateIcon,
-    title: "GDPR-ready DPA",
-    body: "Standard data processing addendum for EU and global buyers, with sub-processor disclosures.",
+    title: "Verified Sellers",
+    body: "Every seller passes ID + business-permit checks. Service contractors add a license check on top.",
   },
   {
     icon: LicenseIcon,
-    title: "99.9% uptime SLA",
-    body: "Multi-AZ infrastructure with documented uptime credits. 99.99% on Enterprise.",
+    title: "Quality Guarantee",
+    body: "If a delivered material doesn’t match its listing, we refund the order — no questions asked, within 7 days.",
   },
   {
     icon: CheckmarkSquare02Icon,
-    title: "Audit logs & SSO",
-    body: "Full audit trail, SAML SSO, SCIM provisioning, IP allowlisting on Enterprise plans.",
+    title: "Dispute Resolution",
+    body: "Buildora mediates disputes between buyers and sellers within 3 business days, with full transaction logs.",
   },
 ]
 
@@ -39,10 +39,10 @@ export function SecurityStrip() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
-              Security & Compliance
+              Trust &amp; Safety
             </span>
             <h2 className="mt-3 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
-              Procurement-Grade By Default.
+              Buyer-protected by default.
             </h2>
           </div>
           <a

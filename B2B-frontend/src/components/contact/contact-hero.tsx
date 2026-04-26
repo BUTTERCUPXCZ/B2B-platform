@@ -28,19 +28,18 @@ export function ContactHero() {
           variants={fadeUp}
           className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl"
         >
-          Talk To A Construction
+          We&rsquo;re Here For Buyers,
           <br />
-          <span className="text-brand-orange">Commerce Specialist.</span>
+          <span className="text-brand-orange">Sellers, And Everyone In Between.</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75"
         >
-          Sales replies in under 4 business hours. Support tickets are answered
-          same-day during your local working hours. No phone trees, no
-          chatbots — every reply comes from someone who has run a yard or a
-          crew before joining Buildora.
+          Buyer support replies in under 1 hour. Seller success replies same
+          day. Press, partnerships, and contractor applications get a real
+          human reply within 24 hours — no chatbots, no phone trees.
         </motion.p>
       </motion.div>
     </section>

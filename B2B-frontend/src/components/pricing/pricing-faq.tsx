@@ -6,32 +6,32 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
 const faqs = [
   {
-    q: "Can I switch between tiers later?",
-    a: "Yes — upgrade or downgrade anytime. Annual contracts can be moved up at any time (we prorate the difference) and adjusted at renewal. No data migration required between tiers.",
+    q: "Is Buildora really free for buyers?",
+    a: "Yes — buyers never pay a membership fee, transaction fee, or commission. The seller pays a transparent commission per order, which is already built into the listed price. What you see at checkout is what you pay.",
   },
   {
-    q: "What's the difference between Starter and Growth?",
-    a: "Starter is a B2B materials storefront with buyer accounts and basic inventory. Growth adds the service quoting workflow, project workspace, multi-branch support, and net-terms billing — the full combined materials + services operator stack.",
+    q: "How does the seller commission work?",
+    a: "Commission is taken automatically per fulfilled order. Material orders: 8% on Starter, 5% on Growth, 3% on Pro. Service jobs: 8% / 6% / 4% per won job. Payment processing is included — no card-network add-ons.",
   },
   {
-    q: "Do you charge per transaction?",
-    a: "On Starter and Growth, payment processing is 1.9% + $0.30 per order on top of the platform fee. Enterprise plans bundle processing into the contract or let you bring your own merchant account.",
+    q: "What's the difference between Starter, Growth, and Pro?",
+    a: "Starter is free and ideal for small sellers testing the platform — list up to 100 items, pay only when you sell. Growth adds featured placement, analytics, promo tools, and lower commissions. Pro is for high-volume sellers — unlimited listings, top-of-feed placement, daily payouts, and a dedicated CSM.",
   },
   {
-    q: "What does implementation look like?",
-    a: "Average go-live is 6–9 weeks. Growth and Enterprise include a dedicated implementation manager who handles catalog migration, buyer account import, and team training. Most customers replace 3–4 existing tools during onboarding.",
+    q: "Can I switch between seller tiers later?",
+    a: "Yes — upgrade or downgrade anytime. Annual sellers can step up immediately (we prorate the difference) and right-size at renewal. Listings, orders, and reviews stay intact across tier changes.",
   },
   {
-    q: "Is there a free trial?",
-    a: "Yes — 14 days on Starter and Growth, no card required. Enterprise customers get a tailored sandbox during the sales process.",
+    q: "How fast do I get paid?",
+    a: "Weekly payouts to your bank on Starter and Growth (every Friday for the previous week). Pro sellers get daily payouts with same-day settlement on weekdays.",
   },
   {
-    q: "What happens to my data if I cancel?",
-    a: "You can export your full catalog, orders, quotes, and customer records at any time as CSV / JSON. Data is retained for 90 days post-cancellation, then permanently deleted on request per our DPA.",
+    q: "Do service contractors pay the same?",
+    a: "Service contractors apply free and pay only the per-won-job commission (8% / 6% / 4% by tier). Subscriptions are optional but unlock featured placement and the verified-pro badge that boosts win rates by 3.2×.",
   },
   {
-    q: "Do you support custom integrations?",
-    a: "Growth includes our standard integrations (QuickBooks, Xero, SAP B1, Stripe, major shipping carriers). Enterprise plans include scoped custom integration work and custom API quotas.",
+    q: "What if a buyer disputes an order?",
+    a: "Buildora holds the buyer's payment in escrow until they sign off. If a dispute is opened, our team reviews transaction logs and mediates within 3 business days — refunding the buyer or releasing funds to the seller based on the evidence.",
   },
 ]
 

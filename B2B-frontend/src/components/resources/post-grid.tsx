@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils"
 import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
-const categories = ["All", "Playbooks", "Case Studies", "Product", "Industry"] as const
+const categories = ["All", "Buying Guides", "Selling on Buildora", "Project Stories", "Industry"] as const
 type Category = (typeof categories)[number]
 
 type Post = {
@@ -24,95 +24,95 @@ type Post = {
 
 const posts: Post[] = [
   {
-    category: "Playbooks",
-    title: "How to digitize a materials yard in 60 days",
+    category: "Buying Guides",
+    title: "How to compare cement brands without getting burned",
     excerpt:
-      "A week-by-week implementation playbook for moving from spreadsheets and WhatsApp to a B2B storefront with net-terms billing.",
+      "Type, strength class, setting time, fineness — what actually matters when you're filling a warehouse cart, and what's marketing fluff.",
     author: "Cara Lim",
-    readTime: "12 min",
+    readTime: "9 min",
     image:
       "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80&auto=format&fit=crop",
     featured: true,
   },
   {
-    category: "Case Studies",
-    title: "How Skyline Materials 3×'d order volume in two quarters",
+    category: "Project Stories",
+    title: "From bare lot to handover: a ₱4.8M Cebu coastal home",
     excerpt:
-      "From paper invoices to a B2B storefront with 12 contractor accounts on net-30 — and why the warehouse team finally trusts the inventory ledger.",
-    author: "Marlon Reyes",
-    readTime: "9 min",
+      "Inside the 9-month build of the Cebu Coastal Residence — every supplier hired through Buildora, every milestone signed off in escrow.",
+    author: "Heritage Build Co.",
+    readTime: "14 min",
+    image:
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    category: "Selling on Buildora",
+    title: "10 listing photos that actually sell tiles",
+    excerpt:
+      "We analyzed 1,200 tile listings to figure out what photo composition triples click-through. Spoiler: lifestyle shots beat catalog shots, but not how you think.",
+    author: "Adi Santoso",
+    readTime: "7 min",
+    image:
+      "https://images.unsplash.com/photo-1615873968403-89e068629265?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    category: "Industry",
+    title: "What homeowners actually fear about hiring a builder",
+    excerpt:
+      "We surveyed 1,400 homeowners who hired through Buildora about their pre-booking anxieties. Top three: cost overruns, no-shows, and quality. Here's how the platform fixes each.",
+    author: "Priya Hassan",
+    readTime: "11 min",
+    image:
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    category: "Buying Guides",
+    title: "How much rebar does a small house actually need?",
+    excerpt:
+      "A practical materials-takeoff cheat sheet for a 80sqm home — quantities, sizes, and the buffer percentage that saves you a second order.",
+    author: "Jonas Park",
+    readTime: "6 min",
+    image:
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    category: "Selling on Buildora",
+    title: "Going from local yard to top-3 supplier in your category",
+    excerpt:
+      "What sellers who hit Top Seller badge do differently — pricing strategy, listing cadence, response time, and how they handle returns.",
+    author: "Renata Cruz",
+    readTime: "10 min",
     image:
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80&auto=format&fit=crop",
   },
   {
-    category: "Product",
-    title: "Inside the new approval workflows engine",
+    category: "Project Stories",
+    title: "A BGC penthouse refit, end to end",
     excerpt:
-      "Why we rebuilt approvals from scratch, what changed in the data model, and how to migrate from the legacy chain rules.",
-    author: "Adi Santoso",
-    readTime: "7 min",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80&auto=format&fit=crop",
-  },
-  {
-    category: "Industry",
-    title: "What the 2026 construction commerce market looks like",
-    excerpt:
-      "Procurement is finally going digital. We surveyed 240 operators across 12 countries about their plans for the next 18 months.",
-    author: "Priya Hassan",
-    readTime: "14 min",
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80&auto=format&fit=crop",
-  },
-  {
-    category: "Playbooks",
-    title: "Underwriting net-terms for new contractor accounts",
-    excerpt:
-      "A practical credit-check workflow that lets you say yes to 80% of new accounts without taking on bad debt.",
-    author: "Jonas Park",
+      "How Northline Interiors used Buildora to source 47 SKUs from 9 sellers, schedule 5 service crews, and deliver a ₱950k refit two weeks early.",
+    author: "Elena Marsh",
     readTime: "8 min",
     image:
-      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=80&auto=format&fit=crop",
   },
   {
-    category: "Case Studies",
-    title: "Heritage Renovation runs 24 crews on one project workspace",
+    category: "Buying Guides",
+    title: "When to hire a builder vs. when to DIY",
     excerpt:
-      "Going from a paper logbook to a shared field feed cut a full ops hire from the budget — and crews actually adopted it.",
-    author: "Elena Marsh",
-    readTime: "10 min",
+      "A decision tree for homeowners — based on job type, scope, regulatory requirements, and how much you actually value your weekends.",
+    author: "Cara Lim",
+    readTime: "7 min",
     image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80&auto=format&fit=crop",
-  },
-  {
-    category: "Product",
-    title: "Multi-branch inventory: how the new ledger works",
-    excerpt:
-      "Behind the redesign of inventory transfers, low-stock alerts, and serialized SKUs across multiple yards.",
-    author: "Renata Cruz",
-    readTime: "6 min",
-    image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=900&q=80&auto=format&fit=crop",
   },
   {
     category: "Industry",
-    title: "Why combined materials + services is the breakout segment",
+    title: "How escrow changed buyer-seller trust in construction",
     excerpt:
-      "Operators who run both lines convert 2× better than pure suppliers. Here's what the data says about why.",
-    author: "Cara Lim",
-    readTime: "11 min",
+      "Two years of dispute data from Buildora — what works, what we changed, and why the average dispute now resolves in 36 hours instead of 14 days.",
+    author: "Priya Hassan",
+    readTime: "12 min",
     image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80&auto=format&fit=crop",
-  },
-  {
-    category: "Playbooks",
-    title: "Migrating a 20,000-SKU catalog without downtime",
-    excerpt:
-      "A staged migration approach we use with our largest customers — including the validation queries to run before flipping the switch.",
-    author: "Adi Santoso",
-    readTime: "13 min",
-    image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=900&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=80&auto=format&fit=crop",
   },
 ]
 

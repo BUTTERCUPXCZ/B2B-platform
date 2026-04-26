@@ -1,10 +1,10 @@
 import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
 const stats = [
-  { value: "3×", label: "More orders processed", suffix: "vs. spreadsheet baseline" },
-  { value: "40%", label: "Faster quote turnaround", suffix: "median across 200+ customers" },
-  { value: "60%", label: "Less spreadsheet time", suffix: "ops & finance teams combined" },
-  { value: "<60d", label: "Average implementation", suffix: "Growth & Enterprise plans" },
+  { value: "12k+", label: "Verified buyers", suffix: "homeowners, contractors, businesses" },
+  { value: "200+", label: "Active sellers", suffix: "materials suppliers and contractors" },
+  { value: "24h", label: "Bid turnaround", suffix: "median time to first contractor bid" },
+  { value: "₱840M", label: "GMV processed", suffix: "in escrow-protected transactions" },
 ]
 
 export function OutcomeStats() {

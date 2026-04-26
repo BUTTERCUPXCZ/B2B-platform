@@ -9,52 +9,52 @@ type Cell = boolean | string
 
 const groups: Array<{
   label: string
-  rows: Array<{ feature: string; starter: Cell; growth: Cell; enterprise: Cell }>
+  rows: Array<{ feature: string; starter: Cell; growth: Cell; pro: Cell }>
 }> = [
   {
-    label: "Commerce & Catalog",
+    label: "Storefront & Listings",
     rows: [
-      { feature: "B2B materials storefront", starter: true, growth: true, enterprise: true },
-      { feature: "Catalog SKUs", starter: "2,000", growth: "20,000", enterprise: "Unlimited" },
-      { feature: "Bulk pricing tiers", starter: true, growth: true, enterprise: true },
-      { feature: "Custom contract pricing per buyer", starter: false, growth: true, enterprise: true },
-      { feature: "Quote-to-cart for registered accounts", starter: false, growth: true, enterprise: true },
+      { feature: "Storefront page on Buildora", starter: true, growth: true, pro: true },
+      { feature: "Active listings", starter: "100", growth: "1,000", pro: "Unlimited" },
+      { feature: "Custom storefront URL", starter: false, growth: true, pro: true },
+      { feature: "Featured placement on category pages", starter: false, growth: true, pro: true },
+      { feature: "Top-of-feed home & search placement", starter: false, growth: false, pro: true },
     ],
   },
   {
-    label: "Quoting & Projects",
+    label: "Fees",
     rows: [
-      { feature: "Service quoting & RFQs", starter: false, growth: true, enterprise: true },
-      { feature: "Digital quote sign-off", starter: false, growth: true, enterprise: true },
-      { feature: "Project workspace", starter: false, growth: true, enterprise: true },
-      { feature: "Field reports & photo logs", starter: false, growth: true, enterprise: true },
-      { feature: "Custom approval workflows", starter: false, growth: false, enterprise: true },
+      { feature: "Monthly subscription", starter: "Free", growth: "₱4,990", pro: "₱14,990" },
+      { feature: "Sales commission (per material order)", starter: "8%", growth: "5%", pro: "3%" },
+      { feature: "Service commission (per won job)", starter: "8%", growth: "6%", pro: "4%" },
+      { feature: "Payouts", starter: "Weekly", growth: "Weekly", pro: "Daily" },
+      { feature: "Payment processing", starter: "Included", growth: "Included", pro: "Included" },
     ],
   },
   {
-    label: "Accounts & Billing",
+    label: "Marketing & Growth",
     rows: [
-      { feature: "Buyer account users", starter: "5", growth: "25", enterprise: "Unlimited" },
-      { feature: "Branches", starter: "1", growth: "Up to 4", enterprise: "Unlimited" },
-      { feature: "Net-30 / 60 / 90 billing", starter: false, growth: true, enterprise: true },
-      { feature: "Multi-currency", starter: false, growth: true, enterprise: true },
-      { feature: "Spend limits & approval chains", starter: false, growth: false, enterprise: true },
+      { feature: "Promo codes & discount campaigns", starter: false, growth: true, pro: true },
+      { feature: "Flash-deal slots on home page", starter: false, growth: "2 / mo", pro: "Unlimited" },
+      { feature: "Verified-pro badge eligibility", starter: false, growth: true, pro: true },
+      { feature: "Custom contract pricing per buyer", starter: false, growth: false, pro: true },
+      { feature: "Storefront analytics & cohorts", starter: "Basic", growth: "Full", pro: "Full + API" },
     ],
   },
   {
-    label: "Security & Support",
+    label: "Support",
     rows: [
-      { feature: "Email & chat support", starter: true, growth: true, enterprise: true },
-      { feature: "Dedicated onboarding manager", starter: false, growth: true, enterprise: true },
-      { feature: "Named CSM + QBRs", starter: false, growth: false, enterprise: true },
-      { feature: "SSO, SCIM, audit logs", starter: false, growth: false, enterprise: true },
-      { feature: "SOC 2 reports & DPA", starter: false, growth: false, enterprise: true },
-      { feature: "Uptime SLA", starter: "99.9%", growth: "99.9%", enterprise: "99.99%" },
+      { feature: "Email support", starter: true, growth: true, pro: true },
+      { feature: "Chat support SLA", starter: "24h", growth: "4h", pro: "1h" },
+      { feature: "Onboarding migration manager", starter: false, growth: true, pro: true },
+      { feature: "Dedicated success manager", starter: false, growth: false, pro: true },
+      { feature: "Quarterly performance reviews", starter: false, growth: false, pro: true },
+      { feature: "Open API & webhook access", starter: false, growth: false, pro: true },
     ],
   },
 ]
 
-const cols = ["starter", "growth", "enterprise"] as const
+const cols = ["starter", "growth", "pro"] as const
 
 export function ComparisonTable() {
   return (
@@ -62,10 +62,10 @@ export function ComparisonTable() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 text-center">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
-            Compare Plans
+            Compare Seller Plans
           </span>
           <h2 className="mt-3 text-4xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-[44px]">
-            Every Capability, Side By Side
+            Every benefit, side by side.
           </h2>
         </div>
 

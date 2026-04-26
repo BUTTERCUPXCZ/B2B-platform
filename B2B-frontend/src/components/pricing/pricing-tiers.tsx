@@ -30,80 +30,80 @@ const tiers: Tier[] = [
   {
     id: "starter",
     name: "Starter",
-    tagline: "For materials yards and hardware stores going digital.",
+    tagline: "For new sellers testing the marketplace. List free, pay only when you sell.",
     icon: Rocket01Icon,
-    monthly: 149,
-    annual: 119,
-    ctaLabel: "Start free trial",
+    monthly: 0,
+    annual: 0,
+    ctaLabel: "Start selling free",
     ctaHref: "#trial",
     meta: [
-      { label: "Users", value: "Up to 5" },
-      { label: "Branches", value: "1" },
-      { label: "Orders / mo", value: "500" },
-      { label: "Catalog SKUs", value: "2,000" },
+      { label: "Listings", value: "Up to 100" },
+      { label: "Sales commission", value: "8%" },
+      { label: "Service commission", value: "8%" },
+      { label: "Payouts", value: "Weekly" },
     ],
     features: [
-      { label: "B2B materials storefront", included: true },
-      { label: "Buyer accounts & order history", included: true },
-      { label: "Inventory & low-stock alerts", included: true },
-      { label: "Stripe & local card payments", included: true },
-      { label: "Email + chat support", included: true },
-      { label: "Service quoting & RFQs", included: false },
-      { label: "Project workspace & field reports", included: false },
-      { label: "Net-terms billing & contract pricing", included: false },
+      { label: "Storefront page on Buildora", included: true },
+      { label: "Up to 100 active listings", included: true },
+      { label: "Standard search placement", included: true },
+      { label: "Basic seller dashboard", included: true },
+      { label: "Email support (24h SLA)", included: true },
+      { label: "Featured placement & search boost", included: false },
+      { label: "Storefront analytics & cohorts", included: false },
+      { label: "Dedicated success manager", included: false },
     ],
   },
   {
     id: "growth",
     name: "Growth",
-    tagline: "For combined materials + services businesses scaling regionally.",
+    tagline: "For active sellers ready to scale reach and conversion.",
     icon: ChartIncreaseIcon,
-    monthly: 449,
-    annual: 359,
-    ctaLabel: "Book a demo",
+    monthly: 4990,
+    annual: 3990,
+    ctaLabel: "Become a seller",
     ctaHref: "#quote",
     highlighted: true,
     meta: [
-      { label: "Users", value: "Up to 25" },
-      { label: "Branches", value: "Up to 4" },
-      { label: "Orders / mo", value: "5,000" },
-      { label: "Catalog SKUs", value: "20,000" },
+      { label: "Listings", value: "Up to 1,000" },
+      { label: "Sales commission", value: "5%" },
+      { label: "Service commission", value: "6%" },
+      { label: "Payouts", value: "Weekly" },
     ],
     features: [
       { label: "Everything in Starter", included: true },
-      { label: "Service quoting & digital sign-off", included: true },
-      { label: "Project workspace & field reports", included: true },
-      { label: "Multi-branch inventory & transfers", included: true },
-      { label: "Net-30 / net-60 billing", included: true },
-      { label: "Customer portal & RFQ inbox", included: true },
-      { label: "Accounting & ERP integrations", included: true },
-      { label: "Dedicated onboarding manager", included: true },
+      { label: "Up to 1,000 active listings", included: true },
+      { label: "Featured placement on category pages", included: true },
+      { label: "Storefront analytics & cohort views", included: true },
+      { label: "Promo codes & flash-deal slots", included: true },
+      { label: "Verified-pro badge eligibility", included: true },
+      { label: "Priority chat support (4h SLA)", included: true },
+      { label: "Onboarding migration manager", included: true },
     ],
   },
   {
     id: "enterprise",
-    name: "Enterprise",
-    tagline: "For multi-region operators with custom workflows and audit needs.",
+    name: "Pro",
+    tagline: "For high-volume sellers & multi-branch operators.",
     icon: Building03Icon,
-    monthly: null,
-    annual: null,
+    monthly: 14990,
+    annual: 11990,
     ctaLabel: "Talk to sales",
     ctaHref: "#sales",
     meta: [
-      { label: "Users", value: "Unlimited" },
-      { label: "Branches", value: "Unlimited" },
-      { label: "Orders / mo", value: "Unlimited" },
-      { label: "Catalog SKUs", value: "Unlimited" },
+      { label: "Listings", value: "Unlimited" },
+      { label: "Sales commission", value: "3%" },
+      { label: "Service commission", value: "4%" },
+      { label: "Payouts", value: "Daily" },
     ],
     features: [
       { label: "Everything in Growth", included: true },
+      { label: "Unlimited listings across branches", included: true },
+      { label: "Top-of-feed placement on home & search", included: true },
       { label: "Custom contract pricing per buyer", included: true },
-      { label: "Approval workflows & spend limits", included: true },
-      { label: "SSO, SCIM, audit logs, SOC 2 reports", included: true },
-      { label: "Dedicated infra & SLAs (99.99%)", included: true },
-      { label: "Custom integrations & API quotas", included: true },
-      { label: "Priority security review", included: true },
-      { label: "Named CSM + quarterly business reviews", included: true },
+      { label: "Daily payouts & priority dispute review", included: true },
+      { label: "Open API & webhook access", included: true },
+      { label: "Dedicated success manager", included: true },
+      { label: "Quarterly performance reviews", included: true },
     ],
   },
 ]
@@ -123,8 +123,9 @@ export function PricingTiers({ billing }: { billing: Billing }) {
       </StaggerGroup>
 
       <p className="mx-auto mt-10 max-w-2xl px-6 text-center text-xs text-brand-black/55">
-        Prices in USD. Plus payment processing (1.9% + $0.30 / order, waived on
-        Enterprise). 14-day free trial on Starter and Growth — no card required.
+        Prices in PHP. Subscription is billed monthly or annually (annual saves 20%).
+        Sales commission is taken automatically per order. Buyers always shop free —
+        no membership fees, no buyer-side commission.
       </p>
     </section>
   )
@@ -133,6 +134,7 @@ export function PricingTiers({ billing }: { billing: Billing }) {
 function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
   const price = billing === "annual" ? tier.annual : tier.monthly
   const isCustom = price === null
+  const isFree = price === 0
 
   return (
     <article
@@ -183,6 +185,18 @@ function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
       <div className="mt-6 flex items-end gap-2">
         {isCustom ? (
           <span className="text-4xl font-extrabold leading-none">Custom</span>
+        ) : isFree ? (
+          <>
+            <span className="text-5xl font-extrabold leading-none">Free</span>
+            <span
+              className={cn(
+                "pb-1 text-xs",
+                tier.highlighted ? "text-white/70" : "text-brand-black/55"
+              )}
+            >
+              · pay only when you sell
+            </span>
+          </>
         ) : (
           <>
             <AnimatePresence mode="popLayout">
@@ -193,7 +207,7 @@ function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
                 exit={{ opacity: 0, y: -10, transition: { duration: 0.15 } }}
                 className="text-5xl font-extrabold leading-none"
               >
-                ${price}
+                ₱{price?.toLocaleString()}
               </motion.span>
             </AnimatePresence>
             <span

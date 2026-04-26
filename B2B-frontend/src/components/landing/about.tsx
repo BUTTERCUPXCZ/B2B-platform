@@ -7,24 +7,24 @@ import { Reveal } from "@/components/motion/primitives"
 
 const tabs = [
   {
-    id: "mission",
-    label: "Our Mission",
-    body: "Bring every construction supply and service business online with the same operational rigor as the largest enterprise distributors — without the eight-figure software bill.",
+    id: "buyers",
+    label: "For Buyers",
+    body: "Homeowners and contractors browse 24,000+ listings from 200+ verified suppliers, compare prices side-by-side, post jobs to vetted builders, and pay through escrow. Free, always — no membership, no hidden buyer fees.",
   },
   {
-    id: "vision",
-    label: "Our Vision",
-    body: "A connected construction economy where materials, labor, and project data flow on shared infrastructure — so a renovation in Cebu and a tower in Riyadh both ship on time.",
+    id: "sellers",
+    label: "For Sellers",
+    body: "Materials yards and hardware retailers list their catalog in days, reach 12,000+ buyers across the country, and get paid weekly straight to the bank. Subscription from free, with transparent commissions per order.",
   },
   {
-    id: "value",
-    label: "Our Value",
-    body: "Outcome-first software. Customers using Buildora process 3× more orders, cut quote turnaround by 40%, and reduce reliance on spreadsheets and WhatsApp by 80%.",
+    id: "contractors",
+    label: "For Contractors",
+    body: "Service contractors apply free, get matched to jobs in their trade and area, send templated bids, and only pay when they win. The verified-pro badge boosts win rates by 3.2× over an unverified pro.",
   },
 ] as const
 
 export function About() {
-  const [active, setActive] = useState<(typeof tabs)[number]["id"]>("mission")
+  const [active, setActive] = useState<(typeof tabs)[number]["id"]>("buyers")
   const activeTab = tabs.find((t) => t.id === active)!
 
   return (
@@ -38,16 +38,15 @@ export function About() {
                 "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80&auto=format&fit=crop')",
             }}
           />
-          <div className="absolute -right-4 bottom-12 hidden w-48 overflow-hidden rounded-md bg-brand-orange p-5 text-white shadow-2xl sm:block">
+          <div className="absolute -right-4 bottom-12 hidden w-52 overflow-hidden rounded-md bg-brand-orange p-5 text-white shadow-2xl sm:block">
             <span className="block text-[10px] font-medium tracking-[0.25em] uppercase">
-              Operating since
+              Marketplace GMV
             </span>
             <span className="mt-2 flex items-end gap-1 leading-none">
-              <span className="text-5xl font-extrabold">14</span>
-              <span className="pb-1.5 text-xs font-semibold uppercase">years</span>
+              <span className="text-5xl font-extrabold">₱840M</span>
             </span>
-            <span className="mt-2 block text-xs text-white/80">
-              powering construction commerce
+            <span className="mt-2 block text-xs text-white/85">
+              processed in escrow across 12k+ buyers
             </span>
           </div>
         </Reveal>
@@ -55,18 +54,18 @@ export function About() {
         <Reveal>
           <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-brand-orange uppercase">
             <span className="h-px w-8 bg-brand-orange" />
-            About Buildora
+            About the Marketplace
           </span>
           <h2 className="mt-4 text-4xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-[44px]">
-            Built By Operators Who Ran
+            One Marketplace.
             <br />
-            Construction Supply Businesses
+            Three Sides Of The Trade.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-brand-black/65">
-            Buildora was founded by a team that spent a decade running materials
-            yards and renovation crews on a tangle of spreadsheets, WhatsApp
-            threads, and disconnected accounting tools. We rebuilt the stack we
-            wished existed — and opened it to the entire industry.
+            Buildora is the construction marketplace where homeowners and
+            contractors shop materials and hire builders, while suppliers and
+            service pros pay a transparent subscription to reach them. Every
+            order moves through escrow — so trust isn&rsquo;t a leap of faith.
           </p>
 
           <div className="mt-8 border-b border-brand-black/10">
@@ -104,8 +103,8 @@ export function About() {
           </AnimatePresence>
 
           <div className="mt-9 flex flex-wrap items-center gap-6">
-            <a href="#quote" className="pill-cta">
-              Talk to Sales
+            <a href="#sell" className="pill-cta">
+              Become a seller
               <span className="pill-cta-icon">
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
               </span>
@@ -116,10 +115,10 @@ export function About() {
               </span>
               <div>
                 <span className="block text-[11px] tracking-wider text-brand-black/50 uppercase">
-                  Want to discuss?
+                  Buyer support
                 </span>
                 <span className="block text-sm font-semibold text-brand-black">
-                  +1 (415) 555-2310
+                  +63 2 8555 2380
                 </span>
               </div>
             </div>

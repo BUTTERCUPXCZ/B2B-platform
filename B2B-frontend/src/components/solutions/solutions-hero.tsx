@@ -28,19 +28,19 @@ export function SolutionsHero() {
           variants={fadeUp}
           className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl lg:text-[64px]"
         >
-          Built For Every Shape Of
+          Built For Everyone
           <br />
-          <span className="text-brand-orange">Construction Commerce.</span>
+          <span className="text-brand-orange">Who Builds.</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75"
         >
-          A materials yard, a parts retailer, a renovation contractor, a hardware
-          chain, and the rare operator who runs all of them — they each have a
-          different RFQ, a different ledger, a different field workflow.
-          Buildora ships a tailored configuration for each.
+          Homeowners renovating a kitchen, contractors stocking a jobsite,
+          materials yards going online, builders winning new projects —
+          Buildora is the construction marketplace that fits every side of the
+          trade.
         </motion.p>
       </motion.div>
     </section>

@@ -13,42 +13,43 @@ import {
 } from "@hugeicons/core-free-icons"
 
 const personas = [
-  "Materials supplier",
-  "Parts & spares retailer",
-  "Service contractor",
-  "Combined materials + services",
-  "Hardware retail",
+  "Buyer — homeowner",
+  "Buyer — contractor",
+  "Seller — materials supplier",
+  "Seller — service contractor",
+  "Press / media",
+  "Partnerships",
   "Other",
 ]
 
 const channels = [
   {
-    icon: HeadsetIcon,
-    label: "Sales",
-    body: "Demos, pricing, procurement questions.",
-    email: "sales@buildora.co",
-    phone: "+1 (415) 555-2310",
-  },
-  {
     icon: Call02Icon,
-    label: "Support",
-    body: "Existing customer? Reach our 24/5 support team.",
-    email: "support@buildora.co",
-    phone: "+1 (415) 555-2380",
+    label: "Buyer Support",
+    body: "Order issues, deliveries, refunds, escrow questions.",
+    email: "help@buildora.co",
+    phone: "+63 2 8555 2380",
   },
   {
-    icon: Megaphone01Icon,
-    label: "Press",
-    body: "Media, analyst inquiries, speaker requests.",
-    email: "press@buildora.co",
-    phone: "—",
+    icon: HeadsetIcon,
+    label: "Seller Success",
+    body: "Listings, payouts, performance, account issues.",
+    email: "sellers@buildora.co",
+    phone: "+63 2 8555 2310",
   },
   {
     icon: Mail01Icon,
-    label: "Partnerships",
-    body: "Integration partners, resellers, implementation firms.",
-    email: "partners@buildora.co",
-    phone: "+1 (415) 555-2399",
+    label: "Become a Seller",
+    body: "Onboarding new materials sellers and contractors.",
+    email: "sales@buildora.co",
+    phone: "+63 2 8555 2330",
+  },
+  {
+    icon: Megaphone01Icon,
+    label: "Press & Partnerships",
+    body: "Media inquiries, integration partners, brand collaborations.",
+    email: "press@buildora.co",
+    phone: "—",
   },
 ]
 
@@ -66,8 +67,9 @@ export function ContactGrid() {
             Send Us A Message
           </h2>
           <p className="mt-3 max-w-md text-sm text-brand-black/60">
-            We route every inbound to a specialist on the right team. Average
-            first reply: 3h 12m during business hours.
+            Tell us who you are and what you need. Buyer support averages
+            34 minutes to first reply. Seller and partnership replies usually
+            land same business day.
           </p>
 
           <AnimatePresence mode="wait">

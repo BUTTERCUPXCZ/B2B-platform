@@ -4,18 +4,18 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 import { staggerFast } from "@/components/motion/variants"
 
 const integrations = [
+  { name: "GCash", category: "Payments" },
+  { name: "Maya", category: "Payments" },
+  { name: "Visa / Mastercard", category: "Payments" },
+  { name: "BPI · BDO · UnionBank", category: "Bank Transfer" },
+  { name: "Lalamove", category: "Delivery" },
+  { name: "Grab Express", category: "Delivery" },
   { name: "QuickBooks", category: "Accounting" },
   { name: "Xero", category: "Accounting" },
-  { name: "SAP B1", category: "ERP" },
-  { name: "NetSuite", category: "ERP" },
-  { name: "Stripe", category: "Payments" },
-  { name: "Adyen", category: "Payments" },
-  { name: "Shopify", category: "Storefront" },
-  { name: "Shippo", category: "Shipping" },
-  { name: "EasyPost", category: "Shipping" },
-  { name: "Slack", category: "Comms" },
+  { name: "Slack", category: "Notifications" },
+  { name: "WhatsApp", category: "Notifications" },
   { name: "Zapier", category: "Automation" },
-  { name: "HubSpot", category: "CRM" },
+  { name: "Open API", category: "Developer" },
 ]
 
 export function IntegrationsStrip() {
@@ -29,14 +29,14 @@ export function IntegrationsStrip() {
               Integrations
             </span>
             <h2 className="mt-3 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
-              Plays Well With Your
+              Pay Any Way.
               <br />
-              Existing Stack.
+              Ship Anywhere.
             </h2>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/85">
-              Buildora ships with first-party integrations across accounting,
-              ERP, payments, shipping, and comms — and a typed REST + webhook
-              API for everything else.
+              Buildora supports every major local payment method, bank, and
+              delivery network. Sellers sync their accounting tools and run
+              everything from one dashboard.
             </p>
             <a
               href="#"

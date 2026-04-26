@@ -7,19 +7,19 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 const faqs = [
   {
     q: "How fast will I hear back?",
-    a: "Sales: under 4 business hours during your local working day. Support: same-day, with a 4-hour SLA on Growth and 1-hour on Enterprise. Press, partnerships, and other inquiries: within 1 business day.",
+    a: "Buyer support: under 1 hour during business hours, under 4 hours overnight. Seller success: same business day. Sales (becoming a seller): under 4 business hours. Press and partnerships: within 1 business day.",
   },
   {
-    q: "How long is a demo?",
-    a: "Standard demos are 45 minutes — 10 minutes of context, 25 minutes of product walkthrough tailored to your business, 10 minutes of Q&A. Bring your team; we encourage 2–4 stakeholders.",
+    q: "I have an order issue — what do I do?",
+    a: "Open a dispute directly from the order page in your account, or email help@buildora.co with your order ID. Funds stay in escrow while we investigate. Most disputes resolve within 36 hours.",
   },
   {
-    q: "Do you offer a free trial?",
-    a: "Yes — 14 days on Starter and Growth, no card required. Enterprise customers get a tailored sandbox environment during the sales process so you can run real data through it.",
+    q: "How do I become a seller?",
+    a: "Submit the ‘Become a Seller’ form (or email sales@buildora.co). We verify your business permit and ID, then walk you through listing your first 10 items. Most sellers go live within 5 business days of applying.",
   },
   {
-    q: "Can you complete our security questionnaire?",
-    a: "Yes. We respond to standard security questionnaires (CAIQ, SIG Lite, custom) within 5 business days. SOC 2 Type II reports, our DPA, and pen-test summaries are available under NDA on request.",
+    q: "What about service contractors?",
+    a: "Service contractors apply through the same channel and add a license check on top of the standard ID verification. Once approved, you appear in the contractor matchmaking feed for jobs in your trade and area.",
   },
 ]
 

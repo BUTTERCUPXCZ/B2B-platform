@@ -1,20 +1,28 @@
+import { useState } from "react"
 import { motion } from "motion/react"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   ArrowRight01Icon,
   CheckmarkCircle02Icon,
-  PlayIcon,
+  Search01Icon,
+  ShoppingBag03Icon,
+  Wrench01Icon,
 } from "@hugeicons/core-free-icons"
+import { cn } from "@/lib/utils"
 import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 import { fadeUp, stagger } from "@/components/motion/variants"
 
+type Mode = "materials" | "services"
+
 const guarantees = [
-  "Unified storefront, quoting, and project workspace in one platform",
-  "Net-terms billing, contract pricing, and multi-user B2B accounts",
-  "Built for materials suppliers, parts sellers, and service contractors",
+  "12,000+ verified buyers across 200+ trusted construction sellers",
+  "Escrow payments — your money is safe until delivery is signed off",
+  "Doorstep & jobsite delivery, scheduled to the hour",
 ]
 
 export function Hero() {
+  const [mode, setMode] = useState<Mode>("materials")
+
   return (
     <section className="relative isolate overflow-hidden bg-brand-ink pt-44 pb-12 text-white">
       <div
@@ -45,35 +53,91 @@ export function Hero() {
             variants={fadeUp}
             className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl lg:text-[68px]"
           >
-            One Platform For
+            Build Anything.
             <br />
-            <span className="text-brand-orange">Materials &amp; Services.</span>
+            <span className="text-brand-orange">Source Everything.</span>
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             className="mt-6 max-w-xl text-base leading-relaxed text-white/75"
           >
-            Buildora is the all-in-one B2B platform for construction supply and service
-            businesses — sell materials online, quote projects faster, and run your
-            field crews from a single source of truth.
+            Shop materials from verified suppliers. Hire vetted builders for
+            every project. One marketplace — from the first bag of cement to
+            the final coat of paint.
           </motion.p>
+
+          <motion.div variants={fadeUp} className="mt-8 max-w-xl">
+            <div className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 p-1 text-[11px] font-semibold backdrop-blur">
+              {(["materials", "services"] as const).map((m) => (
+                <button
+                  key={m}
+                  type="button"
+                  onClick={() => setMode(m)}
+                  className={cn(
+                    "relative inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 tracking-[0.18em] uppercase transition-colors",
+                    mode === m ? "text-white" : "text-white/60 hover:text-white"
+                  )}
+                >
+                  {mode === m && (
+                    <motion.span
+                      layoutId="hero-mode-pill"
+                      className="absolute inset-0 rounded-full bg-brand-orange shadow-lg"
+                      transition={{ type: "spring", stiffness: 320, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative flex items-center gap-1.5">
+                    <HugeiconsIcon
+                      icon={mode === "materials" ? ShoppingBag03Icon : Wrench01Icon}
+                      className="size-3"
+                    />
+                    {m === "materials" ? "Shop materials" : "Hire a builder"}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            <form
+              className="mt-3 flex items-center gap-2 rounded-full bg-white p-1.5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] focus-within:ring-2 focus-within:ring-brand-orange/40"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/55">
+                <HugeiconsIcon icon={Search01Icon} className="size-4" />
+              </span>
+              <input
+                type="search"
+                placeholder={
+                  mode === "materials"
+                    ? "Search 24,000+ materials — cement, tiles, tools…"
+                    : "Search 1,800+ services — roofing, plumbing, full builds…"
+                }
+                className="flex-1 bg-transparent py-1.5 text-sm text-brand-black placeholder:text-brand-black/45 outline-none"
+              />
+              <button
+                type="submit"
+                className="inline-flex h-9 items-center gap-1.5 rounded-full bg-brand-orange px-4 text-[11px] font-semibold tracking-[0.18em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+              >
+                Search
+                <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
+              </button>
+            </form>
+          </motion.div>
 
           <motion.div
             variants={fadeUp}
-            className="mt-8 flex flex-wrap items-center gap-4"
+            className="mt-7 flex flex-wrap items-center gap-4"
           >
-            <a href="#quote" className="pill-cta">
-              Book a Demo
+            <a href="#projects" className="pill-cta">
+              Browse marketplace
               <span className="pill-cta-icon">
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
               </span>
             </a>
-            <a href="#projects" className="pill-ghost">
+            <a href="#sell" className="pill-ghost">
               <span className="flex size-7 items-center justify-center rounded-full bg-white/15">
-                <HugeiconsIcon icon={PlayIcon} className="size-3" />
+                <HugeiconsIcon icon={ShoppingBag03Icon} className="size-3" />
               </span>
-              Watch 90-sec tour
+              Sell on Buildora
             </a>
           </motion.div>
         </div>
@@ -104,21 +168,21 @@ export function Hero() {
 }
 
 const stats = [
-  { value: "200+", label: "Construction\nbusinesses" },
-  { value: "$840M", label: "B2B GMV\nprocessed" },
-  { value: "40%", label: "Faster quote\nturnaround" },
-  { value: "99.9%", label: "Platform\nuptime" },
+  { value: "12k+", label: "Verified\nbuyers" },
+  { value: "200+", label: "Active\nsellers" },
+  { value: "24h", label: "Median bid\nturnaround" },
+  { value: "₱840M", label: "Escrow GMV\nprocessed" },
 ]
 
 function Stats() {
   return (
     <StaggerGroup className="relative mx-auto mt-8 grid max-w-7xl grid-cols-2 gap-8 px-6 sm:grid-cols-4">
       {stats.map((s) => (
-        <StaggerItem key={s.label} className="flex items-baseline gap-3">
-          <span className="text-3xl font-extrabold text-brand-orange sm:text-4xl">
+        <StaggerItem key={s.label} className="flex flex-col gap-1.5 border-l-2 border-brand-orange/40 pl-4">
+          <span className="text-3xl font-extrabold leading-none text-brand-orange sm:text-4xl">
             {s.value}
           </span>
-          <span className="text-xs leading-tight text-white/70 whitespace-pre-line">
+          <span className="text-xs leading-snug text-white/70 whitespace-pre-line">
             {s.label}
           </span>
         </StaggerItem>

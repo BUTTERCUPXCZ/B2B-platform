@@ -6,7 +6,7 @@ import { WhatWeDo } from "@/components/landing/what-we-do"
 import { Process } from "@/components/landing/process"
 import { FeaturedProjects } from "@/components/landing/featured-projects"
 import { Testimonial } from "@/components/landing/testimonial"
-import { QuoteForm } from "@/components/landing/quote-form"
+import { SellOnBuildora } from "@/components/marketplace/sell-on-buildora"
 import { Footer } from "@/components/landing/footer"
 
 export const Route = createFileRoute("/")({
@@ -23,7 +23,7 @@ function LandingPage() {
       <Process />
       <FeaturedProjects />
       <Testimonial />
-      <QuoteForm />
+      <SellOnBuildora />
       <Footer />
     </main>
   )

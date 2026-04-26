@@ -39,18 +39,19 @@ export function PricingHero({
           variants={fadeUp}
           className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl"
         >
-          Pricing That Scales With
+          Buyers shop free.
           <br />
-          <span className="text-brand-orange">Your Construction Business.</span>
+          <span className="text-brand-orange">Sellers grow with us.</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75"
         >
-          One platform, three tiers. Start with the storefront, add quoting and
-          project workspace as you grow, and consolidate onto Enterprise when
-          you need contract pricing, multi-branch, and dedicated support.
+          Browsing, ordering, and hiring on Buildora is always free for buyers.
+          Materials sellers and service contractors pay a transparent
+          subscription + commission to list their products and win jobs.
+          Annual billing saves 20%.
         </motion.p>
 
         <motion.div variants={fadeUp}>

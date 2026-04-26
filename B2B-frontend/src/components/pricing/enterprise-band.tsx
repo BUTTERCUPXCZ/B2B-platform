@@ -9,18 +9,18 @@ import {
 const points = [
   {
     icon: Building03Icon,
-    title: "Multi-region operators",
-    body: "Run dozens of branches, multiple legal entities, and regional pricing books on shared infrastructure.",
+    title: "Multi-branch sellers",
+    body: "Run a regional chain of yards or stores under one Pro account. Listings stay branch-scoped; payouts can be split per location.",
   },
   {
     icon: UserMultipleIcon,
-    title: "Procurement-grade buyer accounts",
-    body: "SSO, spend limits, approval chains, and per-buyer contract pricing your largest customers expect.",
+    title: "Custom contract pricing",
+    body: "Negotiate per-buyer prices for your top contractors directly inside Buildora. Automatic order discounts, no spreadsheets.",
   },
   {
     icon: ChartIncreaseIcon,
-    title: "Built-in compliance posture",
-    body: "SOC 2 Type II, GDPR-ready DPA, audit logs, and dedicated infra options for regulated industries.",
+    title: "Top-of-feed reach",
+    body: "Pro sellers earn the lowest commission and the highest visibility — top placement on home, search, and category pages.",
   },
 ]
 
@@ -38,18 +38,18 @@ export function EnterpriseBand() {
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1fr_1.3fr] lg:items-center">
         <div>
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-black uppercase">
-            Enterprise
+            Pro Plan
           </span>
           <h2 className="mt-3 text-4xl leading-tight font-extrabold tracking-tight sm:text-[42px]">
-            Built For The Largest
+            Top-of-feed reach.
             <br />
-            Construction Operators.
+            Lowest commission.
           </h2>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-white/85">
-            When you outgrow the Growth tier — multi-region, multi-entity,
-            audited, integrated — Enterprise gives you a dedicated CSM,
-            custom contracts, and infrastructure that meets procurement
-            standards for the largest buyers in the industry.
+            For high-volume sellers running multiple branches or service
+            crews. Daily payouts, the lowest commissions on the platform, a
+            dedicated success manager, and prime placement that puts your
+            listings in front of every relevant buyer.
           </p>
           <a
             href="#sales"

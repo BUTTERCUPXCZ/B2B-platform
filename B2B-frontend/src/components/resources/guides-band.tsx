@@ -10,21 +10,21 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 const guides = [
   {
     icon: BookOpen01Icon,
-    title: "B2B E-commerce Playbook for Construction",
-    body: "62-page operator playbook on launching a B2B storefront for materials and parts — pricing models, catalog structure, buyer onboarding.",
-    pages: "62 pages",
+    title: "Homeowner's Construction Buying Guide",
+    body: "How to plan a renovation or new build on Buildora — from materials takeoff to hiring contractors to managing payments through escrow.",
+    pages: "48 pages",
   },
   {
     icon: LibrariesIcon,
-    title: "RFQ-to-Cash in 30 Days",
-    body: "A step-by-step quoting workflow used by our top-performing customers to compress RFQ turnaround from days to hours.",
-    pages: "28 pages",
+    title: "Seller Playbook: Your First 90 Days",
+    body: "The exact onboarding rhythm Top Seller badge holders follow — pricing, listings, photography, response time, and review strategy.",
+    pages: "36 pages",
   },
   {
     icon: BookOpen01Icon,
-    title: "Net-Terms Underwriting Cheat Sheet",
-    body: "The exact credit-check workflow our growth customers use to approve 80% of new contractor accounts without taking on bad debt.",
-    pages: "14 pages",
+    title: "Contractor's Guide to Winning Bids",
+    body: "How verified-pro contractors structure their bids, photos, and response time to win 3× more jobs than the median pro on the platform.",
+    pages: "22 pages",
   },
 ]
 

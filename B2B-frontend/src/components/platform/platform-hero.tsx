@@ -30,27 +30,27 @@ export function PlatformHero() {
           variants={fadeUp}
           className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl lg:text-[68px]"
         >
-          Every Construction Commerce
+          One Platform.
           <br />
-          <span className="text-brand-orange">Surface, In One Stack.</span>
+          <span className="text-brand-orange">Both Sides Of The Trade.</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75"
         >
-          Buildora unifies eight operational surfaces — storefront, quoting,
-          projects, accounts, inventory, billing, customer portal, and
-          analytics — onto a single shared customer and inventory ledger. Stop
-          reconciling between five tools every Friday.
+          Buildora is the marketplace where buyers shop construction materials,
+          hire vetted builders, and pay safely — and where suppliers and
+          contractors list their products and services to reach buyers ready
+          to build.
         </motion.p>
 
         <motion.div
           variants={fadeUp}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <Link to="/" hash="quote" className="pill-cta">
-            Book a Demo
+          <Link to="/" className="pill-cta">
+            Start Shopping
             <span className="pill-cta-icon">
               <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
             </span>
@@ -59,7 +59,7 @@ export function PlatformHero() {
             <span className="flex size-7 items-center justify-center rounded-full bg-white/15">
               <HugeiconsIcon icon={PlayIcon} className="size-3" />
             </span>
-            See Pricing
+            Sell on Buildora
           </Link>
         </motion.div>
       </motion.div>

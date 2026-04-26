@@ -1,14 +1,14 @@
 import { capabilities } from "./capability-data"
 
 const shortLabels: Record<string, string> = {
+  marketplace: "Marketplace",
+  quotes: "Job Quotes",
+  escrow: "Escrow",
+  delivery: "Delivery",
   storefront: "Storefront",
-  quoting: "Quoting",
-  projects: "Projects",
-  accounts: "B2B Accounts",
-  inventory: "Inventory",
-  billing: "Billing",
-  portal: "Portal",
-  analytics: "Analytics",
+  services: "Service Listings",
+  dashboard: "Seller Dashboard",
+  trust: "Trust & Verification",
 }
 
 export function CapabilityNav() {

@@ -29,18 +29,18 @@ export function ResourcesHero() {
           variants={fadeUp}
           className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl"
         >
-          Field Reports From The
+          Everything You Need
           <br />
-          <span className="text-brand-orange">Construction Frontier.</span>
+          <span className="text-brand-orange">To Build Smarter.</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75"
         >
-          Operator playbooks, customer case studies, and product deep-dives —
-          written by the team that ships Buildora and the operators who run on
-          it. No fluff, no listicles.
+          Buying guides for homeowners and contractors, growth playbooks for
+          sellers, and project deep-dives from real Buildora builds. Written by
+          the people who ship the marketplace and the operators who use it.
         </motion.p>
 
         <motion.form
@@ -53,7 +53,7 @@ export function ResourcesHero() {
           </span>
           <input
             type="search"
-            placeholder="Search playbooks, case studies, product posts…"
+            placeholder="Search guides, builds, seller playbooks…"
             className="flex-1 bg-transparent py-3 pr-4 text-sm text-white placeholder:text-white/40 outline-none"
           />
           <button
