@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import { fadeUp, stagger } from "@/components/motion/primitives"
+import { fadeUp, stagger } from "@/components/motion/variants"
 
 export function SolutionsHero() {
   return (

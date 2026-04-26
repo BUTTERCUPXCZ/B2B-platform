@@ -1,7 +1,7 @@
 import { motion } from "motion/react"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { Search01Icon } from "@hugeicons/core-free-icons"
-import { fadeUp, stagger } from "@/components/motion/primitives"
+import { fadeUp, stagger } from "@/components/motion/variants"
 
 export function ResourcesHero() {
   return (

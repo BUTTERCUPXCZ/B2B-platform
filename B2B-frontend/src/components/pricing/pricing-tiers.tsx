@@ -9,7 +9,7 @@ import {
   Building03Icon,
 } from "@hugeicons/core-free-icons"
 import { cn } from "@/lib/utils"
-import type { Billing } from "./pricing-hero"
+import type { Billing } from "./use-billing"
 import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 
 type Tier = {

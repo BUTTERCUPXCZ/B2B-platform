@@ -5,7 +5,8 @@ import {
   CheckmarkCircle02Icon,
   PlayIcon,
 } from "@hugeicons/core-free-icons"
-import { fadeUp, stagger, StaggerGroup, StaggerItem } from "@/components/motion/primitives"
+import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
+import { fadeUp, stagger } from "@/components/motion/variants"
 
 const guarantees = [
   "Unified storefront, quoting, and project workspace in one platform",

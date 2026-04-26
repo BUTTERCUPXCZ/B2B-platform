@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router"
 import { motion } from "motion/react"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowRight01Icon, PlayIcon } from "@hugeicons/core-free-icons"
-import { fadeUp, stagger } from "@/components/motion/primitives"
+import { fadeUp, stagger } from "@/components/motion/variants"
 
 export function PlatformHero() {
   return (

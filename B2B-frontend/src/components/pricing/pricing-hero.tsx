@@ -1,9 +1,7 @@
-import { useState } from "react"
 import { motion } from "motion/react"
 import { cn } from "@/lib/utils"
-import { fadeUp, stagger } from "@/components/motion/primitives"
-
-export type Billing = "monthly" | "annual"
+import { fadeUp, stagger } from "@/components/motion/variants"
+import type { Billing } from "./use-billing"
 
 export function PricingHero({
   billing,
@@ -112,6 +110,3 @@ function BillingToggle({
   )
 }
 
-export function useBilling() {
-  return useState<Billing>("annual")
-}

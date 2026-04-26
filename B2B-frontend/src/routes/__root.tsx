@@ -16,7 +16,7 @@ function RootLayout() {
   useEffect(() => {
     if (location.hash) return
     window.scrollTo({ top: 0, behavior: "instant" })
-  }, [location.pathname])
+  }, [location.pathname, location.hash])
 
   return (
     <>

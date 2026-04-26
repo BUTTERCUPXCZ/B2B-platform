@@ -1,6 +1,7 @@
 import { HugeiconsIcon } from "@hugeicons/react"
 import { LinkIcon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
-import { StaggerGroup, StaggerItem, staggerFast } from "@/components/motion/primitives"
+import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
+import { staggerFast } from "@/components/motion/variants"
 
 const integrations = [
   { name: "QuickBooks", category: "Accounting" },
