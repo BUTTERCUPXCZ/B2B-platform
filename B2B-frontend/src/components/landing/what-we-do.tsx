@@ -41,7 +41,7 @@ const targetUsers = [
 
 export function WhatWeDo() {
   return (
-    <section className="relative overflow-hidden bg-[#f5f3ef] py-24">
+    <section className="relative overflow-hidden bg-[#f5f3ef] py-16 sm:py-20 lg:py-24">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 bg-cover bg-left opacity-[0.06] lg:block"
@@ -60,7 +60,7 @@ export function WhatWeDo() {
       />
 
       <div className="relative mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-12 lg:items-center">
-        <div className="relative lg:col-span-5">
+        <div className="relative hidden lg:col-span-5 lg:block">
           <div className="relative h-[560px]">
             <div
               className="absolute top-0 left-0 size-56 overflow-hidden rounded-md bg-cover bg-center shadow-2xl"
@@ -83,7 +83,7 @@ export function WhatWeDo() {
                   "url('https://images.unsplash.com/photo-1591955506264-3f5a6834570a?w=600&q=80&auto=format&fit=crop')",
               }}
             />
-            <span className="absolute top-4 right-4 rounded-full bg-brand-orange px-4 py-1.5 text-[10px] font-semibold tracking-[0.25em] text-white uppercase shadow-lg">
+            <span className="absolute top-4 right-4 rounded-full bg-brand-orange px-4 py-1.5 text-[10px] font-semibold tracking-[0.25em] text-brand-ink uppercase shadow-lg">
               Real customers
             </span>
           </div>
@@ -105,10 +105,10 @@ export function WhatWeDo() {
             {capabilities.map((c) => (
               <StaggerItem
                 key={c.title}
-                className="group relative overflow-hidden rounded-md border border-brand-black/10 bg-white p-5 transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_20px_40px_-20px_rgba(255,116,32,0.4)]"
+                className="group relative overflow-hidden rounded-md border border-brand-black/10 bg-white p-5 transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_20px_40px_-20px_rgba(201,169,97,0.4)]"
               >
                 <div className="flex items-start justify-between">
-                  <span className="flex size-11 items-center justify-center rounded-md bg-brand-orange/10 text-brand-orange transition-colors group-hover:bg-brand-orange group-hover:text-white">
+                  <span className="flex size-11 items-center justify-center rounded-md bg-brand-orange/10 text-brand-orange transition-colors group-hover:bg-brand-orange group-hover:text-brand-ink">
                     <HugeiconsIcon icon={c.icon} className="size-5" />
                   </span>
                   <HugeiconsIcon

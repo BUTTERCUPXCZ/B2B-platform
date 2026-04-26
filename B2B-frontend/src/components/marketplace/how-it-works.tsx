@@ -55,7 +55,7 @@ const serviceSteps: Step[] = [
 
 export function HowItWorks() {
   return (
-    <section className="bg-[#f5f3ef] py-24">
+    <section className="bg-[#f5f3ef] py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mb-12 text-center">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
@@ -99,7 +99,7 @@ function Path({
   return (
     <Reveal className="rounded-md border border-brand-black/10 bg-white p-7 sm:p-9">
       <div className="flex items-center gap-3">
-        <span className="flex size-12 items-center justify-center rounded-md bg-brand-orange text-white">
+        <span className="flex size-12 items-center justify-center rounded-md bg-brand-orange text-brand-ink">
           <HugeiconsIcon icon={icon} className="size-5" />
         </span>
         <div>

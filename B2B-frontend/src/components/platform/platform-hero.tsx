@@ -6,7 +6,7 @@ import { fadeUp, stagger } from "@/components/motion/variants"
 
 export function PlatformHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-ink pt-44 pb-24 text-white">
+    <section className="relative isolate overflow-hidden bg-brand-ink pt-32 sm:pt-40 lg:pt-44 pb-16 sm:pb-20 lg:pb-24 text-white">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-25"

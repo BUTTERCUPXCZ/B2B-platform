@@ -3,7 +3,6 @@ import { motion } from "motion/react"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   ArrowRight01Icon,
-  CheckmarkCircle02Icon,
   Search01Icon,
   ShoppingBag03Icon,
   Wrench01Icon,
@@ -14,17 +13,11 @@ import { fadeUp, stagger } from "@/components/motion/variants"
 
 type Mode = "materials" | "services"
 
-const guarantees = [
-  "12,000+ verified buyers across 200+ trusted construction sellers",
-  "Escrow payments — your money is safe until delivery is signed off",
-  "Doorstep & jobsite delivery, scheduled to the hour",
-]
-
 export function Hero() {
   const [mode, setMode] = useState<Mode>("materials")
 
   return (
-    <section className="relative isolate overflow-hidden bg-brand-ink pt-44 pb-12 text-white">
+    <section className="relative isolate overflow-hidden bg-brand-ink pt-32 sm:pt-40 lg:pt-44 pb-12 text-white">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-60"
@@ -43,7 +36,7 @@ export function Hero() {
       />
 
       <motion.div
-        className="relative mx-auto grid max-w-7xl gap-10 px-6 pb-32 lg:grid-cols-12 lg:gap-12"
+        className="relative mx-auto grid max-w-7xl gap-10 px-6 pb-16 sm:pb-24 lg:grid-cols-12 lg:gap-12 lg:pb-32"
         initial="hidden"
         animate="show"
         variants={stagger}
@@ -51,7 +44,7 @@ export function Hero() {
         <div className="lg:col-span-7">
           <motion.h1
             variants={fadeUp}
-            className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl lg:text-[68px]"
+            className="mt-6 text-4xl leading-[1.05] font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-[68px]"
           >
             Build Anything.
             <br />
@@ -115,7 +108,7 @@ export function Hero() {
               />
               <button
                 type="submit"
-                className="inline-flex h-9 items-center gap-1.5 rounded-full bg-brand-orange px-4 text-[11px] font-semibold tracking-[0.18em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+                className="inline-flex h-9 items-center gap-1.5 rounded-full bg-brand-orange px-4 text-[11px] font-semibold tracking-[0.18em] text-brand-ink uppercase transition-colors hover:bg-brand-orange-soft"
               >
                 Search
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
@@ -144,23 +137,6 @@ export function Hero() {
 
         <div className="hidden lg:col-span-5 lg:block" aria-hidden />
       </motion.div>
-
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-6 bottom-32 hidden max-w-md rounded-md bg-brand-orange p-6 text-white shadow-[0_30px_60px_-30px_rgba(255,116,32,0.6)] lg:block"
-      >
-        <ul className="space-y-3 text-sm font-medium">
-          {guarantees.map((g) => (
-            <li key={g} className="flex items-start gap-2">
-              <HugeiconsIcon
-                icon={CheckmarkCircle02Icon}
-                className="mt-0.5 size-4 shrink-0"
-              />
-              <span>{g}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
 
       <Stats />
     </section>

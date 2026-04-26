@@ -5,7 +5,7 @@ import { fadeUp, stagger } from "@/components/motion/variants"
 
 export function ResourcesHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-ink pt-44 pb-24 text-white">
+    <section className="relative isolate overflow-hidden bg-brand-ink pt-32 sm:pt-40 lg:pt-44 pb-16 sm:pb-20 lg:pb-24 text-white">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -58,7 +58,7 @@ export function ResourcesHero() {
           />
           <button
             type="submit"
-            className="m-1.5 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+            className="m-1.5 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-brand-ink uppercase transition-colors hover:bg-brand-orange-soft"
           >
             Search
           </button>

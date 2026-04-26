@@ -20,7 +20,7 @@ const integrations = [
 
 export function IntegrationsStrip() {
   return (
-    <section className="relative overflow-hidden bg-brand-orange py-20 text-white">
+    <section className="relative overflow-hidden bg-brand-orange py-14 sm:py-16 lg:py-20 text-brand-ink">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:items-end">
           <div>

@@ -31,7 +31,7 @@ export function QuoteForm() {
   return (
     <section
       id="quote"
-      className="relative isolate overflow-hidden bg-brand-ink py-24 text-white"
+      className="relative isolate overflow-hidden bg-brand-ink py-16 sm:py-20 lg:py-24 text-white"
     >
       <div
         aria-hidden

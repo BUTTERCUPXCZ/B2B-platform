@@ -47,7 +47,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.5fr_2fr_1.2fr]">
         <div>
           <a href="#" className="flex items-center gap-2">
-            <span className="flex size-9 items-center justify-center rounded-full bg-brand-orange text-white">
+            <span className="flex size-9 items-center justify-center rounded-full bg-brand-orange text-brand-ink">
               <HugeiconsIcon icon={ConstructionIcon} className="size-5" />
             </span>
             <span className="text-lg font-bold">Buildora</span>
@@ -113,7 +113,7 @@ export function Footer() {
             />
             <button
               type="submit"
-              className="bg-brand-orange px-5 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+              className="bg-brand-orange px-5 py-3 text-xs font-semibold tracking-[0.2em] text-brand-ink uppercase transition-colors hover:bg-brand-orange-soft"
             >
               Subscribe
             </button>

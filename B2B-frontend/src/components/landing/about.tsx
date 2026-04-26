@@ -28,7 +28,7 @@ export function About() {
   const activeTab = tabs.find((t) => t.id === active)!
 
   return (
-    <section className="relative bg-white py-24">
+    <section className="relative bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center">
         <Reveal className="relative">
           <div
@@ -38,7 +38,7 @@ export function About() {
                 "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80&auto=format&fit=crop')",
             }}
           />
-          <div className="absolute -right-4 bottom-12 hidden w-52 overflow-hidden rounded-md bg-brand-orange p-5 text-white shadow-2xl sm:block">
+          <div className="absolute -right-4 bottom-12 hidden w-52 overflow-hidden rounded-md bg-brand-orange p-5 text-brand-ink shadow-2xl sm:block">
             <span className="block text-[10px] font-medium tracking-[0.25em] uppercase">
               Marketplace GMV
             </span>
@@ -68,15 +68,15 @@ export function About() {
             order moves through escrow — so trust isn&rsquo;t a leap of faith.
           </p>
 
-          <div className="mt-8 border-b border-brand-black/10">
-            <div className="flex gap-8">
+          <div className="mt-8 overflow-x-auto border-b border-brand-black/10">
+            <div className="flex gap-5 sm:gap-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   type="button"
                   onClick={() => setActive(tab.id)}
                   className={cn(
-                    "relative pb-3 text-sm font-semibold transition-colors",
+                    "relative shrink-0 pb-3 text-sm font-semibold whitespace-nowrap transition-colors",
                     active === tab.id
                       ? "text-brand-black"
                       : "text-brand-black/50 hover:text-brand-black"

@@ -22,7 +22,7 @@ export function MarketplaceHero() {
   const [mode, setMode] = useState<Mode>("materials")
 
   return (
-    <section className="relative isolate overflow-hidden bg-brand-ink pt-36 pb-24 text-white">
+    <section className="relative isolate overflow-hidden bg-brand-ink pt-36 pb-16 sm:pb-20 lg:pb-24 text-white">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-35"
@@ -116,7 +116,7 @@ export function MarketplaceHero() {
             />
             <button
               type="submit"
-              className="hidden h-11 items-center gap-2 rounded-full bg-brand-orange px-6 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft sm:inline-flex"
+              className="hidden h-11 items-center gap-2 rounded-full bg-brand-orange px-6 text-xs font-semibold tracking-[0.2em] text-brand-ink uppercase transition-colors hover:bg-brand-orange-soft sm:inline-flex"
             >
               Search
               <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
@@ -124,7 +124,7 @@ export function MarketplaceHero() {
             <button
               type="submit"
               aria-label="Search"
-              className="flex size-11 items-center justify-center rounded-full bg-brand-orange text-white transition-colors hover:bg-brand-orange-soft sm:hidden"
+              className="flex size-11 items-center justify-center rounded-full bg-brand-orange text-brand-ink transition-colors hover:bg-brand-orange-soft sm:hidden"
             >
               <HugeiconsIcon icon={ArrowRight01Icon} className="size-4" />
             </button>

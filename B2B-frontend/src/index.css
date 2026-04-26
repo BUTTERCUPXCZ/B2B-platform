@@ -12,10 +12,10 @@
 @theme inline {
     --font-heading: 'Poppins', sans-serif;
     --font-sans: 'Poppins', sans-serif;
-    --color-brand-orange: #ff7420;
-    --color-brand-orange-soft: #ff8c42;
-    --color-brand-black: #191a19;
-    --color-brand-ink: #0f100f;
+    --color-brand-orange: #c9a961;
+    --color-brand-orange-soft: #d9bf86;
+    --color-brand-black: #0a0a0a;
+    --color-brand-ink: #000000;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -63,8 +63,8 @@
     --card-foreground: oklch(0.148 0.004 228.8);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.148 0.004 228.8);
-    --primary: oklch(0.7 0.187 47.6);
-    --primary-foreground: oklch(1 0 0);
+    --primary: oklch(0.72 0.09 87);
+    --primary-foreground: oklch(0.1 0 0);
     --secondary: oklch(0.967 0.001 286.375);
     --secondary-foreground: oklch(0.21 0.006 285.885);
     --muted: oklch(0.963 0.002 197.1);
@@ -98,8 +98,8 @@
     --card-foreground: oklch(0.987 0.002 197.1);
     --popover: oklch(0.218 0.008 223.9);
     --popover-foreground: oklch(0.987 0.002 197.1);
-    --primary: oklch(0.7 0.187 47.6);
-    --primary-foreground: oklch(1 0 0);
+    --primary: oklch(0.72 0.09 87);
+    --primary-foreground: oklch(0.1 0 0);
     --secondary: oklch(0.274 0.006 286.033);
     --secondary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.275 0.011 216.9);
@@ -145,7 +145,7 @@
 
 @layer utilities {
   .pill-cta {
-    @apply inline-flex items-center gap-3 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-brand-orange-soft hover:shadow-[0_10px_30px_-10px_rgba(255,116,32,0.6)];
+    @apply inline-flex items-center gap-3 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-brand-ink transition-all hover:bg-brand-orange-soft hover:shadow-[0_10px_30px_-10px_rgba(201,169,97,0.6)];
   }
   .pill-cta-icon {
     @apply flex size-7 items-center justify-center rounded-full bg-white/20;

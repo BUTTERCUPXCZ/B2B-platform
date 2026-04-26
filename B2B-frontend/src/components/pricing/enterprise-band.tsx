@@ -26,7 +26,7 @@ const points = [
 
 export function EnterpriseBand() {
   return (
-    <section className="relative overflow-hidden bg-brand-orange py-20 text-white">
+    <section className="relative overflow-hidden bg-brand-orange py-14 sm:py-16 lg:py-20 text-brand-ink">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay"

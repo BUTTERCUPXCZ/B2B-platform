@@ -80,7 +80,7 @@ export function FeaturedProjects() {
   return (
     <section
       id="projects"
-      className="relative bg-brand-orange pt-4 pb-20 text-white"
+      className="relative bg-brand-orange pt-4 pb-20 text-brand-ink"
     >
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="flex flex-col gap-6 pt-8 pb-10 sm:flex-row sm:items-end sm:justify-between">

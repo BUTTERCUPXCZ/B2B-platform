@@ -15,7 +15,7 @@ const appBullets = [
 
 export function AppPromo() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-orange py-20 text-white">
+    <section className="relative isolate overflow-hidden bg-brand-orange py-14 sm:py-16 lg:py-20 text-brand-ink">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.2fr_1fr]">
         <Reveal>
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-black uppercase">

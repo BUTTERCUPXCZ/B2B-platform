@@ -58,7 +58,7 @@ export function BuyerReviews() {
   const next = () => setI((p) => (p + 1) % reviews.length)
 
   return (
-    <section className="bg-brand-ink py-20 text-white">
+    <section className="bg-brand-ink py-14 sm:py-16 lg:py-20 text-white">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <span className="text-[11px] font-semibold tracking-[0.35em] text-brand-orange uppercase">
           Buyer Reviews

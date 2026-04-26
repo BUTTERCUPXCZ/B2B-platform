@@ -27,7 +27,7 @@ export function ContactFAQ() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-12 text-center">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
@@ -47,7 +47,7 @@ export function ContactFAQ() {
                 className={cn(
                   "overflow-hidden rounded-md border bg-white transition-colors",
                   isOpen
-                    ? "border-brand-orange/40 shadow-[0_20px_40px_-30px_rgba(255,116,32,0.5)]"
+                    ? "border-brand-orange/40 shadow-[0_20px_40px_-30px_rgba(201,169,97,0.5)]"
                     : "border-brand-black/10"
                 )}
               >
@@ -64,7 +64,7 @@ export function ContactFAQ() {
                     className={cn(
                       "flex size-9 shrink-0 items-center justify-center rounded-full transition-all",
                       isOpen
-                        ? "rotate-45 bg-brand-orange text-white"
+                        ? "rotate-45 bg-brand-orange text-brand-ink"
                         : "bg-brand-orange/10 text-brand-orange"
                     )}
                   >

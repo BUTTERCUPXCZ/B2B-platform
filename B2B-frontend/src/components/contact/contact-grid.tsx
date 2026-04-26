@@ -57,7 +57,7 @@ export function ContactGrid() {
   const [submitted, setSubmitted] = useState(false)
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto grid max-w-7xl gap-5 px-6 lg:grid-cols-[1.4fr_1fr]">
         <Reveal className="rounded-md border border-brand-black/10 bg-white p-7 sm:p-9">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
@@ -116,7 +116,7 @@ export function ContactGrid() {
               />
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-orange py-4 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-orange py-4 text-sm font-semibold tracking-[0.2em] text-brand-ink uppercase transition-colors hover:bg-brand-orange-soft"
               >
                 Send Message
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-4" />

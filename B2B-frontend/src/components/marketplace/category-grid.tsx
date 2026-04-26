@@ -40,7 +40,7 @@ const categories: Category[] = [
 
 export function CategoryGrid() {
   return (
-    <section id="categories" className="bg-white py-20">
+    <section id="categories" className="bg-white py-14 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mb-10 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
           <div>
@@ -64,10 +64,10 @@ export function CategoryGrid() {
           {categories.map((c) => (
             <StaggerItem
               key={c.name}
-              className="group relative flex aspect-square flex-col items-center justify-center rounded-md border border-brand-black/10 bg-white p-4 text-center transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:bg-brand-orange/[0.03] hover:shadow-[0_20px_40px_-20px_rgba(255,116,32,0.4)]"
+              className="group relative flex aspect-square flex-col items-center justify-center rounded-md border border-brand-black/10 bg-white p-4 text-center transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:bg-brand-orange/[0.03] hover:shadow-[0_20px_40px_-20px_rgba(201,169,97,0.4)]"
             >
               <a href="#" aria-label={`Browse ${c.name}`} className="absolute inset-0 rounded-md" />
-              <span className="flex size-12 items-center justify-center rounded-full bg-brand-orange/10 text-brand-orange transition-colors group-hover:bg-brand-orange group-hover:text-white">
+              <span className="flex size-12 items-center justify-center rounded-full bg-brand-orange/10 text-brand-orange transition-colors group-hover:bg-brand-orange group-hover:text-brand-ink">
                 <HugeiconsIcon icon={c.icon} className="size-6" />
               </span>
               <p className="mt-3 text-sm font-semibold text-brand-black">{c.name}</p>

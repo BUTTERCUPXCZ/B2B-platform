@@ -39,7 +39,7 @@ const offices = [
 
 export function OfficesGrid() {
   return (
-    <section className="bg-[#f5f3ef] py-24">
+    <section className="bg-[#f5f3ef] py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
           <div>
@@ -67,7 +67,7 @@ export function OfficesGrid() {
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                   style={{ backgroundImage: `url('${o.image}')` }}
                 />
-                <span className="absolute top-4 left-4 rounded-full bg-brand-orange px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-white uppercase">
+                <span className="absolute top-4 left-4 rounded-full bg-brand-orange px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-brand-ink uppercase">
                   {o.region}
                 </span>
               </div>

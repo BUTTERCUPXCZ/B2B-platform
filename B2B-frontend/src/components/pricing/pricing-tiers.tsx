@@ -110,7 +110,7 @@ const tiers: Tier[] = [
 
 export function PricingTiers({ billing }: { billing: Billing }) {
   return (
-    <section className="relative -mt-32 pb-24">
+    <section className="relative -mt-16 pb-16 sm:-mt-24 sm:pb-20 lg:-mt-32 lg:pb-24">
       <StaggerGroup
         className="mx-auto grid max-w-7xl gap-5 px-6 lg:grid-cols-3"
         amount={0.05}
@@ -141,7 +141,7 @@ function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
       className={cn(
         "relative flex flex-col rounded-md p-7 transition-shadow",
         tier.highlighted
-          ? "bg-brand-orange text-white shadow-[0_30px_60px_-30px_rgba(255,116,32,0.6)]"
+          ? "bg-brand-orange text-brand-ink shadow-[0_30px_60px_-30px_rgba(201,169,97,0.6)]"
           : "border border-brand-black/10 bg-white text-brand-black"
       )}
     >
@@ -228,7 +228,7 @@ function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
           "mt-7 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-xs font-semibold tracking-[0.2em] uppercase transition-colors",
           tier.highlighted
             ? "bg-brand-black text-white hover:bg-brand-ink"
-            : "bg-brand-orange text-white hover:bg-brand-orange-soft"
+            : "bg-brand-orange text-brand-ink hover:bg-brand-orange-soft"
         )}
       >
         {tier.ctaLabel}

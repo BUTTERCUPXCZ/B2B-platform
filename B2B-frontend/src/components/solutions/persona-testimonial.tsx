@@ -3,7 +3,7 @@ import { QuoteUpIcon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
 
 export function PersonaTestimonial() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-ink py-24 text-white">
+    <section className="relative isolate overflow-hidden bg-brand-ink py-16 sm:py-20 lg:py-24 text-white">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-15"
@@ -51,7 +51,7 @@ export function PersonaTestimonial() {
 
           <a
             href="#"
-            className="mt-9 inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+            className="mt-9 inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-brand-ink uppercase transition-colors hover:bg-brand-orange-soft"
           >
             Read the seller story
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />

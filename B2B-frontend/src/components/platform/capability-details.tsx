@@ -12,7 +12,7 @@ import { capabilities } from "./capability-data"
 export function CapabilityDetails() {
   const reduce = useReducedMotion()
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto flex max-w-7xl flex-col gap-24 px-6">
         {capabilities.map((c, i) => {
           const reverse = i % 2 === 1
@@ -80,7 +80,7 @@ export function CapabilityDetails() {
                   className="aspect-[4/3] w-full overflow-hidden rounded-md bg-cover bg-center shadow-[0_30px_60px_-30px_rgba(0,0,0,0.3)]"
                   style={{ backgroundImage: `url('${c.image}')` }}
                 />
-                <span className="absolute -bottom-3 left-6 rounded-full bg-brand-orange px-4 py-1.5 text-[10px] font-semibold tracking-[0.25em] text-white uppercase shadow-lg">
+                <span className="absolute -bottom-3 left-6 rounded-full bg-brand-orange px-4 py-1.5 text-[10px] font-semibold tracking-[0.25em] text-brand-ink uppercase shadow-lg">
                   {c.eyebrow}
                 </span>
               </div>

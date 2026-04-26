@@ -30,7 +30,7 @@ const suppliers: Supplier[] = [
 
 export function TopSuppliers() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mb-10 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
           <div>

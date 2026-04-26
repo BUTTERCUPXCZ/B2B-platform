@@ -23,7 +23,7 @@ const proBullets = [
 
 export function SellOnBuildora() {
   return (
-    <section id="sell" className="relative isolate overflow-hidden bg-brand-ink py-24 text-white">
+    <section id="sell" className="relative isolate overflow-hidden bg-brand-ink py-16 sm:py-20 lg:py-24 text-white">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -112,7 +112,7 @@ export function SellOnBuildora() {
             </ul>
             <a
               href="#"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-xs font-semibold tracking-[0.2em] text-brand-ink uppercase transition-colors hover:bg-brand-orange-soft"
             >
               Apply as a contractor
               <span className="flex size-6 items-center justify-center rounded-full bg-brand-black/30">

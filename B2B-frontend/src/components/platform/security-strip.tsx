@@ -34,7 +34,7 @@ const trustItems = [
 
 export function SecurityStrip() {
   return (
-    <section className="bg-brand-black py-20 text-white">
+    <section className="bg-brand-black py-14 sm:py-16 lg:py-20 text-white">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>

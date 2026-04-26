@@ -83,7 +83,7 @@ export function FeaturedBuilds() {
     active === "All" ? builds : builds.filter((b) => b.filter === active)
 
   return (
-    <section className="bg-[#f5f3ef] py-24">
+    <section className="bg-[#f5f3ef] py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mb-10 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
           <div>

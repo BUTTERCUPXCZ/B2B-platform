@@ -11,7 +11,7 @@ export function PricingHero({
   onChange: (b: Billing) => void
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-ink pt-44 pb-20 text-white">
+    <section className="relative isolate overflow-hidden bg-brand-ink pt-32 sm:pt-40 lg:pt-44 pb-14 sm:pb-16 lg:pb-20 text-white">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-30"

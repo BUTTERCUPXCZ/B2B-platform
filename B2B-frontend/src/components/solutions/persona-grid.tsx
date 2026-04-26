@@ -117,7 +117,7 @@ const personas: Persona[] = [
 
 export function PersonaGrid() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <StaggerGroup className="grid gap-5 lg:grid-cols-2">
           {personas.map((p, idx) => (
@@ -150,7 +150,7 @@ export function PersonaGrid() {
                     {p.side} side
                   </span>
                   {p.highlight && (
-                    <span className="absolute top-4 right-4 rounded-full bg-brand-orange px-3 py-1 text-[10px] font-semibold tracking-[0.25em] text-white uppercase shadow-md">
+                    <span className="absolute top-4 right-4 rounded-full bg-brand-orange px-3 py-1 text-[10px] font-semibold tracking-[0.25em] text-brand-ink uppercase shadow-md">
                       Top earner
                     </span>
                   )}

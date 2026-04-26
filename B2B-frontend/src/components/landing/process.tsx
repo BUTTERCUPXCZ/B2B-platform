@@ -9,7 +9,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="bg-brand-orange py-16 text-white">
+    <section className="bg-brand-orange py-16 text-brand-ink">
       <div className="mx-auto max-w-7xl px-6">
         <StaggerGroup className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div

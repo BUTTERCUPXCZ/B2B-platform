@@ -18,7 +18,7 @@ const trust = [
 
 export function TrustStrip() {
   return (
-    <section className="bg-brand-orange py-10 text-white">
+    <section className="bg-brand-orange py-10 text-brand-ink">
       <StaggerGroup className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-4 px-6">
         {trust.map((t) => (
           <StaggerItem

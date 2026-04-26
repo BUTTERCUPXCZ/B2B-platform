@@ -9,7 +9,7 @@ const stats = [
 
 export function OutcomeStats() {
   return (
-    <section className="bg-brand-orange py-16 text-white">
+    <section className="bg-brand-orange py-16 text-brand-ink">
       <div className="mx-auto max-w-7xl px-6">
         <StaggerGroup className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (

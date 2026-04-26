@@ -58,7 +58,7 @@ const cols = ["starter", "growth", "pro"] as const
 
 export function ComparisonTable() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 text-center">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">

@@ -90,7 +90,7 @@ const services: Service[] = [
 
 export function ServicesShowcase() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mb-10 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
           <div>
@@ -118,7 +118,7 @@ export function ServicesShowcase() {
           {services.map((s) => (
             <StaggerItem
               key={s.name}
-              className="group relative flex flex-col overflow-hidden rounded-md border border-brand-black/15 bg-white shadow-[0_12px_30px_-15px_rgba(15,16,15,0.18)] ring-1 ring-brand-black/[0.04] transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-15px_rgba(255,116,32,0.25)]"
+              className="group relative flex flex-col overflow-hidden rounded-md border border-brand-black/15 bg-white shadow-[0_12px_30px_-15px_rgba(15,16,15,0.18)] ring-1 ring-brand-black/[0.04] transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-15px_rgba(201,169,97,0.25)]"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <div

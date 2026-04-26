@@ -122,7 +122,7 @@ export function PostGrid() {
     active === "All" ? posts : posts.filter((p) => p.category === active)
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
           <div>
@@ -188,7 +188,7 @@ function PostCard({ post }: { post: Post }) {
           className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
           style={{ backgroundImage: `url('${post.image}')` }}
         />
-        <span className="absolute top-4 left-4 rounded-full bg-brand-orange px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-white uppercase">
+        <span className="absolute top-4 left-4 rounded-full bg-brand-orange px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-brand-ink uppercase">
           {post.category}
         </span>
       </div>

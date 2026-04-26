@@ -89,7 +89,7 @@ const deals: Deal[] = [
 
 export function FlashDeals() {
   return (
-    <section className="bg-brand-orange py-20 text-white">
+    <section className="bg-brand-orange py-14 sm:py-16 lg:py-20 text-brand-ink">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mb-8 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
           <div>
