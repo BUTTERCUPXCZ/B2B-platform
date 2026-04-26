@@ -68,13 +68,19 @@ export function Header() {
             >
               <HugeiconsIcon icon={Search01Icon} className="size-4" />
             </button>
-            <a
-              href="#quote"
+            <Link
+              to="/auth/login"
+              className="hidden items-center text-xs font-semibold tracking-wide text-brand-black/80 uppercase transition-colors hover:text-brand-orange md:inline-flex"
+            >
+              Sign in
+            </Link>
+            <Link
+              to="/auth/signup"
               className="hidden items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-wide text-white uppercase transition-colors hover:bg-brand-orange-soft sm:inline-flex"
             >
-              Book a Demo
+              Sign up
               <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
-            </a>
+            </Link>
 
             <button
               type="button"
@@ -162,14 +168,21 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         </nav>
 
         <div className="mt-auto space-y-3 pt-8">
-          <a
-            href="#quote"
+          <Link
+            to="/auth/login"
+            onClick={onClose}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-semibold tracking-[0.18em] text-white uppercase transition-colors hover:bg-white/10"
+          >
+            Sign in
+          </Link>
+          <Link
+            to="/auth/signup"
             onClick={onClose}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-5 py-3 text-xs font-semibold tracking-[0.18em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
           >
-            Book a Demo
+            Sign up
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
-          </a>
+          </Link>
           <p className="text-center text-[10px] tracking-[0.25em] text-white/40 uppercase">
             Construction marketplace · 12k+ buyers
           </p>

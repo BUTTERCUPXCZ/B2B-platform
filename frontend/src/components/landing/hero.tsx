@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link, useNavigate } from "@tanstack/react-router"
 import { motion } from "motion/react"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
@@ -15,6 +16,16 @@ type Mode = "materials" | "services"
 
 export function Hero() {
   const [mode, setMode] = useState<Mode>("materials")
+  const [query, setQuery] = useState("")
+  const navigate = useNavigate()
+
+  const submitSearch = () => {
+    if (!query.trim()) return
+    navigate({
+      to: mode === "materials" ? "/shop" : "/services",
+      search: { q: query.trim() },
+    })
+  }
 
   return (
     <section className="relative isolate overflow-hidden bg-brand-ink pt-32 sm:pt-40 lg:pt-44 pb-12 text-white">
@@ -92,13 +103,18 @@ export function Hero() {
 
             <form
               className="mt-3 flex items-center gap-2 rounded-full bg-white p-1.5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] focus-within:ring-2 focus-within:ring-brand-orange/40"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={(e) => {
+                e.preventDefault()
+                submitSearch()
+              }}
             >
               <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/55">
                 <HugeiconsIcon icon={Search01Icon} className="size-4" />
               </span>
               <input
                 type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
                 placeholder={
                   mode === "materials"
                     ? "Search 24,000+ materials — cement, tiles, tools…"
@@ -120,18 +136,18 @@ export function Hero() {
             variants={fadeUp}
             className="mt-7 flex flex-wrap items-center gap-4"
           >
-            <a href="#projects" className="pill-cta">
+            <Link to="/shop" className="pill-cta">
               Browse marketplace
               <span className="pill-cta-icon">
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
               </span>
-            </a>
-            <a href="#sell" className="pill-ghost">
+            </Link>
+            <Link to="/sell" className="pill-ghost">
               <span className="flex size-7 items-center justify-center rounded-full bg-white/15">
                 <HugeiconsIcon icon={ShoppingBag03Icon} className="size-3" />
               </span>
               Sell on Buildora
-            </a>
+            </Link>
           </motion.div>
         </div>
 

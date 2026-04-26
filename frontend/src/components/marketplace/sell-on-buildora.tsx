@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   ArrowRight01Icon,
@@ -77,15 +78,16 @@ export function SellOnBuildora() {
                 </li>
               ))}
             </ul>
-            <a
-              href="#"
+            <Link
+              to="/sell"
+              search={{ role: "seller" }}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-black px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink"
             >
               Become a seller
               <span className="flex size-6 items-center justify-center rounded-full bg-brand-orange">
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
               </span>
-            </a>
+            </Link>
           </Reveal>
 
           <Reveal className="group relative overflow-hidden rounded-md border border-white/10 bg-white/[0.04] p-8 backdrop-blur-sm sm:p-10">
@@ -110,15 +112,16 @@ export function SellOnBuildora() {
                 </li>
               ))}
             </ul>
-            <a
-              href="#"
+            <Link
+              to="/sell"
+              search={{ role: "contractor" }}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
             >
               Apply as a contractor
               <span className="flex size-6 items-center justify-center rounded-full bg-brand-black/30">
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
               </span>
-            </a>
+            </Link>
           </Reveal>
         </div>
       </div>
