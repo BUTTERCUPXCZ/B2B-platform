@@ -81,7 +81,7 @@ export function WebinarsList() {
                 <h3 className="mt-1 text-lg leading-snug font-bold">
                   {w.title}
                 </h3>
-                <p className="mt-1 text-xs text-white/65">{w.speaker}</p>
+                <p className="mt-1 text-xs text-white/75">{w.speaker}</p>
               </div>
 
               <a

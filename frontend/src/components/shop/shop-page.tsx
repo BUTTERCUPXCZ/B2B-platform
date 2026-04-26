@@ -90,7 +90,7 @@ export function ShopPage({ initialQuery = "" }: { initialQuery?: string }) {
 
           <div>
             <Reveal className="mb-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-              <p className="text-sm text-brand-black/65">
+              <p className="text-sm text-brand-black/75">
                 <span className="font-bold text-brand-black">{visible.length}</span> of{" "}
                 {products.length} listings
                 {activeCategory ? ` in ${activeCategory}` : ""}
@@ -151,7 +151,7 @@ function Hero({
         <h1 className="mt-5 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
           Shop 24,000+ verified materials.
         </h1>
-        <p className="mt-3 max-w-xl text-sm text-white/70">
+        <p className="mt-3 max-w-xl text-sm text-white/80">
           Filter by category and price, compare suppliers, and pay safely
           through escrow.
         </p>
@@ -160,7 +160,7 @@ function Hero({
           className="mt-7 flex max-w-3xl items-center gap-2 rounded-full bg-white p-1.5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] focus-within:ring-2 focus-within:ring-brand-orange/40"
           onSubmit={(e) => e.preventDefault()}
         >
-          <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/55">
+          <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/65">
             <HugeiconsIcon icon={Search01Icon} className="size-4" />
           </span>
           <input
@@ -217,7 +217,7 @@ function Filters({
       </div>
 
       <div className="mt-6">
-        <p className="text-[10px] font-bold tracking-[0.25em] text-brand-black/55 uppercase">
+        <p className="text-[10px] font-bold tracking-[0.25em] text-brand-black/65 uppercase">
           Category
         </p>
         <ul className="mt-3 space-y-1 text-sm">
@@ -239,7 +239,7 @@ function Filters({
       </div>
 
       <div className="mt-7 border-t border-brand-black/10 pt-7">
-        <p className="text-[10px] font-bold tracking-[0.25em] text-brand-black/55 uppercase">
+        <p className="text-[10px] font-bold tracking-[0.25em] text-brand-black/65 uppercase">
           Price
         </p>
         <ul className="mt-3 space-y-1 text-sm">
@@ -425,9 +425,9 @@ function ProductCard({ product }: { product: Product }) {
         <h3 className="mt-1 text-base leading-snug font-bold text-brand-black">
           {product.name}
         </h3>
-        <p className="mt-1 text-xs text-brand-black/55">by {product.supplier}</p>
+        <p className="mt-1 text-xs text-brand-black/65">by {product.supplier}</p>
 
-        <div className="mt-3 flex items-center gap-1 text-xs text-brand-black/65">
+        <div className="mt-3 flex items-center gap-1 text-xs text-brand-black/75">
           <HugeiconsIcon icon={StarIcon} className="size-3.5 text-brand-orange" />
           <span className="font-semibold text-brand-black">{product.rating}</span>
           <span>· {product.reviews} reviews</span>
@@ -464,7 +464,7 @@ function EmptyState({ onClear }: { onClear: () => void }) {
   return (
     <div className="rounded-md border border-dashed border-brand-black/15 bg-brand-black/[0.02] p-12 text-center">
       <p className="text-sm font-semibold text-brand-black">No listings match</p>
-      <p className="mt-1 text-xs text-brand-black/55">
+      <p className="mt-1 text-xs text-brand-black/65">
         Try clearing some filters or searching for something different.
       </p>
       <button

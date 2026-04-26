@@ -51,7 +51,7 @@ export function AppPromo() {
             >
               <HugeiconsIcon icon={AppleIcon} className="size-7" />
               <span className="leading-none">
-                <span className="block text-[10px] tracking-wider text-white/65 uppercase">
+                <span className="block text-[10px] tracking-wider text-white/75 uppercase">
                   Download on the
                 </span>
                 <span className="block text-base font-bold tracking-tight">
@@ -65,7 +65,7 @@ export function AppPromo() {
             >
               <HugeiconsIcon icon={GoogleIcon} className="size-7" />
               <span className="leading-none">
-                <span className="block text-[10px] tracking-wider text-white/65 uppercase">
+                <span className="block text-[10px] tracking-wider text-white/75 uppercase">
                   Get it on
                 </span>
                 <span className="block text-base font-bold tracking-tight">

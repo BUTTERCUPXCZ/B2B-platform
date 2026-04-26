@@ -100,7 +100,7 @@ export function ServicesShowcase() {
             <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-brand-black sm:text-4xl">
               Need it built? Hire a vetted pro.
             </h2>
-            <p className="mt-2 max-w-xl text-sm text-brand-black/60">
+            <p className="mt-2 max-w-xl text-sm text-brand-black/70">
               Every contractor on Levite is identity-verified, licensed, and
               backed by buyer escrow. Pay only when each milestone is signed off.
             </p>
@@ -138,11 +138,11 @@ export function ServicesShowcase() {
                 <h3 className="text-base font-bold text-brand-black">
                   {s.name}
                 </h3>
-                <p className="mt-1.5 flex-1 text-xs leading-relaxed text-brand-black/60">
+                <p className="mt-1.5 flex-1 text-xs leading-relaxed text-brand-black/70">
                   {s.desc}
                 </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <p className="text-xs text-brand-black/55">
+                  <p className="text-xs text-brand-black/65">
                     Starting from{" "}
                     <span className="font-bold text-brand-black">
                       {s.starting}

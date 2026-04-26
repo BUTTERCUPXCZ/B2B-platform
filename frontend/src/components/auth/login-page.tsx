@@ -22,7 +22,7 @@ export function LoginPage() {
   return (
     <AuthShell
       title="Welcome back."
-      subtitle="Sign in to your buyer or seller account."
+      subtitle="Sign in to keep building. The same account works for buyers, sellers, and contractors."
       bottomPrompt={
         <>
           New to Levite?{" "}
@@ -55,7 +55,7 @@ export function LoginPage() {
           </span>
         </div>
 
-        <Field label="Work email">
+        <Field label="Email">
           <InputWithIcon
             icon={Mail01Icon}
             type="email"
@@ -86,7 +86,7 @@ export function LoginPage() {
           />
         </Field>
 
-        <label className="flex items-center gap-2 text-xs text-brand-black/65">
+        <label className="flex items-center gap-2 text-xs text-brand-black/75">
           <input
             type="checkbox"
             checked={remember}
@@ -98,7 +98,7 @@ export function LoginPage() {
 
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft"
         >
           Sign in
           <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
@@ -120,7 +120,7 @@ function Field({
   return (
     <div>
       <div className="flex items-baseline justify-between">
-        <label className="text-xs font-bold tracking-wide text-brand-black uppercase">
+        <label className="text-sm font-semibold text-brand-black">
           {label}
         </label>
         {right}

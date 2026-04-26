@@ -68,7 +68,7 @@ export function Testimonial() {
             </p>
             <div className="mt-8">
               <p className="text-base font-semibold">{r.name}</p>
-              <p className="text-xs text-white/55">{r.title}</p>
+              <p className="text-xs text-white/65">{r.title}</p>
               <span className="mt-3 inline-block rounded-full bg-brand-orange/15 px-3 py-1 text-[10px] font-semibold tracking-[0.25em] text-brand-orange uppercase">
                 {r.tag}
               </span>
@@ -81,7 +81,7 @@ export function Testimonial() {
             type="button"
             onClick={prev}
             aria-label="Previous testimonial"
-            className="inline-flex items-center gap-2 text-xs text-white/60 transition-colors hover:text-white"
+            className="inline-flex items-center gap-2 text-xs text-white/70 transition-colors hover:text-white"
           >
             <span className="flex size-7 items-center justify-center rounded-full border border-white/20">
               <HugeiconsIcon icon={ArrowLeft01Icon} className="size-3" />
@@ -115,7 +115,7 @@ export function Testimonial() {
             type="button"
             onClick={next}
             aria-label="Next testimonial"
-            className="inline-flex items-center gap-2 text-xs text-white/60 transition-colors hover:text-white"
+            className="inline-flex items-center gap-2 text-xs text-white/70 transition-colors hover:text-white"
           >
             Next
             <span className="flex size-7 items-center justify-center rounded-full border border-white/20">

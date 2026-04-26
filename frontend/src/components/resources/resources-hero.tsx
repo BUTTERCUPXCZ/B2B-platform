@@ -48,7 +48,7 @@ export function ResourcesHero() {
           className="mx-auto mt-9 flex max-w-xl items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/15 backdrop-blur focus-within:ring-brand-orange"
           onSubmit={(e) => e.preventDefault()}
         >
-          <span className="flex size-12 shrink-0 items-center justify-center text-white/55">
+          <span className="flex size-12 shrink-0 items-center justify-center text-white/65">
             <HugeiconsIcon icon={Search01Icon} className="size-4" />
           </span>
           <input

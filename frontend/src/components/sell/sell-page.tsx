@@ -144,7 +144,7 @@ function Hero({ role, setRole }: { role: SellRole; setRole: (r: SellRole) => voi
               onClick={() => setRole(r)}
               className={cn(
                 "relative inline-flex items-center gap-2 rounded-full px-4 py-2 tracking-[0.18em] uppercase transition-colors sm:px-5",
-                role === r ? "text-white" : "text-white/65 hover:text-white"
+                role === r ? "text-white" : "text-white/75 hover:text-white"
               )}
             >
               {role === r && (
@@ -207,7 +207,7 @@ function RoleContent({ role }: { role: SellRole }) {
                   <h3 className="mt-4 text-base font-bold text-brand-black">
                     {b.title}
                   </h3>
-                  <p className="mt-1.5 text-xs leading-relaxed text-brand-black/60">
+                  <p className="mt-1.5 text-xs leading-relaxed text-brand-black/70">
                     {b.body}
                   </p>
                 </StaggerItem>
@@ -222,7 +222,7 @@ function RoleContent({ role }: { role: SellRole }) {
                 <h3 className="mt-2 text-2xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-3xl">
                   Three steps to live.
                 </h3>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-brand-black/65">
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-brand-black/75">
                   No long contracts, no setup fees, no IT lift. The whole flow
                   takes most sellers under a week.
                 </p>
@@ -249,7 +249,7 @@ function RoleContent({ role }: { role: SellRole }) {
                       <p className="text-sm font-bold text-brand-black">
                         {s.title}
                       </p>
-                      <p className="mt-0.5 text-xs leading-relaxed text-brand-black/65">
+                      <p className="mt-0.5 text-xs leading-relaxed text-brand-black/75">
                         {s.body}
                       </p>
                     </div>
@@ -317,7 +317,7 @@ function FAQ() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-sm leading-relaxed text-brand-black/65">
+                    <p className="px-6 pb-5 text-sm leading-relaxed text-brand-black/75">
                       {f.a}
                     </p>
                   </div>
@@ -328,7 +328,7 @@ function FAQ() {
         </ul>
 
         <Reveal className="mt-12 text-center">
-          <p className="text-sm text-brand-black/65">
+          <p className="text-sm text-brand-black/75">
             Still have questions?{" "}
             <Link
               to="/contact"

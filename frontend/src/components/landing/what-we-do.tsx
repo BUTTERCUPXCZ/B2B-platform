@@ -94,7 +94,7 @@ export function WhatWeDo() {
             <h2 className="text-4xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-[44px]">
               What you can do here <span className="text-brand-orange">!</span>
             </h2>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-brand-black/65">
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-brand-black/75">
               Levite is a marketplace, not just a catalog. Every listing
               connects to a verified seller, every job connects to a vetted
               pro, and every transaction is escrow-backed end to end.
@@ -119,7 +119,7 @@ export function WhatWeDo() {
                 <h3 className="mt-4 text-base font-semibold text-brand-black">
                   {c.title}
                 </h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-brand-black/60">
+                <p className="mt-1.5 text-xs leading-relaxed text-brand-black/70">
                   {c.desc}
                 </p>
               </StaggerItem>

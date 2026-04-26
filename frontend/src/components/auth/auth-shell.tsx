@@ -43,11 +43,11 @@ export function AuthShell({
             <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-4xl">
               {title}
             </h1>
-            <p className="mt-2 text-sm text-brand-black/65">{subtitle}</p>
+            <p className="mt-2 text-sm text-brand-black/75">{subtitle}</p>
 
             <div className="mt-8">{children}</div>
 
-            <p className="mt-8 text-center text-sm text-brand-black/65">
+            <p className="mt-8 text-center text-sm text-brand-black/75">
               {bottomPrompt}
             </p>
           </div>
@@ -120,7 +120,7 @@ function Stat({ value, label }: { value: string; label: string }) {
       <p className="text-2xl leading-none font-extrabold text-brand-orange">
         {value}
       </p>
-      <p className="mt-1 text-[11px] tracking-wider text-white/55 uppercase">
+      <p className="mt-1 text-[11px] tracking-wider text-white/65 uppercase">
         {label}
       </p>
     </div>

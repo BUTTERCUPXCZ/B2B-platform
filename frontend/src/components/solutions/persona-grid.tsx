@@ -167,7 +167,7 @@ export function PersonaGrid() {
                     <h3 className="mt-1 text-2xl font-extrabold tracking-tight text-brand-black">
                       {p.name}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-brand-black/55 italic">
+                    <p className="mt-2 text-sm leading-relaxed text-brand-black/65 italic">
                       {p.pain}
                     </p>
                     <ul className="mt-5 space-y-2 text-sm">

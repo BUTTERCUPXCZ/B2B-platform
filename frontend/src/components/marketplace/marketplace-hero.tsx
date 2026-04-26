@@ -77,7 +77,7 @@ export function MarketplaceHero() {
                 onClick={() => setMode(m)}
                 className={cn(
                   "relative inline-flex items-center gap-2 rounded-full px-5 py-2 tracking-[0.18em] uppercase transition-colors",
-                  mode === m ? "text-white" : "text-white/65 hover:text-white"
+                  mode === m ? "text-white" : "text-white/75 hover:text-white"
                 )}
               >
                 {mode === m && (
@@ -102,7 +102,7 @@ export function MarketplaceHero() {
             className="mt-5 flex items-center gap-2 rounded-full bg-white p-2 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] focus-within:ring-2 focus-within:ring-brand-orange/40"
             onSubmit={(e) => e.preventDefault()}
           >
-            <span className="flex size-11 shrink-0 items-center justify-center text-brand-black/55">
+            <span className="flex size-11 shrink-0 items-center justify-center text-brand-black/65">
               <HugeiconsIcon icon={Search01Icon} className="size-5" />
             </span>
             <input
@@ -147,7 +147,7 @@ export function MarketplaceHero() {
 
         <motion.p
           variants={fadeUp}
-          className="mt-9 inline-flex items-center gap-2 text-xs text-white/55"
+          className="mt-9 inline-flex items-center gap-2 text-xs text-white/65"
         >
           <HugeiconsIcon icon={CheckmarkCircle02Icon} className="size-3.5 text-brand-orange" />
           Trusted by 12,000+ buyers across 200+ verified construction sellers

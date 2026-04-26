@@ -106,7 +106,7 @@ function Path({
           <h3 className="text-2xl font-extrabold tracking-tight text-brand-black">
             {title}
           </h3>
-          <p className="text-xs text-brand-black/55">{tagline}</p>
+          <p className="text-xs text-brand-black/65">{tagline}</p>
         </div>
       </div>
 
@@ -126,7 +126,7 @@ function Path({
                 <HugeiconsIcon icon={s.icon} className="size-4 text-brand-orange" />
                 <p className="text-sm font-semibold text-brand-black">{s.title}</p>
               </div>
-              <p className="mt-1 text-xs leading-relaxed text-brand-black/60">
+              <p className="mt-1 text-xs leading-relaxed text-brand-black/70">
                 {s.body}
               </p>
             </div>

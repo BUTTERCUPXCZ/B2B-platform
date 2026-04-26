@@ -74,7 +74,7 @@ export function SignupPage({ initialRole = "buyer" }: { initialRole?: SignupRole
         className="space-y-6"
       >
         <div>
-          <p className="text-xs font-bold tracking-wide text-brand-black uppercase">
+          <p className="text-sm font-semibold text-brand-black">
             I&rsquo;m signing up as a…
           </p>
           <div className="mt-3 grid grid-cols-3 gap-2">
@@ -112,7 +112,7 @@ export function SignupPage({ initialRole = "buyer" }: { initialRole?: SignupRole
                   <span className="text-sm font-bold text-brand-black">
                     {r.label}
                   </span>
-                  <span className="text-[10px] leading-tight text-brand-black/55">
+                  <span className="text-[10px] leading-tight text-brand-black/65">
                     {r.tagline}
                   </span>
                 </button>
@@ -132,7 +132,7 @@ export function SignupPage({ initialRole = "buyer" }: { initialRole?: SignupRole
           />
         </Field>
 
-        <Field label="Work email">
+        <Field label="Email">
           <InputWithIcon
             icon={Mail01Icon}
             type="email"
@@ -173,7 +173,7 @@ export function SignupPage({ initialRole = "buyer" }: { initialRole?: SignupRole
           </div>
         </Field>
 
-        <label className="flex items-start gap-2.5 text-xs text-brand-black/65">
+        <label className="flex items-start gap-2.5 text-xs text-brand-black/75">
           <input
             type="checkbox"
             checked={agree}
@@ -197,7 +197,7 @@ export function SignupPage({ initialRole = "buyer" }: { initialRole?: SignupRole
         <button
           type="submit"
           disabled={!agree}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft disabled:cursor-not-allowed disabled:opacity-50"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft disabled:cursor-not-allowed disabled:opacity-50"
         >
           Create account
           <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
@@ -218,10 +218,10 @@ function Field({
 }) {
   return (
     <div>
-      <label className="text-xs font-bold tracking-wide text-brand-black uppercase">
+      <label className="text-sm font-semibold text-brand-black">
         {label}
       </label>
-      {hint && <p className="mt-1 text-[11px] text-brand-black/55">{hint}</p>}
+      {hint && <p className="mt-1 text-xs text-brand-black/70">{hint}</p>}
       <div className="mt-2">{children}</div>
     </div>
   )

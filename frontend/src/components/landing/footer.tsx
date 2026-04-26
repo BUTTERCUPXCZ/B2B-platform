@@ -52,13 +52,13 @@ export function Footer() {
             </span>
             <span className="text-lg font-bold">Levite</span>
           </a>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
             The all-in-one platform for construction supply and service
             businesses — selling materials, quoting projects, and running
             field crews on shared infrastructure.
           </p>
 
-          <p className="mt-6 text-[10px] font-semibold tracking-[0.25em] text-white/55 uppercase">
+          <p className="mt-6 text-[10px] font-semibold tracking-[0.25em] text-white/65 uppercase">
             Follow us
           </p>
           <div className="mt-3 flex gap-2">
@@ -98,7 +98,7 @@ export function Footer() {
           <p className="text-[10px] font-semibold tracking-[0.25em] text-brand-orange uppercase">
             Newsletter
           </p>
-          <p className="mt-4 text-sm text-white/65">
+          <p className="mt-4 text-sm text-white/75">
             Field reports on construction commerce, monthly. No spam.
           </p>
           <form

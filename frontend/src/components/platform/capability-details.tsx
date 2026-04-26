@@ -47,7 +47,7 @@ export function CapabilityDetails() {
                   </h2>
                 </div>
 
-                <p className="mt-5 max-w-lg text-sm leading-relaxed text-brand-black/65">
+                <p className="mt-5 max-w-lg text-sm leading-relaxed text-brand-black/75">
                   {c.body}
                 </p>
 

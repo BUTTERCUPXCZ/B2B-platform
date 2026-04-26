@@ -61,7 +61,7 @@ export function About() {
             <br />
             Three Sides Of The Trade.
           </h2>
-          <p className="mt-5 text-sm leading-relaxed text-brand-black/65">
+          <p className="mt-5 text-sm leading-relaxed text-brand-black/75">
             Levite is the construction marketplace where homeowners and
             contractors shop materials and hire builders, while suppliers and
             service pros pay a transparent subscription to reach them. Every
@@ -96,7 +96,7 @@ export function About() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
               exit={{ opacity: 0, y: -4, transition: { duration: 0.15 } }}
-              className="mt-5 max-w-xl text-sm leading-relaxed text-brand-black/65"
+              className="mt-5 max-w-xl text-sm leading-relaxed text-brand-black/75"
             >
               {activeTab.body}
             </motion.p>

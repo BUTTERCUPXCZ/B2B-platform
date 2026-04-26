@@ -275,7 +275,7 @@ function PreviewCard({ form }: { form: FormState }) {
               {form.category || "Trade"}
             </span>
             {form.location && (
-              <span className="inline-flex items-center gap-1 text-[11px] text-brand-black/60">
+              <span className="inline-flex items-center gap-1 text-[11px] text-brand-black/70">
                 <HugeiconsIcon
                   icon={Location01Icon}
                   className="size-3 text-brand-orange"
@@ -287,12 +287,12 @@ function PreviewCard({ form }: { form: FormState }) {
           <h3 className="mt-3 text-base leading-snug font-bold text-brand-black">
             {form.title || "Your job title appears here"}
           </h3>
-          <p className="mt-2 line-clamp-4 text-xs leading-relaxed text-brand-black/65">
+          <p className="mt-2 line-clamp-4 text-xs leading-relaxed text-brand-black/75">
             {form.description ||
               "Your description will show here. Contractors will use this to price their bids — be specific about scope, materials, and constraints."}
           </p>
           {(form.startWindow || form.budget) && (
-            <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-semibold text-brand-black/65">
+            <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-semibold text-brand-black/75">
               {form.startWindow && (
                 <span className="inline-flex items-center gap-1 rounded-full bg-white px-2 py-1">
                   <HugeiconsIcon icon={TimerIcon} className="size-3" />
@@ -362,7 +362,7 @@ function Confirmation({ form }: { form: FormState }) {
       <h2 className="mt-5 text-2xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-3xl">
         Your job is live.
       </h2>
-      <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-brand-black/65">
+      <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-brand-black/75">
         We&rsquo;ve notified verified pros in{" "}
         <span className="font-semibold text-brand-black">
           {form.category || "your trade"}
@@ -433,7 +433,7 @@ function Field({
         {label}
         {required && <span className="ml-1 text-brand-orange">*</span>}
       </label>
-      {hint && <p className="mt-1 text-[11px] text-brand-black/55">{hint}</p>}
+      {hint && <p className="mt-1 text-[11px] text-brand-black/65">{hint}</p>}
       <div className="mt-2">{children}</div>
     </div>
   )
@@ -526,7 +526,7 @@ function PhotoPlaceholder({
         type="button"
         onClick={onAdd}
         disabled={attachments.length >= 5}
-        className="flex w-full items-center justify-center gap-3 rounded-md border-2 border-dashed border-brand-black/15 bg-brand-black/[0.02] px-4 py-6 text-sm text-brand-black/60 transition-colors hover:border-brand-orange/40 hover:text-brand-orange disabled:cursor-not-allowed disabled:opacity-50"
+        className="flex w-full items-center justify-center gap-3 rounded-md border-2 border-dashed border-brand-black/15 bg-brand-black/[0.02] px-4 py-6 text-sm text-brand-black/70 transition-colors hover:border-brand-orange/40 hover:text-brand-orange disabled:cursor-not-allowed disabled:opacity-50"
       >
         <HugeiconsIcon icon={Image01Icon} className="size-5" />
         <span>

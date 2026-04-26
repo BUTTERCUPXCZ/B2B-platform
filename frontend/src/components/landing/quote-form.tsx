@@ -212,7 +212,7 @@ function Select({ name, options }: { name: string; options: string[] }) {
       </select>
       <HugeiconsIcon
         icon={ArrowDown01Icon}
-        className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-brand-black/60"
+        className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-brand-black/70"
       />
     </div>
   )

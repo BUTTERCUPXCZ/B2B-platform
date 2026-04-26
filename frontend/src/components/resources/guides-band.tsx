@@ -57,7 +57,7 @@ export function GuidesBand() {
                 <span className="flex size-11 items-center justify-center rounded-md bg-white/15 text-white">
                   <HugeiconsIcon icon={g.icon} className="size-5" />
                 </span>
-                <span className="text-[10px] font-semibold tracking-[0.25em] text-white/65 uppercase">
+                <span className="text-[10px] font-semibold tracking-[0.25em] text-white/75 uppercase">
                   {g.pages}
                 </span>
               </div>

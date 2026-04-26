@@ -50,7 +50,7 @@ export function OfficesGrid() {
               Where We Work.
             </h2>
           </div>
-          <p className="max-w-sm text-sm text-brand-black/60">
+          <p className="max-w-sm text-sm text-brand-black/70">
             We&rsquo;re a remote-first team with anchor offices in three regions
             — drop in if you&rsquo;re nearby.
           </p>

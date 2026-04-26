@@ -83,7 +83,7 @@ export function JobsListPage({
           </Reveal>
 
           <div className="mt-8 mb-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-            <p className="text-sm text-brand-black/65">
+            <p className="text-sm text-brand-black/75">
               <span className="font-bold text-brand-black">{visible.length}</span>{" "}
               of {jobs.length} open jobs
               {activeCategory ? ` in ${activeCategory}` : ""}
@@ -141,7 +141,7 @@ function Hero({
         <h1 className="mt-5 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
           Open jobs from buyers across the country.
         </h1>
-        <p className="mt-3 max-w-xl text-sm text-white/70">
+        <p className="mt-3 max-w-xl text-sm text-white/80">
           Browse jobs that match your trade and area. Submit a bid in minutes —
           win the job, get paid through escrow as you deliver.
         </p>
@@ -154,7 +154,7 @@ function Hero({
             Post a job instead
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
           </Link>
-          <span className="text-xs text-white/55">
+          <span className="text-xs text-white/80">
             Free to post · pay only when you hire
           </span>
         </div>
@@ -163,7 +163,7 @@ function Hero({
           className="mt-6 flex max-w-3xl items-center gap-2 rounded-full bg-white p-1.5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] focus-within:ring-2 focus-within:ring-brand-orange/40"
           onSubmit={(e) => e.preventDefault()}
         >
-          <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/55">
+          <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/65">
             <HugeiconsIcon icon={Search01Icon} className="size-4" />
           </span>
           <input
@@ -294,7 +294,7 @@ function JobCard({ job }: { job: Job }) {
           <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-orange/10 px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
             {job.category}
           </span>
-          <span className="inline-flex items-center gap-1 text-[11px] text-brand-black/55">
+          <span className="inline-flex items-center gap-1 text-[11px] text-brand-black/65">
             <HugeiconsIcon
               icon={Location01Icon}
               className="size-3 text-brand-orange"
@@ -310,11 +310,11 @@ function JobCard({ job }: { job: Job }) {
       <h3 className="mt-3 text-lg leading-snug font-bold text-brand-black sm:text-xl">
         {job.title}
       </h3>
-      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-brand-black/65">
+      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-brand-black/75">
         {job.description}
       </p>
 
-      <div className="mt-4 flex flex-wrap items-center gap-3 text-[11px] text-brand-black/65">
+      <div className="mt-4 flex flex-wrap items-center gap-3 text-xs text-brand-black/75">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-black/[0.04] px-3 py-1 font-semibold">
           Budget · {job.budget}
         </span>
@@ -329,7 +329,7 @@ function JobCard({ job }: { job: Job }) {
       </div>
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-brand-black/10 pt-5">
-        <span className="inline-flex items-center gap-2 text-xs text-brand-black/65">
+        <span className="inline-flex items-center gap-2 text-xs text-brand-black/75">
           Posted by{" "}
           <span className="font-semibold text-brand-black">
             {job.buyer.name}
@@ -358,7 +358,7 @@ function EmptyState({ onClear }: { onClear: () => void }) {
   return (
     <div className="rounded-md border border-dashed border-brand-black/15 bg-brand-black/[0.02] p-12 text-center">
       <p className="text-sm font-semibold text-brand-black">No open jobs match</p>
-      <p className="mt-1 text-xs text-brand-black/55">
+      <p className="mt-1 text-xs text-brand-black/65">
         New jobs post every day. Try a different trade or clear the filters.
       </p>
       <button

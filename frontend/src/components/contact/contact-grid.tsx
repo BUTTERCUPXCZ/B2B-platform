@@ -66,7 +66,7 @@ export function ContactGrid() {
           <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-brand-black sm:text-4xl">
             Send Us A Message
           </h2>
-          <p className="mt-3 max-w-md text-sm text-brand-black/60">
+          <p className="mt-3 max-w-md text-sm text-brand-black/70">
             Tell us who you are and what you need. Buyer support averages
             34 minutes to first reply. Seller and partnership replies usually
             land same business day.
@@ -140,7 +140,7 @@ export function ContactGrid() {
                   <h3 className="text-base font-bold text-brand-black">
                     {c.label}
                   </h3>
-                  <p className="mt-1 text-xs text-brand-black/60">{c.body}</p>
+                  <p className="mt-1 text-xs text-brand-black/70">{c.body}</p>
                   <dl className="mt-3 space-y-1 text-xs">
                     <div className="flex items-center gap-2">
                       <dt className="text-brand-black/45">Email</dt>
@@ -204,7 +204,7 @@ function Select({
       </select>
       <HugeiconsIcon
         icon={ArrowDown01Icon}
-        className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-brand-black/55"
+        className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-brand-black/65"
       />
     </div>
   )

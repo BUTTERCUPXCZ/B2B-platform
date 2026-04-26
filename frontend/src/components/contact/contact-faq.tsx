@@ -78,7 +78,7 @@ export function ContactFAQ() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-sm leading-relaxed text-brand-black/65">
+                    <p className="px-6 pb-5 text-sm leading-relaxed text-brand-black/75">
                       {f.a}
                     </p>
                   </div>

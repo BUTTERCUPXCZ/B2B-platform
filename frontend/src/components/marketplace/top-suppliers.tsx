@@ -70,14 +70,14 @@ export function TopSuppliers() {
               <h3 className="mt-4 text-base font-bold text-brand-black">
                 {s.name}
               </h3>
-              <p className="text-xs text-brand-black/55">{s.category}</p>
+              <p className="text-xs text-brand-black/65">{s.category}</p>
 
-              <div className="mt-3 flex items-center gap-1 text-xs text-brand-black/65">
+              <div className="mt-3 flex items-center gap-1 text-xs text-brand-black/75">
                 <HugeiconsIcon icon={StarIcon} className="size-3.5 text-brand-orange" />
                 <span className="font-semibold text-brand-black">{s.rating}</span>
                 <span>· {s.reviews} reviews</span>
               </div>
-              <p className="mt-1 text-xs text-brand-black/55">{s.items}</p>
+              <p className="mt-1 text-xs text-brand-black/65">{s.items}</p>
 
               <a
                 href="#"

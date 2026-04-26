@@ -80,7 +80,7 @@ export function Hero() {
                   onClick={() => setMode(m)}
                   className={cn(
                     "relative inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 tracking-[0.18em] uppercase transition-colors",
-                    mode === m ? "text-white" : "text-white/60 hover:text-white"
+                    mode === m ? "text-white" : "text-white/70 hover:text-white"
                   )}
                 >
                   {mode === m && (
@@ -108,7 +108,7 @@ export function Hero() {
                 submitSearch()
               }}
             >
-              <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/55">
+              <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/65">
                 <HugeiconsIcon icon={Search01Icon} className="size-4" />
               </span>
               <input

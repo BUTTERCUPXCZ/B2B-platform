@@ -127,10 +127,10 @@ export function FlashDeals() {
                 <h3 className="line-clamp-2 text-[13px] leading-snug font-semibold">
                   {d.name}
                 </h3>
-                <p className="mt-1 text-[11px] text-brand-black/55">
+                <p className="mt-1 text-[11px] text-brand-black/65">
                   {d.supplier}
                 </p>
-                <div className="mt-1 flex items-center gap-1 text-[11px] text-brand-black/65">
+                <div className="mt-1 flex items-center gap-1 text-[11px] text-brand-black/75">
                   <HugeiconsIcon icon={StarIcon} className="size-3 text-brand-orange" />
                   <span className="font-semibold text-brand-black">{d.rating}</span>
                   <span>· {d.reviews}</span>

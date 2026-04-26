@@ -15,8 +15,7 @@ const navItems: Array<{ label: string; to: string }> = [
   { label: "Home", to: "/" },
   { label: "Shop", to: "/shop" },
   { label: "Jobs", to: "/jobs" },
-  { label: "Platform", to: "/platform" },
-  { label: "Solutions", to: "/solutions" },
+  { label: "Sell", to: "/sell" },
   { label: "Pricing", to: "/pricing" },
   { label: "Resources", to: "/resources" },
   { label: "Contact", to: "/contact" },
@@ -49,7 +48,7 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-5 text-sm font-medium text-brand-black/80 lg:flex">
+          <nav className="hidden items-center gap-6 text-sm font-medium text-brand-black/80 lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.label}

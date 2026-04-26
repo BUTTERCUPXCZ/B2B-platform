@@ -171,7 +171,7 @@ export function PostGrid() {
         </StaggerGroup>
 
         {visible.length === 0 && (
-          <p className="mt-16 text-center text-sm text-brand-black/55">
+          <p className="mt-16 text-center text-sm text-brand-black/65">
             No posts in this category yet — try another tab.
           </p>
         )}
@@ -197,11 +197,11 @@ function PostCard({ post }: { post: Post }) {
         <h3 className="text-lg leading-snug font-bold text-brand-black transition-colors group-hover:text-brand-orange">
           {post.title}
         </h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-brand-black/60">
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-brand-black/70">
           {post.excerpt}
         </p>
 
-        <div className="mt-5 flex items-center justify-between border-t border-brand-black/10 pt-4 text-xs text-brand-black/55">
+        <div className="mt-5 flex items-center justify-between border-t border-brand-black/10 pt-4 text-xs text-brand-black/65">
           <span className="flex items-center gap-1.5">
             <HugeiconsIcon icon={UserCircleIcon} className="size-3.5" />
             {post.author}

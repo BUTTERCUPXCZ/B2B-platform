@@ -43,7 +43,7 @@ export function PersonaTestimonial() {
             />
             <div>
               <p className="text-sm font-semibold">Marisol Tan</p>
-              <p className="text-xs text-white/55">
+              <p className="text-xs text-white/65">
                 Owner, Tan Heritage Construction
               </p>
             </div>
@@ -69,7 +69,7 @@ export function PersonaTestimonial() {
               key={m.label}
               className="rounded-md border border-white/10 bg-white/[0.04] p-5"
             >
-              <dt className="text-[10px] font-semibold tracking-[0.25em] text-white/55 uppercase">
+              <dt className="text-[10px] font-semibold tracking-[0.25em] text-white/65 uppercase">
                 {m.label}
               </dt>
               <dd className="mt-2 text-3xl font-extrabold tracking-tight text-brand-orange">

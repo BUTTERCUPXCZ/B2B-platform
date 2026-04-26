@@ -122,7 +122,7 @@ export function PricingTiers({ billing }: { billing: Billing }) {
         ))}
       </StaggerGroup>
 
-      <p className="mx-auto mt-10 max-w-2xl px-6 text-center text-xs text-brand-black/55">
+      <p className="mx-auto mt-10 max-w-2xl px-6 text-center text-xs text-brand-black/65">
         Prices in PHP. Subscription is billed monthly or annually (annual saves 20%).
         Sales commission is taken automatically per order. Buyers always shop free —
         no membership fees, no buyer-side commission.
@@ -176,7 +176,7 @@ function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
       <p
         className={cn(
           "mt-1 text-sm",
-          tier.highlighted ? "text-white/85" : "text-brand-black/60"
+          tier.highlighted ? "text-white/85" : "text-brand-black/70"
         )}
       >
         {tier.tagline}
@@ -191,7 +191,7 @@ function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
             <span
               className={cn(
                 "pb-1 text-xs",
-                tier.highlighted ? "text-white/70" : "text-brand-black/55"
+                tier.highlighted ? "text-white/70" : "text-brand-black/65"
               )}
             >
               · pay only when you sell
@@ -213,7 +213,7 @@ function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
             <span
               className={cn(
                 "pb-1 text-xs",
-                tier.highlighted ? "text-white/70" : "text-brand-black/55"
+                tier.highlighted ? "text-white/70" : "text-brand-black/65"
               )}
             >
               / mo · billed {billing}
@@ -253,7 +253,7 @@ function TierCard({ tier, billing }: { tier: Tier; billing: Billing }) {
             <dt
               className={cn(
                 "text-[10px] font-semibold tracking-[0.2em] uppercase",
-                tier.highlighted ? "text-white/65" : "text-brand-black/50"
+                tier.highlighted ? "text-white/75" : "text-brand-black/50"
               )}
             >
               {m.label}

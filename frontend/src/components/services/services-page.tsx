@@ -72,7 +72,7 @@ export function ServicesPage({
           </Reveal>
 
           <div className="mt-8 mb-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-            <p className="text-sm text-brand-black/65">
+            <p className="text-sm text-brand-black/75">
               <span className="font-bold text-brand-black">{visible.length}</span>{" "}
               of {servicePros.length} verified pros
               {activeCategory ? ` for ${activeCategory}` : ""}
@@ -135,7 +135,7 @@ function Hero({
         <h1 className="mt-5 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
           Hire 1,800+ verified pros.
         </h1>
-        <p className="mt-3 max-w-xl text-sm text-white/70">
+        <p className="mt-3 max-w-xl text-sm text-white/80">
           Filter by trade and location, compare ratings and jobs completed,
           or post a job to get up to 5 priced bids in 24 hours.
         </p>
@@ -148,7 +148,7 @@ function Hero({
             Post a job
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
           </Link>
-          <span className="text-xs text-white/55">
+          <span className="text-xs text-white/80">
             Free to post · pay only when you hire
           </span>
         </div>
@@ -157,7 +157,7 @@ function Hero({
           className="mt-6 flex max-w-3xl items-center gap-2 rounded-full bg-white p-1.5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] focus-within:ring-2 focus-within:ring-brand-orange/40"
           onSubmit={(e) => e.preventDefault()}
         >
-          <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/55">
+          <span className="flex size-9 shrink-0 items-center justify-center text-brand-black/65">
             <HugeiconsIcon icon={Search01Icon} className="size-4" />
           </span>
           <input
@@ -307,7 +307,7 @@ function ProCard({ pro }: { pro: ServicePro }) {
           {pro.name}
         </h3>
 
-        <div className="mt-1 flex items-center gap-3 text-xs text-brand-black/60">
+        <div className="mt-1 flex items-center gap-3 text-xs text-brand-black/70">
           <span className="inline-flex items-center gap-1">
             <HugeiconsIcon
               icon={Location01Icon}
@@ -322,11 +322,11 @@ function ProCard({ pro }: { pro: ServicePro }) {
           </span>
         </div>
 
-        <p className="mt-3 line-clamp-2 text-xs leading-relaxed text-brand-black/65">
+        <p className="mt-3 line-clamp-2 text-xs leading-relaxed text-brand-black/75">
           {pro.blurb}
         </p>
 
-        <p className="mt-3 text-[11px] text-brand-black/55">
+        <p className="mt-3 text-[11px] text-brand-black/65">
           <span className="font-bold text-brand-black">{pro.jobsCompleted}</span>{" "}
           jobs completed on Levite
         </p>
@@ -358,7 +358,7 @@ function EmptyState({ onClear }: { onClear: () => void }) {
   return (
     <div className="rounded-md border border-dashed border-brand-black/15 bg-brand-black/[0.02] p-12 text-center">
       <p className="text-sm font-semibold text-brand-black">No pros match</p>
-      <p className="mt-1 text-xs text-brand-black/55">
+      <p className="mt-1 text-xs text-brand-black/65">
         Try clearing the filters or search a different trade.
       </p>
       <button

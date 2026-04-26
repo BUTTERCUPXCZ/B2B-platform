@@ -78,7 +78,7 @@ function BillingToggle({
           onClick={() => onChange(b)}
           className={cn(
             "relative rounded-full px-5 py-2 tracking-[0.18em] uppercase transition-colors",
-            billing === b ? "text-white" : "text-white/65 hover:text-white"
+            billing === b ? "text-white" : "text-white/75 hover:text-white"
           )}
         >
           {billing === b && (

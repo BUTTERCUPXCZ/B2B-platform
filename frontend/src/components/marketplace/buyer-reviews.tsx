@@ -88,7 +88,7 @@ export function BuyerReviews() {
 
             <div className="mt-4">
               <p className="text-base font-semibold">{r.name}</p>
-              <p className="text-xs text-white/55">{r.title}</p>
+              <p className="text-xs text-white/65">{r.title}</p>
               <span className="mt-3 inline-block rounded-full bg-brand-orange/15 px-3 py-1 text-[10px] font-semibold tracking-[0.25em] text-brand-orange uppercase">
                 {r.tag}
               </span>
@@ -101,7 +101,7 @@ export function BuyerReviews() {
             type="button"
             onClick={prev}
             aria-label="Previous review"
-            className="flex size-9 items-center justify-center rounded-full border border-white/20 text-white/65 transition-colors hover:border-brand-orange hover:text-brand-orange"
+            className="flex size-9 items-center justify-center rounded-full border border-white/20 text-white/75 transition-colors hover:border-brand-orange hover:text-brand-orange"
           >
             <HugeiconsIcon icon={ArrowLeft01Icon} className="size-3.5" />
           </button>
@@ -132,7 +132,7 @@ export function BuyerReviews() {
             type="button"
             onClick={next}
             aria-label="Next review"
-            className="flex size-9 items-center justify-center rounded-full border border-white/20 text-white/65 transition-colors hover:border-brand-orange hover:text-brand-orange"
+            className="flex size-9 items-center justify-center rounded-full border border-white/20 text-white/75 transition-colors hover:border-brand-orange hover:text-brand-orange"
           >
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
           </button>
