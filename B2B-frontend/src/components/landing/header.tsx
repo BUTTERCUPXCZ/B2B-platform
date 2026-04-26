@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
-  Location01Icon,
-  Mail01Icon,
   Search01Icon,
   ArrowRight01Icon,
   ConstructionIcon,
@@ -20,25 +18,6 @@ const navItems: Array<{ label: string; to: string }> = [
 export function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
-      <div className="border-b border-white/10 bg-black/40 text-[11px] tracking-wide text-white/70 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-2.5">
-          <p className="hidden items-center gap-2 sm:flex">
-            <span className="inline-block size-1.5 rounded-full bg-brand-orange" />
-            Trusted by 200+ construction supply &amp; service businesses
-          </p>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-            <span className="inline-flex items-center gap-1.5">
-              <HugeiconsIcon icon={Location01Icon} className="size-3.5 text-brand-orange" />
-              Manila · Jakarta · Dubai
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <HugeiconsIcon icon={Mail01Icon} className="size-3.5 text-brand-orange" />
-              hello@buildora.co
-            </span>
-          </div>
-        </div>
-      </div>
-
       <div className="mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between gap-4 rounded-full bg-white/95 px-3 py-2 shadow-[0_24px_60px_-30px_rgba(0,0,0,0.5)] backdrop-blur">
           <Link to="/" className="flex items-center gap-2 pl-3">

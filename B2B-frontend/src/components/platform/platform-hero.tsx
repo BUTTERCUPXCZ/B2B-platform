@@ -26,14 +26,6 @@ export function PlatformHero() {
         animate="show"
         variants={stagger}
       >
-        <motion.span
-          variants={fadeUp}
-          className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-brand-orange uppercase"
-        >
-          <span className="size-1.5 rounded-full bg-brand-orange" />
-          The Platform
-        </motion.span>
-
         <motion.h1
           variants={fadeUp}
           className="mt-6 text-5xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl lg:text-[68px]"
