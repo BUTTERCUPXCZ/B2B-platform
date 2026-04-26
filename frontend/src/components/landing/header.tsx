@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils"
 const navItems: Array<{ label: string; to: string }> = [
   { label: "Home", to: "/" },
   { label: "Shop", to: "/shop" },
+  { label: "Services", to: "/services" },
   { label: "Jobs", to: "/jobs" },
   { label: "Sell", to: "/sell" },
   { label: "Pricing", to: "/pricing" },
@@ -48,7 +49,7 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-6 text-sm font-medium text-brand-black/80 lg:flex">
+          <nav className="hidden items-center gap-5 text-sm font-medium text-brand-black/80 lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.label}
