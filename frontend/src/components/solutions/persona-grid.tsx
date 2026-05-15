@@ -118,7 +118,7 @@ const personas: Persona[] = [
 export function PersonaGrid() {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <StaggerGroup className="grid gap-5 lg:grid-cols-2">
           {personas.map((p, idx) => (
             <StaggerItem

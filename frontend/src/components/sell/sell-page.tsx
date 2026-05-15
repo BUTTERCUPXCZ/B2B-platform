@@ -8,7 +8,7 @@ import {
   Wrench01Icon,
   ShoppingBag03Icon,
   CashbackIcon,
-  CertificateIcon,
+  Certificate01Icon,
   Shield01Icon,
   PlusSignIcon,
   CustomerService01Icon,
@@ -48,7 +48,7 @@ const contractorBenefits = [
     body: "You're paid when each milestone is signed off. No invoicing, no chasing, no late checks.",
   },
   {
-    icon: CertificateIcon,
+    icon: Certificate01Icon,
     title: "Verified-pro badge",
     body: "Verified pros win jobs at 3.2× the rate of unverified ones. We handle the license and ID checks.",
   },
@@ -68,8 +68,8 @@ const contractorSteps = [
 
 const faqs = [
   {
-    q: "How much does it cost to sell on Levite?",
-    a: "Listing your products is free. Levite takes a per-order commission that scales with your seller tier (8% on Starter, 5% on Growth, 3% on Pro). Service contractors apply free and pay a commission per won job — no upfront fees.",
+    q: "How much does it cost to sell on STRUKTURA?",
+    a: "Listing your products is free. STRUKTURA takes a per-order commission that scales with your seller tier (8% on Starter, 5% on Growth, 3% on Pro). Service contractors apply free and pay a commission per won job — no upfront fees.",
   },
   {
     q: "How long does onboarding take?",
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: "What if a buyer disputes an order?",
-    a: "Levite holds payment in escrow until delivery is signed off. If a dispute is opened, our team reviews transaction logs and mediates within 3 business days.",
+    a: "STRUKTURA holds payment in escrow until delivery is signed off. If a dispute is opened, our team reviews transaction logs and mediates within 3 business days.",
   },
 ]
 
@@ -122,7 +122,7 @@ function Hero({ role, setRole }: { role: SellRole; setRole: (r: SellRole) => voi
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
         <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
           <span className="size-1.5 rounded-full bg-brand-orange" />
-          Sell on Levite
+          Sell on STRUKTURA
         </span>
 
         <h1 className="mt-5 text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -176,7 +176,7 @@ function RoleContent({ role }: { role: SellRole }) {
 
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
         <AnimatePresence mode="wait">
           <motion.div
             key={role}

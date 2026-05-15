@@ -2,7 +2,7 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import {
   CheckmarkBadge02Icon,
   Shield01Icon,
-  CertificateIcon,
+  Certificate01Icon,
   TruckDeliveryIcon,
   HeadsetIcon,
 } from "@hugeicons/core-free-icons"
@@ -11,7 +11,7 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 const trust = [
   { icon: CheckmarkBadge02Icon, label: "Verified suppliers" },
   { icon: Shield01Icon, label: "Escrow payments" },
-  { icon: CertificateIcon, label: "Quality guarantee" },
+  { icon: Certificate01Icon, label: "Quality guarantee" },
   { icon: TruckDeliveryIcon, label: "Doorstep delivery" },
   { icon: HeadsetIcon, label: "24/7 buyer support" },
 ]
@@ -19,7 +19,7 @@ const trust = [
 export function TrustStrip() {
   return (
     <section className="bg-brand-orange py-10 text-white">
-      <StaggerGroup className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-4 px-6">
+      <StaggerGroup className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-center gap-x-8 gap-y-4 px-6">
         {trust.map((t) => (
           <StaggerItem
             key={t.label}

@@ -1,5 +1,5 @@
 import { HugeiconsIcon } from "@hugeicons/react"
-import { LinkIcon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
+import { Link01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
 import { StaggerGroup, StaggerItem } from "@/components/motion/primitives"
 import { staggerFast } from "@/components/motion/variants"
 
@@ -21,11 +21,11 @@ const integrations = [
 export function IntegrationsStrip() {
   return (
     <section className="relative overflow-hidden bg-brand-orange py-14 sm:py-16 lg:py-20 text-white">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:items-end">
           <div>
             <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.3em] text-brand-black uppercase">
-              <HugeiconsIcon icon={LinkIcon} className="size-3.5" />
+              <HugeiconsIcon icon={Link01Icon} className="size-3.5" />
               Integrations
             </span>
             <h2 className="mt-3 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
@@ -34,7 +34,7 @@ export function IntegrationsStrip() {
               Ship Anywhere.
             </h2>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/85">
-              Levite supports every major local payment method, bank, and
+              STRUKTURA supports every major local payment method, bank, and
               delivery network. Sellers sync their accounting tools and run
               everything from one dashboard.
             </p>

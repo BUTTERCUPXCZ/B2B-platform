@@ -79,7 +79,7 @@ export function PostServicePage({
       <Hero />
 
       <section className="bg-[#f5f3ef] pb-16 sm:pb-20 lg:pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <AnimatePresence mode="wait">
             {submitted ? (
               <Confirmation key="done" form={form} />
@@ -123,7 +123,7 @@ function Hero() {
       />
       <Reveal className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
         <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
-          <span className="size-1.5 rounded-full bg-brand-orange" />
+          <span className="size-1.5 rounded-none bg-brand-orange" />
           List your service
         </span>
         <h1 className="mt-5 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
@@ -309,7 +309,7 @@ function ServiceForm({
             How buyers reach you
           </h2>
           <p className="mt-1 text-sm text-brand-black/70">
-            We never share these publicly — buyers contact you through Levite.
+            We never share these publicly — buyers contact you through STRUKTURA.
           </p>
         </div>
 
@@ -346,7 +346,7 @@ function ServiceForm({
           />
           <span>
             I confirm my business is registered, I&rsquo;m authorized to list this
-            service, and I agree to Levite&rsquo;s{" "}
+            service, and I agree to STRUKTURA&rsquo;s{" "}
             <Link to="/" className="font-semibold text-brand-orange hover:underline">
               Seller Terms
             </Link>
@@ -358,7 +358,7 @@ function ServiceForm({
       <button
         type="submit"
         disabled={!valid}
-        className="mt-9 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft disabled:cursor-not-allowed disabled:opacity-50"
+        className="mt-9 inline-flex w-full items-center justify-center gap-2 rounded-none bg-brand-orange py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft disabled:cursor-not-allowed disabled:opacity-50"
       >
         Submit listing for review
         <HugeiconsIcon icon={ArrowRight01Icon} className="size-4" />
@@ -437,7 +437,7 @@ function PreviewCard({ form }: { form: FormState }) {
               icon={CheckmarkCircle02Icon}
               className="mt-0.5 size-3.5 shrink-0 text-brand-orange"
             />
-            Free to list — Levite earns only on successful jobs
+            Free to list — STRUKTURA earns only on successful jobs
           </li>
           <li className="flex items-start gap-2">
             <HugeiconsIcon
@@ -473,7 +473,7 @@ function Confirmation({ form }: { form: FormState }) {
       animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
       className="mx-auto max-w-2xl rounded-md border border-brand-black/10 bg-white p-9 text-center shadow-[0_24px_60px_-30px_rgba(15,16,15,0.25)]"
     >
-      <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-brand-orange/15 text-brand-orange">
+      <span className="mx-auto flex size-14 items-center justify-center rounded-none bg-brand-orange/15 text-brand-orange">
         <HugeiconsIcon icon={CheckmarkCircle02Icon} className="size-8" />
       </span>
       <h2 className="mt-5 text-2xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-3xl">
@@ -508,7 +508,7 @@ function Confirmation({ form }: { form: FormState }) {
       <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
         <Link
           to="/jobs"
-          className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft"
+          className="inline-flex items-center gap-2 rounded-none bg-brand-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft"
         >
           Browse open jobs
           <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
@@ -527,7 +527,7 @@ function Confirmation({ form }: { form: FormState }) {
 function Step({ n, label }: { n: number; label: string }) {
   return (
     <li className="flex items-start gap-3">
-      <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-brand-orange/10 text-xs font-bold text-brand-orange">
+      <span className="flex size-7 shrink-0 items-center justify-center rounded-none bg-brand-orange/10 text-xs font-bold text-brand-orange">
         {n}
       </span>
       <span className="pt-0.5">{label}</span>

@@ -13,7 +13,7 @@ export function CapabilityDetails() {
   const reduce = useReducedMotion()
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto flex max-w-7xl flex-col gap-24 px-6">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-24 px-6">
         {capabilities.map((c, i) => {
           const reverse = i % 2 === 1
           return (

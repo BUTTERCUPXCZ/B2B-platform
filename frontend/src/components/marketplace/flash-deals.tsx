@@ -1,7 +1,8 @@
+import { Link } from "@tanstack/react-router"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   ShoppingCart01Icon,
-  TimerIcon,
+  Timer02Icon,
   StarIcon,
   ArrowRight01Icon,
 } from "@hugeicons/core-free-icons"
@@ -90,7 +91,7 @@ const deals: Deal[] = [
 export function FlashDeals() {
   return (
     <section className="bg-brand-orange py-14 sm:py-16 lg:py-20 text-white">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <Reveal className="mb-8 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
           <div>
             <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.3em] text-brand-black uppercase">
@@ -102,7 +103,7 @@ export function FlashDeals() {
             </h2>
           </div>
           <div className="inline-flex items-center gap-2 rounded-full bg-brand-black/30 px-4 py-2 text-xs font-semibold backdrop-blur">
-            <HugeiconsIcon icon={TimerIcon} className="size-4" />
+            <HugeiconsIcon icon={Timer02Icon} className="size-4" />
             Ends in <span className="font-bold tracking-wider">14 : 32 : 09</span>
           </div>
         </Reveal>
@@ -159,13 +160,13 @@ export function FlashDeals() {
         </StaggerGroup>
 
         <div className="mt-10 flex justify-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-black px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink"
+          <Link
+            to="/shop"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-black px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink active:scale-[0.97]"
           >
             See all deals
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

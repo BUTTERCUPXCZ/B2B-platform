@@ -14,7 +14,7 @@ const shortLabels: Record<string, string> = {
 export function CapabilityNav() {
   return (
     <nav className="sticky top-0 z-20 -mt-12 border-b border-brand-black/10 bg-white/95 shadow-sm backdrop-blur">
-      <div className="mx-auto max-w-7xl overflow-x-auto px-6">
+      <div className="mx-auto max-w-[1440px] overflow-x-auto px-6">
         <ul className="flex gap-1 py-3 text-xs font-semibold whitespace-nowrap">
           {capabilities.map((c, i) => (
             <li key={c.id}>

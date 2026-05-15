@@ -7,7 +7,7 @@ import {
   ArrowRight01Icon,
   ArrowDown01Icon,
   Location01Icon,
-  TimerIcon,
+  Timer02Icon,
   CheckmarkBadge02Icon,
   Wrench01Icon,
 } from "@hugeicons/core-free-icons"
@@ -70,11 +70,11 @@ export function JobsListPage({
   }, [query, activeCategory, sort])
 
   return (
-    <main className="bg-white">
+    <main className="bg-gray-100">
       <Hero query={query} setQuery={setQuery} />
 
-      <section className="bg-white pt-4 pb-16 sm:pt-6 sm:pb-20 lg:pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section className="bg-gray-100 pt-4 pb-16 sm:pt-6 sm:pb-20 lg:pb-24">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <Reveal>
             <CategoryRail
               active={activeCategory}
@@ -132,9 +132,9 @@ function Hero({
         aria-hidden
         className="absolute inset-0 bg-gradient-to-b from-brand-ink/95 via-brand-ink/85 to-brand-ink"
       />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6">
         <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
-          <span className="size-1.5 rounded-full bg-brand-orange" />
+          <span className="size-1.5 rounded-none bg-brand-orange" />
           Job Board
         </span>
 
@@ -149,7 +149,7 @@ function Hero({
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Link
             to="/jobs/post"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+            className="inline-flex items-center gap-2 rounded-none bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
           >
             Post a job instead
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
@@ -202,7 +202,7 @@ function CategoryRail({
           {active === null && (
             <motion.span
               layoutId="jobs-cat-pill"
-              className="absolute inset-0 rounded-full bg-brand-orange"
+              className="absolute inset-0 rounded-none bg-brand-orange"
               transition={{ type: "spring", stiffness: 320, damping: 30 }}
             />
           )}
@@ -225,7 +225,7 @@ function CategoryRail({
               {isActive && (
                 <motion.span
                   layoutId="jobs-cat-pill"
-                  className="absolute inset-0 -z-10 rounded-full bg-brand-orange"
+                  className="absolute inset-0 -z-10 rounded-none bg-brand-orange"
                   transition={{ type: "spring", stiffness: 320, damping: 30 }}
                 />
               )}
@@ -288,10 +288,13 @@ function SortMenu({
 
 function JobCard({ job }: { job: Job }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-md border border-brand-black/10 bg-white p-6 shadow-[0_8px_20px_-12px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-0.5 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-25px_rgba(255,116,32,0.25)] sm:p-7">
+    <Link
+      to="/jobs/$jobId"
+      params={{ jobId: job.id }}
+      className="group flex flex-col overflow-hidden rounded-md border border-brand-black/10 bg-white p-6 shadow-[0_8px_20px_-12px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-0.5 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-25px_rgba(255,116,32,0.25)] sm:p-7">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-orange/10 px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
+          <span className="inline-flex items-center gap-1.5 rounded-none bg-brand-orange/10 px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
             {job.category}
           </span>
           <span className="inline-flex items-center gap-1 text-[11px] text-brand-black/65">
@@ -315,14 +318,14 @@ function JobCard({ job }: { job: Job }) {
       </p>
 
       <div className="mt-4 flex flex-wrap items-center gap-3 text-xs text-brand-black/75">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-black/[0.04] px-3 py-1 font-semibold">
+        <span className="inline-flex items-center gap-1.5 rounded-none bg-brand-black/[0.04] px-3 py-1 font-semibold">
           Budget · {job.budget}
         </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-black/[0.04] px-3 py-1">
-          <HugeiconsIcon icon={TimerIcon} className="size-3" />
+        <span className="inline-flex items-center gap-1.5 rounded-none bg-brand-black/[0.04] px-3 py-1">
+          <HugeiconsIcon icon={Timer02Icon} className="size-3" />
           {job.startWindow}
         </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-black/[0.04] px-3 py-1">
+        <span className="inline-flex items-center gap-1.5 rounded-none bg-brand-black/[0.04] px-3 py-1">
           <HugeiconsIcon icon={Wrench01Icon} className="size-3" />
           {job.bidCount} bid{job.bidCount === 1 ? "" : "s"} so far
         </span>
@@ -335,22 +338,18 @@ function JobCard({ job }: { job: Job }) {
             {job.buyer.name}
           </span>
           {job.buyer.verified && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-brand-orange/10 px-2 py-0.5 text-[10px] font-semibold text-brand-orange">
+            <span className="inline-flex items-center gap-1 rounded-none bg-brand-orange/10 px-2 py-0.5 text-[10px] font-semibold text-brand-orange">
               <HugeiconsIcon icon={CheckmarkBadge02Icon} className="size-3" />
               Verified buyer
             </span>
           )}
         </span>
-        <Link
-          to="/auth/signup"
-          search={{ role: "contractor" }}
-          className="inline-flex items-center gap-1.5 rounded-full bg-brand-orange px-4 py-2 text-[11px] font-semibold tracking-[0.18em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
-        >
-          Submit a bid
+        <span className="inline-flex items-center gap-1.5 rounded-none bg-brand-orange px-4 py-2 text-[11px] font-semibold tracking-[0.18em] text-white uppercase transition-colors group-hover:bg-brand-orange-soft">
+          View & bid
           <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
-        </Link>
+        </span>
       </div>
-    </article>
+    </Link>
   )
 }
 
@@ -364,7 +363,7 @@ function EmptyState({ onClear }: { onClear: () => void }) {
       <button
         type="button"
         onClick={onClear}
-        className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+        className="mt-5 inline-flex items-center gap-2 rounded-none bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
       >
         Reset filters
         <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />

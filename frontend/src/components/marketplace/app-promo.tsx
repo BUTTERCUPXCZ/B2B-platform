@@ -16,13 +16,13 @@ const appBullets = [
 export function AppPromo() {
   return (
     <section className="relative isolate overflow-hidden bg-brand-orange py-14 sm:py-16 lg:py-20 text-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.2fr_1fr]">
+      <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-6 lg:grid-cols-[1.2fr_1fr]">
         <Reveal>
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-black uppercase">
             Mobile App
           </span>
           <h2 className="mt-3 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
-            Levite in your pocket.
+            STRUKTURA in your pocket.
             <br />
             Built for the jobsite.
           </h2>
@@ -91,7 +91,7 @@ export function AppPromo() {
             />
             <div className="relative flex h-full flex-col p-6 text-white">
               <span className="text-[10px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
-                Levite · Today
+                STRUKTURA · Today
               </span>
               <h3 className="mt-2 text-xl leading-tight font-bold">
                 Cement order arriving 2:30pm

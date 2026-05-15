@@ -3,10 +3,10 @@ import {
   House04Icon,
   Building03Icon,
   Wrench01Icon,
-  TapIcon,
+  Tap01Icon,
   FlashIcon,
   PaintBrush01Icon,
-  PlantIcon,
+  Plant02Icon,
   ToolsIcon,
   ArrowRight01Icon,
   ArrowUpRight01Icon,
@@ -47,7 +47,7 @@ const services: Service[] = [
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80&auto=format&fit=crop",
   },
   {
-    icon: TapIcon,
+    icon: Tap01Icon,
     name: "Plumbing",
     desc: "Installs, repairs, fixtures, and emergency call-outs.",
     starting: "₱2.5k",
@@ -71,7 +71,7 @@ const services: Service[] = [
       "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=900&q=80&auto=format&fit=crop",
   },
   {
-    icon: PlantIcon,
+    icon: Plant02Icon,
     name: "Landscaping",
     desc: "Garden builds, hardscape, irrigation, lawn restoration.",
     starting: "₱45k",
@@ -91,7 +91,7 @@ const services: Service[] = [
 export function ServicesShowcase() {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <Reveal className="mb-10 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
           <div>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
@@ -101,7 +101,7 @@ export function ServicesShowcase() {
               Need it built? Hire a vetted pro.
             </h2>
             <p className="mt-2 max-w-xl text-sm text-brand-black/70">
-              Every contractor on Levite is identity-verified, licensed, and
+              Every contractor on STRUKTURA is identity-verified, licensed, and
               backed by buyer escrow. Pay only when each milestone is signed off.
             </p>
           </div>

@@ -25,7 +25,7 @@ export function LoginPage() {
       subtitle="Sign in to keep building. The same account works for buyers, sellers, and contractors."
       bottomPrompt={
         <>
-          New to Levite?{" "}
+          New to STRUKTURA?{" "}
           <Link
             to="/auth/signup"
             className="font-semibold text-brand-orange hover:underline"

@@ -1,6 +1,9 @@
 import { useMemo, useState } from "react"
+import { Link } from "@tanstack/react-router"
 import { motion } from "motion/react"
 import { HugeiconsIcon } from "@hugeicons/react"
+
+import { useCart } from "@/components/cart/cart-context"
 import {
   Search01Icon,
   ArrowRight01Icon,
@@ -73,11 +76,11 @@ export function ShopPage({ initialQuery = "" }: { initialQuery?: string }) {
   }
 
   return (
-    <main className="bg-white">
+    <main className="bg-gray-100">
       <Hero query={query} setQuery={setQuery} onOpenFilters={() => setFiltersOpen(true)} />
 
-      <section className="bg-white pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[260px_1fr]">
+      <section className="bg-gray-100 pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24">
+        <div className="mx-auto grid max-w-[1280px] gap-8 px-4 sm:px-6 lg:grid-cols-[260px_1fr]">
           <Filters
             activeCategory={activeCategory}
             setActiveCategory={setActiveCategory}
@@ -129,7 +132,7 @@ function Hero({
   onOpenFilters: () => void
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-ink pt-32 pb-12 text-white sm:pt-40 lg:pt-44">
+    <section className="relative isolate overflow-hidden bg-brand-ink pt-20 pb-8 text-white sm:pt-24 lg:pt-28">
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center opacity-25"
@@ -142,9 +145,9 @@ function Hero({
         aria-hidden
         className="absolute inset-0 bg-gradient-to-b from-brand-ink/95 via-brand-ink/85 to-brand-ink"
       />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6">
         <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
-          <span className="size-1.5 rounded-full bg-brand-orange" />
+          <span className="size-1.5 rounded-none bg-brand-orange" />
           Marketplace · Materials
         </span>
 
@@ -173,7 +176,7 @@ function Hero({
           <button
             type="button"
             onClick={onOpenFilters}
-            className="inline-flex h-9 items-center gap-1.5 rounded-full bg-brand-black/5 px-4 text-[11px] font-semibold tracking-[0.18em] text-brand-black uppercase transition-colors hover:bg-brand-orange/10 hover:text-brand-orange lg:hidden"
+            className="inline-flex h-9 items-center gap-1.5 rounded-none bg-brand-black/5 px-4 text-[11px] font-semibold tracking-[0.18em] text-brand-black uppercase transition-colors hover:bg-brand-orange/10 hover:text-brand-orange lg:hidden"
           >
             <HugeiconsIcon icon={FilterHorizontalIcon} className="size-3.5" />
             Filters
@@ -291,7 +294,7 @@ function Filters({
                 type="button"
                 aria-label="Close filters"
                 onClick={onClose}
-                className="flex size-9 items-center justify-center rounded-full bg-brand-black/5 text-brand-black"
+                className="flex size-9 items-center justify-center rounded-none bg-brand-black/5 text-brand-black"
               >
                 <HugeiconsIcon icon={Cancel01Icon} className="size-4" />
               </button>
@@ -300,7 +303,7 @@ function Filters({
             <button
               type="button"
               onClick={onClose}
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-brand-orange py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+              className="mt-8 inline-flex w-full items-center justify-center rounded-none bg-brand-orange py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
             >
               Apply filters
             </button>
@@ -391,12 +394,16 @@ function SortMenu({
 }
 
 function ProductCard({ product }: { product: Product }) {
+  const cart = useCart()
   const off =
     product.oldPrice != null
       ? Math.round((1 - product.price / product.oldPrice) * 100)
       : 0
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-md border border-brand-black/10 bg-white shadow-[0_8px_20px_-12px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-25px_rgba(255,116,32,0.25)]">
+    <Link
+      to="/shop/$productId"
+      params={{ productId: product.id }}
+      className="group flex h-full flex-col overflow-hidden rounded-md border border-brand-black/10 bg-white shadow-[0_8px_20px_-12px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1 hover:shadow-[0_25px_50px_-25px_rgba(0,0,0,0.15)]">
       <div className="relative aspect-square overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -450,13 +457,18 @@ function ProductCard({ product }: { product: Product }) {
           <button
             type="button"
             aria-label={`Add ${product.name} to cart`}
-            className="inline-flex size-10 items-center justify-center rounded-full bg-brand-orange text-white transition-colors hover:bg-brand-orange-soft"
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              cart.add(product.id, 1)
+            }}
+            className="inline-flex size-10 items-center justify-center rounded-none bg-brand-orange text-white transition-colors hover:bg-brand-orange-soft"
           >
             <HugeiconsIcon icon={ShoppingCart01Icon} className="size-4" />
           </button>
         </div>
       </div>
-    </article>
+    </Link>
   )
 }
 
@@ -470,7 +482,7 @@ function EmptyState({ onClear }: { onClear: () => void }) {
       <button
         type="button"
         onClick={onClear}
-        className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+        className="mt-5 inline-flex items-center gap-2 rounded-none bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
       >
         Reset filters
         <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />

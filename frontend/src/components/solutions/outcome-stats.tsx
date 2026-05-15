@@ -10,7 +10,7 @@ const stats = [
 export function OutcomeStats() {
   return (
     <section className="bg-brand-orange py-16 text-white">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <StaggerGroup className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
             <StaggerItem key={s.label} className="border-l-2 border-white/30 pl-5">

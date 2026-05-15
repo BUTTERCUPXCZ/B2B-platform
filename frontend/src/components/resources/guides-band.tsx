@@ -1,7 +1,7 @@
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   BookOpen01Icon,
-  DownloadIcon,
+  Download01Icon,
   LibrariesIcon,
 } from "@hugeicons/core-free-icons"
 
@@ -11,7 +11,7 @@ const guides = [
   {
     icon: BookOpen01Icon,
     title: "Homeowner's Construction Buying Guide",
-    body: "How to plan a renovation or new build on Levite — from materials takeoff to hiring contractors to managing payments through escrow.",
+    body: "How to plan a renovation or new build on STRUKTURA — from materials takeoff to hiring contractors to managing payments through escrow.",
     pages: "48 pages",
   },
   {
@@ -31,7 +31,7 @@ const guides = [
 export function GuidesBand() {
   return (
     <section className="bg-brand-orange py-14 sm:py-16 lg:py-20 text-white">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <div className="flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
           <div>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-black uppercase">
@@ -72,7 +72,7 @@ export function GuidesBand() {
                 className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase transition-colors hover:bg-brand-black hover:text-white"
               >
                 Download PDF
-                <HugeiconsIcon icon={DownloadIcon} className="size-3.5" />
+                <HugeiconsIcon icon={Download01Icon} className="size-3.5" />
               </a>
             </StaggerItem>
           ))}

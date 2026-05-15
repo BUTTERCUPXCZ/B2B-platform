@@ -35,7 +35,7 @@ export function AuthShell({
               <HugeiconsIcon icon={ConstructionIcon} className="size-5" />
             </span>
             <span className="text-lg font-bold tracking-tight text-brand-black">
-              Levite
+              STRUKTURA
             </span>
           </Link>
 
@@ -53,7 +53,7 @@ export function AuthShell({
           </div>
 
           <p className="text-center text-[11px] tracking-wider text-brand-black/45">
-            © {new Date().getFullYear()} Levite · {" "}
+            © {new Date().getFullYear()} STRUKTURA · {" "}
             <Link to="/contact" className="hover:text-brand-orange">Help</Link>
             {" · "}
             <Link to="/pricing" className="hover:text-brand-orange">Pricing</Link>

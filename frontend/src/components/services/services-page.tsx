@@ -63,7 +63,7 @@ export function ServicesPage({
       <Hero query={query} setQuery={setQuery} />
 
       <section className="bg-white pt-4 pb-16 sm:pt-6 sm:pb-20 lg:pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <Reveal>
             <CategoryRail
               active={activeCategory}
@@ -126,9 +126,9 @@ function Hero({
         aria-hidden
         className="absolute inset-0 bg-gradient-to-b from-brand-ink/95 via-brand-ink/85 to-brand-ink"
       />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6">
         <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
-          <span className="size-1.5 rounded-full bg-brand-orange" />
+          <span className="size-1.5 rounded-none bg-brand-orange" />
           Marketplace · Services
         </span>
 
@@ -143,7 +143,7 @@ function Hero({
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Link
             to="/jobs/post"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft"
+            className="inline-flex items-center gap-2 rounded-none bg-brand-orange px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-soft"
           >
             Post a job
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
@@ -219,14 +219,14 @@ function CategoryRail({
               className={cn(
                 "relative inline-flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold transition-colors",
                 isActive
-                  ? "border-brand-orange text-white"
+                  ? "border-brand-orange bg-brand-orange text-white"
                   : "border-brand-black/10 bg-white text-brand-black/70 hover:border-brand-orange/40 hover:text-brand-orange"
               )}
             >
               {isActive && (
                 <motion.span
                   layoutId="cat-pill"
-                  className="absolute inset-0 -z-10 rounded-full bg-brand-orange"
+                  className="absolute inset-0 rounded-full bg-brand-orange"
                   transition={{ type: "spring", stiffness: 320, damping: 30 }}
                 />
               )}
@@ -289,7 +289,10 @@ function SortMenu({
 
 function ProCard({ pro }: { pro: ServicePro }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-md border border-brand-black/10 bg-white shadow-[0_8px_20px_-12px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-25px_rgba(255,116,32,0.25)]">
+    <Link
+      to="/services/$serviceId"
+      params={{ serviceId: pro.id }}
+      className="group flex h-full flex-col overflow-hidden rounded-md border border-brand-black/10 bg-white shadow-[0_8px_20px_-12px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_25px_50px_-25px_rgba(255,116,32,0.25)]">
       <div className="relative aspect-[16/10] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -335,7 +338,7 @@ function ProCard({ pro }: { pro: ServicePro }) {
 
         <p className="mt-3 text-[11px] text-brand-black/65">
           <span className="font-bold text-brand-black">{pro.jobsCompleted}</span>{" "}
-          jobs completed on Levite
+          jobs completed on STRUKTURA
         </p>
 
         <div className="mt-auto flex items-end justify-between pt-4">
@@ -347,17 +350,13 @@ function ProCard({ pro }: { pro: ServicePro }) {
               {pro.startingFrom}
             </p>
           </div>
-          <Link
-            to="/jobs/post"
-            search={{ category: pro.category }}
-            className="inline-flex items-center gap-1.5 rounded-full bg-brand-orange px-4 py-2 text-[11px] font-semibold tracking-[0.18em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
-          >
-            Get quotes
+          <span className="inline-flex items-center gap-1.5 rounded-none bg-brand-orange px-4 py-2 text-[11px] font-semibold tracking-[0.18em] text-white uppercase transition-colors group-hover:bg-brand-orange-soft">
+            View profile
             <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
-          </Link>
+          </span>
         </div>
       </div>
-    </article>
+    </Link>
   )
 }
 
@@ -371,7 +370,7 @@ function EmptyState({ onClear }: { onClear: () => void }) {
       <button
         type="button"
         onClick={onClear}
-        className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+        className="mt-5 inline-flex items-center gap-2 rounded-none bg-brand-orange px-5 py-2.5 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
       >
         Reset filters
         <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />

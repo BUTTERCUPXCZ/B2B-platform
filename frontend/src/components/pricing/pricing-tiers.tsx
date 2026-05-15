@@ -43,7 +43,7 @@ const tiers: Tier[] = [
       { label: "Payouts", value: "Weekly" },
     ],
     features: [
-      { label: "Storefront page on Levite", included: true },
+      { label: "Storefront page on STRUKTURA", included: true },
       { label: "Up to 100 active listings", included: true },
       { label: "Standard search placement", included: true },
       { label: "Basic seller dashboard", included: true },
@@ -112,7 +112,7 @@ export function PricingTiers({ billing }: { billing: Billing }) {
   return (
     <section className="relative -mt-16 pb-16 sm:-mt-24 sm:pb-20 lg:-mt-32 lg:pb-24">
       <StaggerGroup
-        className="mx-auto grid max-w-7xl gap-5 px-6 lg:grid-cols-3"
+        className="mx-auto grid max-w-[1440px] gap-5 px-6 lg:grid-cols-3"
         amount={0.05}
       >
         {tiers.map((t) => (

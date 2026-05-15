@@ -11,7 +11,7 @@ import {
   Location01Icon,
   Calendar01Icon,
   Shield01Icon,
-  TimerIcon,
+  Timer02Icon,
   Cancel01Icon,
 } from "@hugeicons/core-free-icons"
 import { cn } from "@/lib/utils"
@@ -72,8 +72,8 @@ export function PostJobPage({
     <main className="bg-white">
       <Hero />
 
-      <section className="bg-[#f5f3ef] pb-16 sm:pb-20 lg:pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section className="bg-[#f5f3ef] pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24 lg:pb-24">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <AnimatePresence mode="wait">
             {submitted ? (
               <Confirmation key="done" form={form} />
@@ -117,7 +117,7 @@ function Hero() {
       />
       <Reveal className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
         <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-brand-orange uppercase">
-          <span className="size-1.5 rounded-full bg-brand-orange" />
+          <span className="size-1.5 rounded-none bg-brand-orange" />
           Post a Job
         </span>
         <h1 className="mt-5 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
@@ -249,7 +249,7 @@ function JobForm({
       <button
         type="submit"
         disabled={!valid}
-        className="mt-9 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange py-4 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft disabled:cursor-not-allowed disabled:opacity-50"
+        className="mt-9 inline-flex w-full items-center justify-center gap-2 rounded-none bg-brand-orange py-4 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft disabled:cursor-not-allowed disabled:opacity-50"
       >
         Post job · Get up to 5 bids
         <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
@@ -271,7 +271,7 @@ function PreviewCard({ form }: { form: FormState }) {
         </p>
         <div className="mt-4 rounded-md border border-brand-black/10 bg-[#f9f7f3] p-5">
           <div className="flex items-center gap-2">
-            <span className="rounded-full bg-brand-orange/10 px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-brand-orange uppercase">
+            <span className="rounded-none bg-brand-orange/10 px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-brand-orange uppercase">
               {form.category || "Trade"}
             </span>
             {form.location && (
@@ -295,7 +295,7 @@ function PreviewCard({ form }: { form: FormState }) {
             <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-semibold text-brand-black/75">
               {form.startWindow && (
                 <span className="inline-flex items-center gap-1 rounded-full bg-white px-2 py-1">
-                  <HugeiconsIcon icon={TimerIcon} className="size-3" />
+                  <HugeiconsIcon icon={Timer02Icon} className="size-3" />
                   {form.startWindow}
                 </span>
               )}
@@ -327,7 +327,7 @@ function PreviewCard({ form }: { form: FormState }) {
               icon={Shield01Icon}
               className="mt-0.5 size-3.5 shrink-0 text-brand-orange"
             />
-            Every bid comes from an identity-verified Levite pro
+            Every bid comes from an identity-verified STRUKTURA pro
           </li>
           <li className="flex items-start gap-2">
             <HugeiconsIcon
@@ -356,7 +356,7 @@ function Confirmation({ form }: { form: FormState }) {
       animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
       className="mx-auto max-w-2xl rounded-md border border-brand-black/10 bg-white p-9 text-center shadow-[0_24px_60px_-30px_rgba(15,16,15,0.25)]"
     >
-      <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-brand-orange/15 text-brand-orange">
+      <span className="mx-auto flex size-14 items-center justify-center rounded-none bg-brand-orange/15 text-brand-orange">
         <HugeiconsIcon icon={CheckmarkCircle02Icon} className="size-8" />
       </span>
       <h2 className="mt-5 text-2xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-3xl">
@@ -387,7 +387,7 @@ function Confirmation({ form }: { form: FormState }) {
       <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
         <Link
           to="/services"
-          className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
+          className="inline-flex items-center gap-2 rounded-none bg-brand-orange px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-orange-soft"
         >
           Browse pros while you wait
           <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
@@ -406,7 +406,7 @@ function Confirmation({ form }: { form: FormState }) {
 function Step({ n, label }: { n: number; label: string }) {
   return (
     <li className="flex items-start gap-3">
-      <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-brand-orange/10 text-xs font-bold text-brand-orange">
+      <span className="flex size-7 shrink-0 items-center justify-center rounded-none bg-brand-orange/10 text-xs font-bold text-brand-orange">
         {n}
       </span>
       <span className="pt-0.5">{label}</span>

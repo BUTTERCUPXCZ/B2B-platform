@@ -13,20 +13,20 @@ const webinars = [
     date: "May 12",
     time: "11:00 GMT+8 · 60 min",
     title: "Listing 101: Photo, Pricing, and Description Best Practices",
-    speaker: "Adi Santoso · Head of Marketplace, Levite",
+    speaker: "Adi Santoso · Head of Marketplace, STRUKTURA",
     tag: "Sellers",
   },
   {
     date: "May 27",
     time: "10:00 GMT+8 · 45 min",
     title: "How To Plan A Home Renovation You Can Actually Afford",
-    speaker: "Jonas Park · Buyer Advocate, Levite",
+    speaker: "Jonas Park · Buyer Advocate, STRUKTURA",
     tag: "Buyers",
   },
   {
     date: "Jun 03",
     time: "13:00 GMT+8 · 75 min",
-    title: "Q&A With A Verified-Pro: Winning Service Jobs on Levite",
+    title: "Q&A With A Verified-Pro: Winning Service Jobs on STRUKTURA",
     speaker: "Elena Marsh · Founder, Heritage Renovation Co.",
     tag: "Contractors",
   },
@@ -35,7 +35,7 @@ const webinars = [
 export function WebinarsList() {
   return (
     <section className="bg-brand-black py-14 sm:py-16 lg:py-20 text-white">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <div className="flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
           <div>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">

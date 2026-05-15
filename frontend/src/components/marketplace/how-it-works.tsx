@@ -56,7 +56,7 @@ const serviceSteps: Step[] = [
 export function HowItWorks() {
   return (
     <section className="bg-[#f5f3ef] py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <Reveal className="mb-12 text-center">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
             How it works

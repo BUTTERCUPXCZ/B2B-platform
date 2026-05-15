@@ -101,11 +101,15 @@ export function MarketplaceHero() {
           <form
             className="mt-5 flex items-center gap-2 rounded-full bg-white p-2 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] focus-within:ring-2 focus-within:ring-brand-orange/40"
             onSubmit={(e) => e.preventDefault()}
+            role="search"
+            aria-label={`${mode === "materials" ? "Materials" : "Services"} search`}
           >
-            <span className="flex size-11 shrink-0 items-center justify-center text-brand-black/65">
+            <span className="flex size-11 shrink-0 items-center justify-center text-brand-black/65" aria-hidden>
               <HugeiconsIcon icon={Search01Icon} className="size-5" />
             </span>
+            <label htmlFor="marketplace-search" className="sr-only">Search</label>
             <input
+              id="marketplace-search"
               type="search"
               placeholder={
                 mode === "materials"

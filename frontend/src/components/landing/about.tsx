@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router"
 import { useState } from "react"
 import { AnimatePresence, motion } from "motion/react"
 import { HugeiconsIcon } from "@hugeicons/react"
@@ -28,17 +29,18 @@ export function About() {
   const activeTab = tabs.find((t) => t.id === active)!
 
   return (
-    <section className="relative bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center">
+    <section className="relative bg-white py-16 sm:py-20 lg:py-24" aria-labelledby="about-heading">
+      <div className="mx-auto grid max-w-[1440px] gap-14 px-6 lg:grid-cols-2 lg:items-center">
         <Reveal className="relative">
           <div
-            className="aspect-[4/5] w-full overflow-hidden rounded-md bg-cover bg-center shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)]"
+            aria-hidden
+            className="aspect-[4/5] w-full overflow-hidden rounded-lg bg-cover bg-center shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)]"
             style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80&auto=format&fit=crop')",
             }}
           />
-          <div className="absolute -right-4 bottom-12 hidden w-52 overflow-hidden rounded-md bg-brand-orange p-5 text-white shadow-2xl sm:block">
+          <div className="absolute -right-4 bottom-12 hidden w-52 overflow-hidden rounded-lg bg-brand-orange p-5 text-white shadow-2xl sm:block">
             <span className="block text-[10px] font-medium tracking-[0.25em] uppercase">
               Marketplace GMV
             </span>
@@ -56,24 +58,28 @@ export function About() {
             <span className="h-px w-8 bg-brand-orange" />
             About the Marketplace
           </span>
-          <h2 className="mt-4 text-4xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-[44px]">
+          <h2 id="about-heading" className="mt-4 text-4xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-[44px]">
             One Marketplace.
             <br />
             Three Sides Of The Trade.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-brand-black/75">
-            Levite is the construction marketplace where homeowners and
+            STRUKTURA is the construction marketplace where homeowners and
             contractors shop materials and hire builders, while suppliers and
             service pros pay a transparent subscription to reach them. Every
             order moves through escrow — so trust isn&rsquo;t a leap of faith.
           </p>
 
           <div className="mt-8 overflow-x-auto border-b border-brand-black/10">
-            <div className="flex gap-5 sm:gap-8">
+            <div role="tablist" aria-label="About tabs" className="flex gap-5 sm:gap-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
+                  role="tab"
                   type="button"
+                  aria-selected={active === tab.id}
+                  aria-controls={`tab-panel-${tab.id}`}
+                  id={`tab-${tab.id}`}
                   onClick={() => setActive(tab.id)}
                   className={cn(
                     "relative shrink-0 pb-3 text-sm font-semibold whitespace-nowrap transition-colors",
@@ -91,24 +97,31 @@ export function About() {
             </div>
           </div>
           <AnimatePresence mode="wait">
-            <motion.p
+            <div
               key={activeTab.id}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
-              exit={{ opacity: 0, y: -4, transition: { duration: 0.15 } }}
-              className="mt-5 max-w-xl text-sm leading-relaxed text-brand-black/75"
+              id={`tab-panel-${activeTab.id}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${activeTab.id}`}
+              tabIndex={0}
             >
-              {activeTab.body}
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
+                exit={{ opacity: 0, y: -4, transition: { duration: 0.15 } }}
+                className="mt-5 max-w-xl text-sm leading-relaxed text-brand-black/75"
+              >
+                {activeTab.body}
+              </motion.p>
+            </div>
           </AnimatePresence>
 
           <div className="mt-9 flex flex-wrap items-center gap-6">
-            <a href="#sell" className="pill-cta">
+            <Link to="/sell" className="pill-cta group/pill">
               Become a seller
               <span className="pill-cta-icon">
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
               </span>
-            </a>
+            </Link>
             <div className="flex items-center gap-3">
               <span className="flex size-11 items-center justify-center rounded-full bg-brand-orange/10 text-brand-orange">
                 <HugeiconsIcon icon={Call02Icon} className="size-5" />

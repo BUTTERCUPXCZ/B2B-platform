@@ -22,7 +22,7 @@ const proBullets = [
   "Only pay when you win — no upfront fees",
 ]
 
-export function SellOnBuildora() {
+export function SellOnStruktura() {
   return (
     <section id="sell" className="relative isolate overflow-hidden bg-brand-ink py-16 sm:py-20 lg:py-24 text-white">
       <div
@@ -38,20 +38,20 @@ export function SellOnBuildora() {
         className="absolute inset-0 bg-gradient-to-b from-brand-ink/95 via-brand-ink/80 to-brand-ink"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-[1440px] px-6">
         <Reveal className="mb-12 text-center">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
             Run a construction business?
           </span>
           <h2 className="mt-3 text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl">
-            Sell on Levite.
+            Sell on STRUKTURA.
             <br />
             <span className="text-brand-orange">Reach buyers ready to build.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
             We don&rsquo;t carry inventory or staff jobsites. We&rsquo;re the platform —
             you&rsquo;re the brand. Materials sellers and service contractors both
-            grow on Levite.
+            grow on STRUKTURA.
           </p>
         </Reveal>
 
@@ -61,7 +61,7 @@ export function SellOnBuildora() {
               <HugeiconsIcon icon={Store02Icon} className="size-5" />
             </span>
             <h3 className="mt-5 text-2xl font-extrabold tracking-tight">
-              Sell on Levite
+              Sell on STRUKTURA
             </h3>
             <p className="mt-2 text-sm text-white/85">
               For construction-materials sellers — cement yards, hardware retail,

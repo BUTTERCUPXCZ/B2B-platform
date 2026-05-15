@@ -40,7 +40,7 @@ const offices = [
 export function OfficesGrid() {
   return (
     <section className="bg-[#f5f3ef] py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1280px] px-6">
         <div className="mb-12 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
           <div>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">

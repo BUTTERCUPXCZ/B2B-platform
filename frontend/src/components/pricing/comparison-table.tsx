@@ -14,7 +14,7 @@ const groups: Array<{
   {
     label: "Storefront & Listings",
     rows: [
-      { feature: "Storefront page on Levite", starter: true, growth: true, pro: true },
+      { feature: "Storefront page on STRUKTURA", starter: true, growth: true, pro: true },
       { feature: "Active listings", starter: "100", growth: "1,000", pro: "Unlimited" },
       { feature: "Custom storefront URL", starter: false, growth: true, pro: true },
       { feature: "Featured placement on category pages", starter: false, growth: true, pro: true },
@@ -59,7 +59,7 @@ const cols = ["starter", "growth", "pro"] as const
 export function ComparisonTable() {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <div className="mb-12 text-center">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
             Compare Seller Plans

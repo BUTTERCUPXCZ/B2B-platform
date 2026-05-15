@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { motion } from "motion/react"
+import { Link } from "@tanstack/react-router"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
 import { cn } from "@/lib/utils"
@@ -81,25 +82,28 @@ export function FeaturedProjects() {
     <section
       id="projects"
       className="relative bg-brand-orange pt-4 pb-20 text-white"
+      aria-labelledby="projects-heading"
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <Reveal className="flex flex-col gap-6 pt-8 pb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-white/80 uppercase">
               Real builds
             </span>
-            <h2 className="mt-2 text-4xl font-extrabold tracking-tight text-brand-black sm:text-[44px]">
-              Built through Levite.
+            <h2 id="projects-heading" className="mt-2 text-4xl font-extrabold tracking-tight text-brand-black sm:text-[44px]">
+              Built through STRUKTURA.
             </h2>
           </div>
-          <div className="flex flex-wrap gap-1.5 text-xs font-semibold">
+          <div className="flex flex-wrap gap-1.5 text-xs font-semibold" role="tablist" aria-label="Filter projects">
             {filters.map((f) => (
               <button
                 key={f}
                 type="button"
+                role="tab"
+                aria-selected={active === f}
                 onClick={() => setActive(f)}
                 className={cn(
-                  "relative rounded-full px-4 py-2 transition-colors",
+                  "relative rounded-full px-4 py-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50",
                   active === f ? "text-white" : "bg-white/15 text-white/85 hover:bg-white/25"
                 )}
               >
@@ -123,11 +127,13 @@ export function FeaturedProjects() {
           {visible.map((p) => (
             <StaggerItem
               key={p.name}
-              className="group relative aspect-[3/4] overflow-hidden rounded-md bg-brand-black"
+              className="group relative aspect-[3/4] overflow-hidden rounded-lg bg-brand-black"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                 style={{ backgroundImage: `url('${p.image}')` }}
+                role="img"
+                aria-label={p.name}
               />
               <div
                 aria-hidden
@@ -142,7 +148,7 @@ export function FeaturedProjects() {
                 </h3>
                 <p className="mt-1 text-xs text-white/70">{p.category}</p>
               </div>
-              <span className="absolute top-4 right-4 flex size-9 items-center justify-center rounded-full bg-white text-brand-orange opacity-0 transition-opacity group-hover:opacity-100">
+              <span className="absolute top-4 right-4 flex size-9 items-center justify-center rounded-full bg-white text-brand-orange opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100" aria-hidden>
                 <HugeiconsIcon icon={ArrowRight01Icon} className="size-4" />
               </span>
             </StaggerItem>
@@ -150,15 +156,15 @@ export function FeaturedProjects() {
         </StaggerGroup>
 
         <div className="mt-10 flex justify-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-black px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink"
+          <Link
+            to="/shop"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-black px-6 py-3 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink active:scale-[0.97]"
           >
             Explore all builds
             <span className="flex size-6 items-center justify-center rounded-full bg-brand-orange">
               <HugeiconsIcon icon={ArrowRight01Icon} className="size-3" />
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

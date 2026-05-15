@@ -84,14 +84,14 @@ export function FeaturedBuilds() {
 
   return (
     <section className="bg-[#f5f3ef] py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <Reveal className="mb-10 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
           <div>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
               Featured Builds
             </span>
             <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-brand-black sm:text-4xl">
-              Real homes, built through Levite.
+              Real homes, built through STRUKTURA.
             </h2>
           </div>
           <div className="flex flex-wrap gap-1.5 text-xs font-semibold">

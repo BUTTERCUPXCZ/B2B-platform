@@ -2,10 +2,10 @@ import {
   House04Icon,
   Building03Icon,
   Wrench01Icon,
-  TapIcon,
+  Tap01Icon,
   FlashIcon,
   PaintBrush01Icon,
-  PlantIcon,
+  Plant02Icon,
   ToolsIcon,
 } from "@hugeicons/core-free-icons"
 
@@ -23,12 +23,26 @@ export const serviceCategories: { name: ServiceCategory; icon: typeof House04Ico
   { name: "Custom Home Build", icon: House04Icon },
   { name: "Renovation", icon: Building03Icon },
   { name: "Roofing", icon: ToolsIcon },
-  { name: "Plumbing", icon: TapIcon },
+  { name: "Plumbing", icon: Tap01Icon },
   { name: "Electrical", icon: FlashIcon },
   { name: "Painting", icon: PaintBrush01Icon },
-  { name: "Landscaping", icon: PlantIcon },
+  { name: "Landscaping", icon: Plant02Icon },
   { name: "Repairs & Handyman", icon: Wrench01Icon },
 ]
+
+export type ServiceReview = {
+  author: string
+  rating: number
+  text: string
+  date: string
+}
+
+export type ServicePackage = {
+  name: string
+  price: string
+  duration: string
+  description: string
+}
 
 export type ServicePro = {
   id: string
@@ -42,6 +56,9 @@ export type ServicePro = {
   blurb: string
   badge?: "Verified Pro" | "Top Rated" | "Quick Responder"
   image: string
+  portfolio?: string[]
+  packages?: ServicePackage[]
+  customerReviews?: ServiceReview[]
 }
 
 export const servicePros: ServicePro[] = [
@@ -173,3 +190,51 @@ export const proSortOptions = [
 ] as const
 
 export type ProSortOption = (typeof proSortOptions)[number]["id"]
+
+const defaultPortfolio = [
+  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=900&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=900&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1632759145355-8b8f1f4f5c0c?w=900&q=80&auto=format&fit=crop",
+]
+
+const defaultReviews: ServiceReview[] = [
+  {
+    author: "Maria S.",
+    rating: 5,
+    text: "On time, on budget, and the team was easy to coordinate with. Will hire again.",
+    date: "2 weeks ago",
+  },
+  {
+    author: "Carlo D.",
+    rating: 5,
+    text: "Communicated daily progress with photos. Quality finishing and clean handover.",
+    date: "1 month ago",
+  },
+  {
+    author: "Aileen R.",
+    rating: 4,
+    text: "Solid work overall. Some delays from supplier side but the team adjusted well.",
+    date: "2 months ago",
+  },
+]
+
+const defaultPackages: Record<string, ServicePackage[]> = {
+  default: [
+    { name: "Consult & estimate", price: "₱2,500", duration: "1 visit", description: "Site visit, scope review, written quote within 48h." },
+    { name: "Standard package", price: "₱45,000", duration: "1–2 weeks", description: "Materials sourcing, labor, coordination, and weekly status." },
+    { name: "Premium package", price: "₱120,000", duration: "3–4 weeks", description: "Full project mgmt, premium finishes, 2-year workmanship warranty." },
+  ],
+}
+
+export function getServiceProDetail(pro: ServicePro): Required<
+  Pick<ServicePro, "portfolio" | "packages" | "customerReviews">
+> {
+  return {
+    portfolio: pro.portfolio ?? defaultPortfolio,
+    packages: pro.packages ?? defaultPackages.default,
+    customerReviews: pro.customerReviews ?? defaultReviews,
+  }
+}

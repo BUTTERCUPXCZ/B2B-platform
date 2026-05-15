@@ -32,6 +32,7 @@ export function QuoteForm() {
     <section
       id="quote"
       className="relative isolate overflow-hidden bg-brand-ink py-16 sm:py-20 lg:py-24 text-white"
+      aria-labelledby="quote-heading"
     >
       <div
         aria-hidden
@@ -46,9 +47,9 @@ export function QuoteForm() {
         className="absolute inset-0 bg-gradient-to-b from-brand-ink/95 via-brand-ink/85 to-brand-ink"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-[1440px] px-6">
         <div className="text-center">
-          <h2 className="mx-auto max-w-3xl text-4xl leading-tight font-extrabold tracking-tight sm:text-[44px]">
+          <h2 id="quote-heading" className="mx-auto max-w-3xl text-4xl leading-tight font-extrabold tracking-tight sm:text-[44px]">
             The Operating System For
             <br />
             <span className="text-brand-orange">Construction Commerce</span>
@@ -68,7 +69,7 @@ export function QuoteForm() {
         </div>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-[1.4fr_1fr]">
-          <div className="rounded-md bg-brand-orange p-7 sm:p-9">
+          <div className="rounded-lg bg-brand-orange p-7 sm:p-9">
             <h3 className="text-xl font-bold tracking-tight">Request A Demo</h3>
             <p className="mt-2 max-w-md text-sm text-white/85">
               Tell us about your business. We&rsquo;ll come back within one
@@ -76,7 +77,7 @@ export function QuoteForm() {
             </p>
 
             {submitted ? (
-              <div className="mt-7 flex items-center gap-3 rounded-md bg-white/15 p-5">
+              <div className="mt-7 animate-fade-in flex items-center gap-3 rounded-lg bg-white/15 p-5" role="status">
                 <HugeiconsIcon
                   icon={CheckmarkCircle02Icon}
                   className="size-6 text-white"
@@ -94,19 +95,20 @@ export function QuoteForm() {
                 }}
               >
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <Input name="name" placeholder="Full name" required />
-                  <Input name="email" type="email" placeholder="Work email" required />
-                  <Input name="phone" placeholder="Phone (optional)" />
-                  <Select name="service" options={services} />
+                  <Input name="name" label="Full name" placeholder="Full name" required />
+                  <Input name="email" label="Work email" type="email" placeholder="Work email" required />
+                  <Input name="phone" label="Phone" placeholder="Phone (optional)" />
+                  <Select name="service" label="Service interest" options={services} />
                 </div>
                 <Textarea
                   name="details"
+                  label="Business details"
                   placeholder="Tell us about your business — branches, monthly orders, current stack..."
                   rows={4}
                 />
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-black py-4 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-black py-4 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink active:scale-[0.98]"
                 >
                   Submit Request
                   <HugeiconsIcon icon={ArrowRight01Icon} className="size-4" />
@@ -115,7 +117,7 @@ export function QuoteForm() {
             )}
           </div>
 
-          <aside className="rounded-md bg-brand-orange p-7 sm:p-9">
+          <aside className="rounded-lg bg-brand-orange p-7 sm:p-9" aria-label="Contact information">
             <h3 className="text-xl font-bold tracking-tight">Contact Sales</h3>
 
             <ContactRow
@@ -126,7 +128,7 @@ export function QuoteForm() {
             <ContactRow
               icon={Mail01Icon}
               label="Email"
-              lines={["sales@leviteconstruction.com", "support@leviteconstruction.com"]}
+              lines={["sales@struktura.ph", "support@struktura.ph"]}
             />
             <ContactRow
               icon={Call02Icon}
@@ -140,8 +142,8 @@ export function QuoteForm() {
             />
 
             <a
-              href="mailto:sales@leviteconstruction.com"
-              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-black py-4 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink"
+              href="mailto:sales@struktura.ph"
+              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-black py-4 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-brand-ink active:scale-[0.98]"
             >
               Talk to Sales
             </a>
@@ -165,7 +167,7 @@ function ContactRow({
 }) {
   return (
     <div className="mt-5 flex items-start gap-3 border-t border-white/15 pt-5 first-of-type:mt-7 first-of-type:border-t-0 first-of-type:pt-0">
-      <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-white/15 text-white">
+      <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/15 text-white" aria-hidden>
         <HugeiconsIcon icon={icon} className="size-4" />
       </span>
       <div>
@@ -183,20 +185,34 @@ function ContactRow({
 }
 
 const inputClass =
-  "w-full rounded-md bg-white px-4 py-3 text-sm text-brand-black placeholder:text-brand-black/50 outline-none ring-2 ring-transparent transition-shadow focus:ring-brand-black"
+  "w-full rounded-lg bg-white px-4 py-3 text-sm text-brand-black placeholder:text-brand-black/50 outline-none ring-2 ring-transparent transition-shadow focus:ring-brand-black"
 
-function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
-  return <input {...props} className={inputClass} />
+function Input(props: React.InputHTMLAttributes<HTMLInputElement> & { label: string }) {
+  const { label, ...rest } = props
+  return (
+    <div>
+      <label htmlFor={rest.name} className="sr-only">{label}</label>
+      <input {...rest} id={rest.name} className={inputClass} />
+    </div>
+  )
 }
 
-function Textarea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
-  return <textarea {...props} className={`${inputClass} resize-none`} />
+function Textarea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement> & { label?: string }) {
+  const { label, ...rest } = props
+  return (
+    <div>
+      {label && <label htmlFor={rest.name} className="sr-only">{label}</label>}
+      <textarea {...rest} id={rest.name} className={`${inputClass} resize-none`} />
+    </div>
+  )
 }
 
-function Select({ name, options }: { name: string; options: string[] }) {
+function Select({ name, label, options }: { name: string; label: string; options: string[] }) {
   return (
     <div className="relative">
+      <label htmlFor={name} className="sr-only">{label}</label>
       <select
+        id={name}
         name={name}
         defaultValue=""
         className={`${inputClass} appearance-none pr-10`}
@@ -213,6 +229,7 @@ function Select({ name, options }: { name: string; options: string[] }) {
       <HugeiconsIcon
         icon={ArrowDown01Icon}
         className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-brand-black/70"
+        aria-hidden
       />
     </div>
   )

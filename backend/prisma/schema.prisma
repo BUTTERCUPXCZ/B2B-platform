@@ -1,0 +1,196 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── Enums ────────────────────────────────────────────────────────────────────
+
+enum Role {
+  CLIENT
+  CONTRACTOR
+  SUPPLIER
+  JOB_SEEKER
+  ADMIN
+  MODERATOR
+  SUPPORT
+}
+
+enum OnboardingStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  PENDING_VERIFICATION
+  COMPLETED
+  REJECTED
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  DELETED
+}
+
+enum VerificationLevel {
+  UNVERIFIED
+  IDENTITY
+  LICENSE
+  PORTFOLIO
+  TOP_RATED
+}
+
+// ─── Core User ────────────────────────────────────────────────────────────────
+
+model User {
+  id              String     @id @default(cuid())
+  supabaseAuthId  String     @unique
+  email           String     @unique
+  emailVerifiedAt DateTime?
+  fullName        String?
+  phone           String?
+  avatarUrl       String?
+  status          UserStatus @default(ACTIVE)
+  lastLoginAt     DateTime?
+  lastLoginIp     String?
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+
+  userRoles         UserRole[]
+  onboardingStates  OnboardingState[]
+  clientProfile     ClientProfile?
+  contractorProfile ContractorProfile?
+  supplierProfile   SupplierProfile?
+  jobSeekerProfile  JobSeekerProfile?
+  auditLogs         AuditLog[]
+
+  @@index([email])
+  @@index([supabaseAuthId])
+  @@index([status])
+}
+
+model UserRole {
+  id         String   @id @default(cuid())
+  userId     String
+  role       Role
+  assignedAt DateTime @default(now())
+  assignedBy String?
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, role])
+  @@index([role])
+}
+
+// ─── Onboarding ───────────────────────────────────────────────────────────────
+
+model OnboardingState {
+  id          String           @id @default(cuid())
+  userId      String
+  role        Role
+  status      OnboardingStatus @default(NOT_STARTED)
+  currentStep String?
+  data        Json             @default("{}")
+  startedAt   DateTime?
+  completedAt DateTime?
+  rejectedAt  DateTime?
+  rejectReason String?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  user        User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, role])
+  @@index([status])
+}
+
+// ─── Role-specific profiles ───────────────────────────────────────────────────
+
+model ClientProfile {
+  id                  String   @id @default(cuid())
+  userId              String   @unique
+  region              String?
+  city                String?
+  address             String?
+  preferredCategories String[]
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ContractorProfile {
+  id                String            @id @default(cuid())
+  userId            String            @unique
+  trade             String
+  yearsExperience   Int
+  bio               String?
+  expertiseTags     String[]
+  location          String?
+  verificationLevel VerificationLevel @default(UNVERIFIED)
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([trade])
+  @@index([verificationLevel])
+}
+
+model SupplierProfile {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  businessName    String
+  businessAddress String
+  businessRegNo   String?
+  taxId           String?
+  payoutBankName  String?
+  payoutAcctName  String?
+  payoutAcctNo    String?
+  verifiedAt      DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([businessName])
+}
+
+model JobSeekerProfile {
+  id                 String    @id @default(cuid())
+  userId             String    @unique
+  skills             String[]
+  yearsExperience    Int
+  preferredLocations String[]
+  availableFrom      DateTime?
+  resumeUrl          String?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  user               User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ─── Audit Trail (append-only) ────────────────────────────────────────────────
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  actorUserId String?
+  actorRole   Role?
+  action      String
+  entityType  String?
+  entityId    String?
+  oldValues   Json?
+  newValues   Json?
+  ipAddress   String?
+  userAgent   String?
+  traceId     String?
+  metadata    Json?
+  createdAt   DateTime @default(now())
+
+  actor       User?    @relation(fields: [actorUserId], references: [id], onDelete: SetNull)
+
+  @@index([actorUserId])
+  @@index([action])
+  @@index([createdAt])
+  @@index([entityType, entityId])
+}

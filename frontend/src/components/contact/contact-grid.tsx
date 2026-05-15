@@ -27,28 +27,28 @@ const channels = [
     icon: Call02Icon,
     label: "Buyer Support",
     body: "Order issues, deliveries, refunds, escrow questions.",
-    email: "help@leviteconstruction.com",
+    email: "help@struktura.ph",
     phone: "+63 2 8555 2380",
   },
   {
     icon: HeadsetIcon,
     label: "Seller Success",
     body: "Listings, payouts, performance, account issues.",
-    email: "sellers@leviteconstruction.com",
+    email: "sellers@struktura.ph",
     phone: "+63 2 8555 2310",
   },
   {
     icon: Mail01Icon,
     label: "Become a Seller",
     body: "Onboarding new materials sellers and contractors.",
-    email: "sales@leviteconstruction.com",
+    email: "sales@struktura.ph",
     phone: "+63 2 8555 2330",
   },
   {
     icon: Megaphone01Icon,
     label: "Press & Partnerships",
     body: "Media inquiries, integration partners, brand collaborations.",
-    email: "press@leviteconstruction.com",
+    email: "press@struktura.ph",
     phone: "—",
   },
 ]
@@ -58,7 +58,7 @@ export function ContactGrid() {
 
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto grid max-w-7xl gap-5 px-6 lg:grid-cols-[1.4fr_1fr]">
+      <div className="mx-auto grid max-w-[1280px] gap-5 px-6 lg:grid-cols-[1.4fr_1fr]">
         <Reveal className="rounded-md border border-brand-black/10 bg-white p-7 sm:p-9">
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-orange uppercase">
             General Inquiry

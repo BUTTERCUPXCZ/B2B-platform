@@ -15,7 +15,7 @@ const points = [
   {
     icon: UserMultipleIcon,
     title: "Custom contract pricing",
-    body: "Negotiate per-buyer prices for your top contractors directly inside Levite. Automatic order discounts, no spreadsheets.",
+    body: "Negotiate per-buyer prices for your top contractors directly inside STRUKTURA. Automatic order discounts, no spreadsheets.",
   },
   {
     icon: ChartIncreaseIcon,
@@ -35,7 +35,7 @@ export function EnterpriseBand() {
             "url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&auto=format&fit=crop')",
         }}
       />
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1fr_1.3fr] lg:items-center">
+      <div className="relative mx-auto grid max-w-[1440px] gap-12 px-6 lg:grid-cols-[1fr_1.3fr] lg:items-center">
         <div>
           <span className="text-[11px] font-semibold tracking-[0.3em] text-brand-black uppercase">
             Pro Plan

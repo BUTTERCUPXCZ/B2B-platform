@@ -1,16 +1,16 @@
 import {
-  LayersIcon,
+  BrickWallIcon,
   Building03Icon,
   Tree02Icon,
   Layers01Icon,
   PaintBucketIcon,
   ToolsIcon,
-  TapIcon,
+  Tap01Icon,
   FlashIcon,
   House04Icon,
   Door01Icon,
   Wrench01Icon,
-  PlantIcon,
+  Plant02Icon,
 } from "@hugeicons/core-free-icons"
 
 export type ProductCategory =
@@ -27,19 +27,19 @@ export type ProductCategory =
   | "Hardware"
   | "Landscaping"
 
-export const productCategories: { name: ProductCategory; icon: typeof LayersIcon; count: number }[] = [
-  { name: "Cement & Concrete", icon: LayersIcon, count: 2_400 },
+export const productCategories: { name: ProductCategory; icon: typeof Layers01Icon; count: number }[] = [
+  { name: "Cement & Concrete", icon: BrickWallIcon, count: 2_400 },
   { name: "Steel & Rebar", icon: Building03Icon, count: 1_180 },
   { name: "Lumber & Wood", icon: Tree02Icon, count: 3_650 },
   { name: "Tiles & Flooring", icon: Layers01Icon, count: 5_210 },
   { name: "Paint & Finishes", icon: PaintBucketIcon, count: 2_090 },
   { name: "Tools & Equipment", icon: ToolsIcon, count: 8_420 },
-  { name: "Plumbing", icon: TapIcon, count: 1_940 },
+  { name: "Plumbing", icon: Tap01Icon, count: 1_940 },
   { name: "Electrical", icon: FlashIcon, count: 2_330 },
   { name: "Roofing", icon: House04Icon, count: 880 },
   { name: "Doors & Windows", icon: Door01Icon, count: 1_420 },
   { name: "Hardware", icon: Wrench01Icon, count: 6_150 },
-  { name: "Landscaping", icon: PlantIcon, count: 1_070 },
+  { name: "Landscaping", icon: Plant02Icon, count: 1_070 },
 ]
 
 export type Product = {

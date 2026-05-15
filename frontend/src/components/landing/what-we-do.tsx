@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   ArrowRight01Icon,
@@ -41,7 +42,7 @@ const targetUsers = [
 
 export function WhatWeDo() {
   return (
-    <section className="relative overflow-hidden bg-[#f5f3ef] py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-brand-surface py-16 sm:py-20 lg:py-24" aria-labelledby="whatwedo-heading">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 bg-cover bg-left opacity-[0.06] lg:block"
@@ -59,29 +60,35 @@ export function WhatWeDo() {
         }}
       />
 
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-12 lg:items-center">
+      <div className="relative mx-auto grid max-w-[1440px] gap-14 px-6 lg:grid-cols-12 lg:items-center">
         <div className="relative hidden lg:col-span-5 lg:block">
           <div className="relative h-[560px]">
             <div
-              className="absolute top-0 left-0 size-56 overflow-hidden rounded-md bg-cover bg-center shadow-2xl"
+              className="absolute top-0 left-0 size-56 overflow-hidden rounded-lg bg-cover bg-center shadow-2xl"
               style={{
                 backgroundImage:
                   "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80&auto=format&fit=crop')",
               }}
+              role="img"
+              aria-label="Construction workers on site"
             />
             <div
-              className="absolute top-32 left-32 size-56 overflow-hidden rounded-md bg-cover bg-center shadow-2xl ring-8 ring-[#f5f3ef]"
+              className="absolute top-32 left-32 size-56 overflow-hidden rounded-lg bg-cover bg-center shadow-2xl ring-8 ring-brand-surface"
               style={{
                 backgroundImage:
                   "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&auto=format&fit=crop')",
               }}
+              role="img"
+              aria-label="Building materials delivery"
             />
             <div
-              className="absolute top-72 left-12 size-48 overflow-hidden rounded-md bg-cover bg-center shadow-2xl ring-8 ring-[#f5f3ef]"
+              className="absolute top-72 left-12 size-48 overflow-hidden rounded-lg bg-cover bg-center shadow-2xl ring-8 ring-brand-surface"
               style={{
                 backgroundImage:
                   "url('https://images.unsplash.com/photo-1591955506264-3f5a6834570a?w=600&q=80&auto=format&fit=crop')",
               }}
+              role="img"
+              aria-label="Interior finishing work"
             />
             <span className="absolute top-4 right-4 rounded-full bg-brand-orange px-4 py-1.5 text-[10px] font-semibold tracking-[0.25em] text-white uppercase shadow-lg">
               Real customers
@@ -91,11 +98,11 @@ export function WhatWeDo() {
 
         <div className="lg:col-span-7">
           <Reveal className="mb-10">
-            <h2 className="text-4xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-[44px]">
+            <h2 id="whatwedo-heading" className="text-4xl leading-tight font-extrabold tracking-tight text-brand-black sm:text-[44px]">
               What you can do here <span className="text-brand-orange">!</span>
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-brand-black/75">
-              Levite is a marketplace, not just a catalog. Every listing
+              STRUKTURA is a marketplace, not just a catalog. Every listing
               connects to a verified seller, every job connects to a vetted
               pro, and every transaction is escrow-backed end to end.
             </p>
@@ -105,10 +112,10 @@ export function WhatWeDo() {
             {capabilities.map((c) => (
               <StaggerItem
                 key={c.title}
-                className="group relative overflow-hidden rounded-md border border-brand-black/10 bg-white p-5 transition-all hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_20px_40px_-20px_rgba(255,116,32,0.4)]"
+                className="group relative overflow-hidden rounded-lg border border-brand-black/10 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-orange/40 hover:shadow-[0_20px_40px_-20px_rgba(255,116,32,0.4)]"
               >
                 <div className="flex items-start justify-between">
-                  <span className="flex size-11 items-center justify-center rounded-md bg-brand-orange/10 text-brand-orange transition-colors group-hover:bg-brand-orange group-hover:text-white">
+                  <span className="flex size-11 items-center justify-center rounded-lg bg-brand-orange/10 text-brand-orange transition-colors group-hover:bg-brand-orange group-hover:text-white">
                     <HugeiconsIcon icon={c.icon} className="size-5" />
                   </span>
                   <HugeiconsIcon
@@ -141,12 +148,12 @@ export function WhatWeDo() {
             ))}
           </ul>
 
-          <a href="#projects" className="pill-cta mt-9">
+          <Link to="/shop" className="pill-cta group/pill mt-9 inline-flex">
             Browse the marketplace
             <span className="pill-cta-icon">
               <HugeiconsIcon icon={ArrowRight01Icon} className="size-3.5" />
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

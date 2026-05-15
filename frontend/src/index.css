@@ -6,12 +6,17 @@
 @import "@fontsource/poppins/600.css";
 @import "@fontsource/poppins/700.css";
 @import "@fontsource/poppins/800.css";
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
     --font-heading: 'Poppins', sans-serif;
-    --font-sans: 'Poppins', sans-serif;
+    --font-sans: 'Inter', sans-serif;
     --color-brand-orange: #ff7420;
     --color-brand-orange-soft: #ff8c42;
     --color-brand-black: #191a19;
@@ -47,17 +52,51 @@
     --color-card: var(--card);
     --color-foreground: var(--foreground);
     --color-background: var(--background);
-    --radius-sm: calc(var(--radius) * 0.6);
-    --radius-md: calc(var(--radius) * 0.8);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --radius-4xl: 2rem;
+
+    --color-brand-surface: #f5f3ef;
+    --color-brand-surface-dark: #1a1b1a;
+
+    --animate-shimmer: shimmer 2s infinite linear;
+    --animate-fade-in: fade-in 0.3s ease-out;
+    --animate-slide-up: slide-up 0.4s ease-out;
+    --animate-slide-down: slide-down 0.3s ease-out;
+    --animate-scale-in: scale-in 0.2s ease-out;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 :root {
-    --background: oklch(1 0 0);
+    --background: oklch(0.955 0.002 250);
     --foreground: oklch(0.148 0.004 228.8);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.148 0.004 228.8);
@@ -67,20 +106,20 @@
     --primary-foreground: oklch(1 0 0);
     --secondary: oklch(0.967 0.001 286.375);
     --secondary-foreground: oklch(0.21 0.006 285.885);
-    --muted: oklch(0.963 0.002 197.1);
-    --muted-foreground: oklch(0.56 0.021 213.5);
-    --accent: oklch(0.963 0.002 197.1);
+    --muted: oklch(0.945 0.002 250);
+    --muted-foreground: oklch(0.5 0.015 250);
+    --accent: oklch(0.945 0.002 250);
     --accent-foreground: oklch(0.218 0.008 223.9);
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.925 0.005 214.3);
-    --input: oklch(0.925 0.005 214.3);
+    --border: oklch(0.9 0.005 250);
+    --input: oklch(0.9 0.005 250);
     --ring: oklch(0.723 0.014 214.4);
     --chart-1: oklch(0.837 0.128 66.29);
     --chart-2: oklch(0.705 0.213 47.604);
     --chart-3: oklch(0.646 0.222 41.116);
     --chart-4: oklch(0.553 0.195 38.402);
     --chart-5: oklch(0.47 0.157 37.304);
-    --radius: 0.875rem;
+    --radius: 0.0625rem;
     --sidebar: oklch(0.987 0.002 197.1);
     --sidebar-foreground: oklch(0.148 0.004 228.8);
     --sidebar-primary: oklch(0.546 0.245 262.881);
@@ -127,30 +166,215 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
-    }
+    @apply border-border;
+  }
   body {
-    @apply bg-background text-foreground;
-    }
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 1vw + 0.25rem, 1rem);
+    line-height: 1.7;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   html {
     @apply font-sans;
     scroll-behavior: smooth;
-    }
+  }
   @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-orange);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    @apply not-sr-only fixed top-4 left-4 z-[9999] rounded-md bg-brand-orange px-4 py-2 text-sm font-semibold text-white;
+  }
+
+  h1, .h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  h2, .h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3vw + 0.25rem, 2.5rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  h3, .h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.375rem, 2vw + 0.25rem, 2rem);
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  h4, .h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.125rem, 1.5vw + 0.25rem, 1.5rem);
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+  h5, .h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.9375rem, 1vw + 0.25rem, 1.25rem);
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+  h6, .h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
+    line-height: 1.4;
+    letter-spacing: 0.01em;
   }
 }
 
 @layer utilities {
+  /* Display/Hero — Playfair Display 700, 40–72px, lh 1.1, ls -0.02em */
+  .text-display {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw + 0.5rem, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  /* Body Large — Inter 400, 16–18px, lh 1.7 */
+  .text-body-lg {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 1vw + 0.25rem, 1.125rem);
+    line-height: 1.7;
+    letter-spacing: 0;
+  }
+  /* Body Small — Inter 300, 12–14px, lh 1.6 */
+  .text-body-sm {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(0.75rem, 0.5vw + 0.5rem, 0.875rem);
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+  /* Button — Inter 500, 13–14px, lh 1, ls 0.08em */
+  .text-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.8125rem, 0.5vw + 0.5rem, 0.875rem);
+    line-height: 1;
+    letter-spacing: 0.08em;
+  }
+  /* Caption — Inter 400, 11–12px, lh 1.5, ls 0.02em */
+  .text-caption {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.6875rem, 0.5vw + 0.375rem, 0.75rem);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+  /* Label/Tag — Inter 500, 11–12px, lh 1, ls 0.1em */
+  .text-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.6875rem, 0.5vw + 0.375rem, 0.75rem);
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  /* Nav Link — Inter 400–500, 13–14px, lh 1, ls 0.05em */
+  .text-nav {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.8125rem, 0.5vw + 0.5rem, 0.875rem);
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+
   .pill-cta {
-    @apply inline-flex items-center gap-3 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-brand-orange-soft hover:shadow-[0_10px_30px_-10px_rgba(255,116,32,0.6)];
+    @apply inline-flex items-center gap-3 rounded-full bg-brand-orange px-6 py-3 text-white transition-all hover:bg-brand-orange-soft hover:shadow-[0_10px_30px_-10px_rgba(255,116,32,0.6)] active:scale-[0.97];
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
   }
   .pill-cta-icon {
-    @apply flex size-7 items-center justify-center rounded-full bg-white/20;
+    @apply flex size-7 items-center justify-center rounded-full bg-white/20 transition-transform group-hover/pill:translate-x-0.5;
   }
   .pill-ghost {
-    @apply inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10;
+    @apply inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/5 px-6 py-3 text-white transition-colors hover:bg-white/10 active:scale-[0.97];
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--color-muted) 25%,
+      oklch(0.95 0.002 250 / 0.6) 50%,
+      var(--color-muted) 75%
+    );
+    background-size: 200% 100%;
+    animation: var(--animate-shimmer);
+  }
+
+  .dark .shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--color-muted) 25%,
+      oklch(0.275 0.011 216.9 / 0.5) 50%,
+      var(--color-muted) 75%
+    );
+    background-size: 200% 100%;
+    animation: var(--animate-shimmer);
+  }
+
+  .animate-fade-in {
+    animation: var(--animate-fade-in);
+  }
+  .animate-slide-up {
+    animation: var(--animate-slide-up);
+  }
+  .animate-slide-down {
+    animation: var(--animate-slide-down);
+  }
+  .animate-scale-in {
+    animation: var(--animate-scale-in);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 3px;
   }
 }
