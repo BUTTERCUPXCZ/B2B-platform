@@ -27,10 +27,6 @@ import {
 import { peso } from "@/components/shared/price-tag"
 import { cn } from "@/lib/utils"
 
-const overviewById = new Map(
-  clientEstimatesOverview.map((o) => [o.estimateId, o]),
-)
-
 const statusVariant: Record<ClientEstimateStatus, "outline" | "secondary" | "destructive"> = {
   pending: "secondary",
   ready: "outline",

@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { productCategories } from "@/components/shop/shop-data"
+import { type ProductCategory, productCategories } from "@/components/shop/shop-data"
 import { peso } from "@/components/shared/price-tag"
 import { cn } from "@/lib/utils"
 
@@ -139,7 +139,7 @@ function SellerCatalogNewRoute() {
                   <select
                     id="category"
                     value={category}
-                    onChange={(e) => setCategory(e.target.value)}
+                    onChange={(e) => setCategory(e.target.value as ProductCategory)}
                     className="mt-1 h-10 w-full rounded-md border border-input bg-white px-3 text-sm focus-visible:border-brand-orange focus-visible:outline-none"
                   >
                     {productCategories.map((c) => (
